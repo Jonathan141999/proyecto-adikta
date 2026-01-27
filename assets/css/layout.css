@@ -1,0 +1,280 @@
+/* =========================
+   Layout inspirado en Ant Design
+   Basado en: https://ant.design/docs/spec/introduce/
+   ========================= */
+
+.site-header,
+.site-footer {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--ant-border-color-base);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px; /* Padding estándar de Ant Design */
+  height: 64px; /* Altura estándar de header Ant Design */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Z-index alto de Ant Design para headers */
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px; /* Espaciado de Ant Design */
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--ant-text-color);
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav a:hover {
+  color: var(--ant-primary-color);
+  border-bottom-color: var(--ant-primary-color);
+}
+
+.main-nav a.active {
+  color: var(--ant-primary-color);
+  border-bottom-color: var(--ant-primary-color);
+  font-weight: 500;
+}
+
+/* Secciones */
+.section {
+  padding: 64px 4%; /* Padding grande estilo Ant Design */
+  background-color: #ffffff;
+}
+
+.section-alt {
+  background-color: #fafafa; /* Fondo alternativo de Ant Design */
+}
+
+.section-title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--ant-text-color);
+}
+
+.section-title p {
+  font-size: 14px;
+  color: var(--ant-text-color-secondary);
+}
+
+/* Grids estilo Ant Design */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px; /* Gap estándar de Ant Design */
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.three-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* Page Header */
+.page-header {
+  padding: 48px 4% 24px;
+  background-color: #f0f2f5; /* Fondo característico de Ant Design */
+  border-bottom: 1px solid var(--ant-border-color-base);
+}
+
+.page-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--ant-text-color);
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--ant-text-color-secondary);
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 64px;
+  padding: 48px 4% 24px;
+  border-top: 1px solid var(--ant-border-color-base);
+  background-color: #fafafa;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.site-footer h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: var(--ant-text-color);
+}
+
+.site-footer ul {
+  list-style: none;
+}
+
+.site-footer li {
+  font-size: 14px;
+  color: var(--ant-text-color-secondary);
+  margin-bottom: 8px;
+}
+
+.site-footer a {
+  color: var(--ant-text-color-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-footer a:hover {
+  color: var(--ant-primary-color);
+}
+
+.footer-bottom {
+  font-size: 14px;
+  color: var(--ant-text-color-secondary);
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--ant-border-color-base);
+}
+
+/* Menú hamburguesa móvil */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--ant-border-color-base);
+  color: var(--ant-text-color);
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: var(--ant-border-radius-base);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mobile-menu-btn:hover {
+  border-color: var(--ant-primary-color);
+  color: var(--ant-primary-color);
+}
+
+.mobile-menu-btn.active {
+  background-color: var(--ant-primary-color);
+  color: #ffffff;
+  border-color: var(--ant-primary-color);
+}
+
+/* Responsive - Breakpoints de Ant Design */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 16px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    order: 2;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: var(--ant-shadow-2-down);
+    border-top: 1px solid var(--ant-border-color-base);
+    display: none;
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    height: auto;
+    padding: 12px 16px;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+    border-left: 3px solid transparent;
+  }
+
+  .main-nav a:hover,
+  .main-nav a.active {
+    border-left-color: var(--ant-primary-color);
+    background-color: #e6f7ff;
+  }
+
+  .section {
+    padding: 32px 4%;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .two-columns,
+  .three-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,33 @@
+/* =========================
+   Reset y estilos base inspirados en Ant Design
+   Basado en: https://ant.design/docs/spec/introduce/
+   ========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Tipografía principal: Poppins + fallback Ant Design */
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  color: rgba(0, 0, 0, 0.85); /* Color de texto principal de Ant Design */
+  background-color: #fafafa; /* Fondo característico de Ant Design */
+  line-height: 1.5715; /* Line-height estándar de Ant Design */
+  font-size: 14px; /* Tamaño base de fuente de Ant Design */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Variables CSS inspiradas en Ant Design */
+:root {
+  --ant-primary-color: #1890ff; /* Color primario de Ant Design */
+  --ant-primary-color-hover: #40a9ff;
+  --ant-primary-color-active: #096dd9;
+  --ant-text-color: rgba(0, 0, 0, 0.85);
+  --ant-text-color-secondary: rgba(0, 0, 0, 0.45);
+  --ant-border-color-base: #d9d9d9;
+  --ant-border-radius-base: 2px; /* Border radius característico de Ant Design */
+  --ant-shadow-1-down: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --ant-shadow-2-down: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,34 @@
+class CustomFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <footer class="site-footer">
+        <div class="footer-columns">
+          <div>
+            <h4>Adikt@ PC</h4>
+            <p>Soluciones tecnológicas para hogar, estudio y negocio.</p>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <ul>
+              <li>Teléfono: 02 204-6510</li>
+              <li>WhatsApp: +593 99 252 0315</li>
+              <li>Email: informacion@adiktapc.net</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Enlaces</h4>
+            <ul>
+              <li><a href="soporte.html">Soporte</a></li>
+              <li><a href="distribuidores.html">Distribuidores</a></li>
+              <li><a href="legal.html">Términos y privacidad</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-bottom">©2026 Adikt@ PC. Todos los derechos reservados.</p>
+      </footer>
+    `;
+  }
+}
+
+customElements.define('custom-footer', CustomFooter);
+

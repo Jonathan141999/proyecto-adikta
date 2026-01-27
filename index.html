@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adikt@ PC | Tecnología Innovadora</title>
+
+  <!-- Iconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tus estilos personalizados (inspirados en Ant Design) -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Fuente Poppins desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar como Web Component -->
+  <custom-navbar></custom-navbar>
+
+  <main>
+    <!-- HERO PRINCIPAL estilo Ant Design -->
+    <section class="hero">
+      <div class="hero-content">
+        <p style="text-transform: uppercase; letter-spacing: 1px; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.8); margin-bottom: 16px;">
+          Marca ecuatoriana de tecnología
+        </p>
+        <h1>
+          Adikt@ PC – Tecnología confiable para tu día a día
+        </h1>
+        <p>
+          Más de 11 años de experiencia brindando soluciones en cómputo a nivel nacional para hogar, educación y negocios.
+        </p>
+        <div class="hero-actions">
+          <a href="productos.html" class="btn btn-primary">
+            <i class="fa-solid fa-laptop" style="margin-right: 8px;"></i>
+            Ver productos
+          </a>
+          <a href="servicios.html" class="btn btn-secondary">
+            <i class="fa-solid fa-screwdriver-wrench" style="margin-right: 8px;"></i>
+            Servicio técnico
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS / SERVICIOS DESTACADOS estilo Ant Design -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Nuestras soluciones</h2>
+        <p>Todo lo que necesitas en un solo lugar.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card">
+          <h3><i class="fa-solid fa-laptop" style="color: #1890ff; margin-right: 8px;"></i>Laptops y PCs</h3>
+          <p>Equipos optimizados para estudio, trabajo y gaming.</p>
+          <a href="productos.html" class="link-more">Explorar productos <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i></a>
+        </article>
+        <article class="card">
+          <h3><i class="fa-solid fa-screwdriver-wrench" style="color: #1890ff; margin-right: 8px;"></i>Servicio técnico</h3>
+          <p>Soporte especializado para tus equipos Adikt@ PC.</p>
+          <a href="servicios.html" class="link-more">Ver servicios <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i></a>
+        </article>
+        <article class="card">
+          <h3><i class="fa-solid fa-store" style="color: #1890ff; margin-right: 8px;"></i>Distribuidores</h3>
+          <p>Red de aliados autorizados en todo el país.</p>
+          <a href="distribuidores.html" class="link-more">Ver distribuidores <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS estilo Ant Design -->
+    <section class="section section-alt">
+      <div class="section-title">
+        <h2>Productos destacados</h2>
+        <p>Conoce algunos de nuestros equipos más solicitados.</p>
+      </div>
+      <div class="cards-grid cards-products">
+        <article class="card product-card">
+          <h3><i class="fa-solid fa-laptop" style="color: #1890ff; margin-right: 8px;"></i>Adikt@ Laptop Pro 14"</h3>
+          <ul>
+            <li><i class="fa-solid fa-microchip" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>Procesador Intel Core i5</li>
+            <li><i class="fa-solid fa-memory" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>8 GB RAM</li>
+            <li><i class="fa-solid fa-hard-drive" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>SSD 512 GB</li>
+          </ul>
+          <a href="productos.html" class="btn btn-outline" style="margin-top: 16px;">Ver detalles</a>
+        </article>
+        <article class="card product-card">
+          <h3><i class="fa-solid fa-desktop" style="color: #1890ff; margin-right: 8px;"></i>Adikt@ Desktop Business</h3>
+          <ul>
+            <li><i class="fa-solid fa-microchip" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>Procesador Intel Core i7</li>
+            <li><i class="fa-solid fa-memory" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>16 GB RAM</li>
+            <li><i class="fa-solid fa-hard-drive" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>Almacenamiento híbrido</li>
+          </ul>
+          <a href="productos.html" class="btn btn-outline" style="margin-top: 16px;">Ver detalles</a>
+        </article>
+        <article class="card product-card">
+          <h3><i class="fa-solid fa-display" style="color: #1890ff; margin-right: 8px;"></i>Adikt@ All-in-One 24"</h3>
+          <ul>
+            <li><i class="fa-solid fa-tv" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>Pantalla Full HD</li>
+            <li><i class="fa-solid fa-compress" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>Diseño compacto</li>
+            <li><i class="fa-solid fa-home" style="color: #1890ff; margin-right: 8px; font-size: 12px;"></i>Ideal para oficina y hogar</li>
+          </ul>
+          <a href="productos.html" class="btn btn-outline" style="margin-top: 16px;">Ver detalles</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE ESTADÍSTICAS/IMPACTO estilo Ant Design -->
+    <section class="impact">
+      <div class="impact-container">
+        <h2>
+          Impulsamos la transformación <br />
+          tecnológica a <span>ESCALA REGIONAL</span>
+        </h2>
+        <p>
+          Respaldados por años de experiencia en el sector tecnológico, acompañamos a empresas de todo
+          el Ecuador en la implementación, gestión y optimización de sus soluciones IT. Nuestra operación combina la venta de equipos tecnológicos de marcas líderes con servicios de outsourcing
+          especializado, garantizando cobertura nacional, eficiencia operativa y soporte confiable.
+          Los resultados que nos respaldan reflejan nuestro compromiso con la excelencia, la innovación
+          y la construcción de relaciones de largo plazo con nuestros clientes.
+        </p>
+
+        <div class="impact-cards">
+          <div class="impact-card">
+            <h3 data-target="11">0</h3>
+            <span>Años de experiencia</span>
+          </div>
+
+          <div class="impact-card">
+            <h3 data-target="550">0</h3>
+            <span>Clientes corporativos</span>
+          </div>
+
+          <div class="impact-card">
+            <h3 data-target="650">0</h3>
+            <span>Proyectos realizados</span>
+          </div>
+
+          <div class="impact-card">
+            <h3 data-target="12000">0</h3>
+            <span>Equipos tecnológicos vendidos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE TESTIMONIOS estilo Ant Design -->
+    <section class="testimonials" id="testimonios">
+      <div class="testimonials-container">
+        <h2 class="testimonials-subtitle-red">Lo que dicen nuestros clientes</h2>
+        <p class="testimonials-subtitle">
+          Conoce las experiencias de quienes confían en <strong>Adikt@ PC</strong>
+        </p>
+
+        <div class="testimonials-cards">
+          <div class="testimonial-card">
+            <div class="avatar">
+              <i class="fa-solid fa-user" style="font-size: 40px; color: #1890ff; display: flex; align-items: center; justify-content: center; height: 100%;"></i>
+            </div>
+
+            <h3>Andrés C.</h3>
+            <span class="role">
+              Director de Tecnologías de la Información (CIO) |
+              Ministerio de Salud Pública (MSP)
+            </span>
+
+            <p class="quote">
+              "Necesitábamos estandarizar infraestructura
+              y asegurar continuidad operativa.
+              El equipo llegó con diagnóstico claro, propuestas
+              aterrizadas y ejecución impecable. Cumplieron
+              plazos, documentaron todo y dejaron soporte
+              funcionando de verdad. Se nota cuando
+              un proveedor entiende misión crítica".
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="avatar">
+              <i class="fa-solid fa-user" style="font-size: 40px; color: #1890ff; display: flex; align-items: center; justify-content: center; height: 100%;"></i>
+            </div>
+
+            <h3>Elena H.</h3>
+            <span class="role">
+              Coordinadora Zonal de Transformación Digital |
+              Ministerio de Educación (Zona)
+            </span>
+
+            <p class="quote">
+              "Lo que más valoro
+              es la capacidad de convertir necesidades
+              dispersas en una solución integral: equipos,
+              licencias, implementación y acompañamiento.
+              No fue solo vender, fue ordenar el proyecto
+              y asegurar adopción. Con ellos, el servicio
+              no termina en la entrega".
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="avatar">
+              <i class="fa-solid fa-user" style="font-size: 40px; color: #1890ff; display: flex; align-items: center; justify-content: center; height: 100%;"></i>
+            </div>
+
+            <h3>Adriana S.</h3>
+            <span class="role">
+              Directora de Planificación
+              y Proyectos Estratégicos | GAD Provincial (Costa)
+            </span>
+
+            <p class="quote">
+              "Teníamos presión por resultados rápidos
+              y cero margen de error en la implementación.
+              Ellos aterrizaron el plan, ordenaron
+              el roadmap y ejecutaron con metodología.
+              Lo mejor: comunicación clara, trazabilidad
+              del avance y un cierre con entregables
+              completos. Es el tipo de aliado que te reduce
+              riesgos, no te los crea".
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE DE CONFIANZA estilo Ant Design -->
+    <section class="section trust-section">
+      <div class="trust-content">
+        <h2><i class="fa-solid fa-shield-halved" style="margin-right: 12px;"></i>Marca ecuatoriana con respaldo</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 12px;"><i class="fa-solid fa-check-circle" style="color: #52c41a; margin-right: 8px;"></i>Más de 11 años en el mercado.</li>
+          <li style="margin-bottom: 12px;"><i class="fa-solid fa-check-circle" style="color: #52c41a; margin-right: 8px;"></i>Soporte técnico especializado.</li>
+          <li style="margin-bottom: 12px;"><i class="fa-solid fa-check-circle" style="color: #52c41a; margin-right: 8px;"></i>Portafolio diseñado para tus necesidades.</li>
+        </ul>
+        <a href="nosotros.html" class="btn btn-primary" style="margin-top: 24px;">
+          <i class="fa-solid fa-users" style="margin-right: 8px;"></i>
+          Conócenos
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer como Web Component -->
+  <custom-footer></custom-footer>
+
+  <!-- Componentes Web para navbar y footer -->
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  
+  <!-- Scripts adicionales -->
+  <script src="assets/js/mobile-menu.js"></script>
+  <script src="assets/js/counters.js"></script>
+</body>
+</html>
