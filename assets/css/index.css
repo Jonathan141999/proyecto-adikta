@@ -1,0 +1,43 @@
+/* Estilos específicos para index.html */
+
+.hero-tag {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 16px;
+}
+
+/* Iconos reutilizables */
+.icon-primary { color: #1890ff; margin-right: 8px; }
+.icon-small { color: #1890ff; margin-right: 8px; font-size: 12px; }
+.icon-space { margin-left: 4px; }
+
+/* Botones: espacio antes del texto para iconos */
+.btn-icon { margin-right: 8px; }
+
+/* Product card CTA */
+.product-card .product-cta { margin-top: 16px; }
+
+/* Avatar icon dentro de testimonial */
+.avatar { width: 60px; height: 60px; border-radius: 50%; background: #eef6ff; display:flex; align-items:center; justify-content:center; margin-bottom: 12px; }
+.avatar-icon { font-size: 40px; color: #1890ff; }
+
+/* Impact cards (si necesita estilos adicionales para números) */
+.impact-card h3 { font-size: 24px; margin: 0; }
+
+/* Trust list y boton */
+.trust-list { list-style: none; padding: 0; margin: 0 0 12px 0; }
+.trust-list li { margin-bottom: 12px; display:flex; align-items:center; }
+.check-icon { color: #52c41a; margin-right: 8px; }
+
+/* Ajuste botón trust */
+.trust-cta { margin-top: 24px; }
+
+/* Utilidades pequeñas */
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+
+/* Enlace adicional: icon spacing en links */
+.link-more .icon-space { margin-left: 8px; }

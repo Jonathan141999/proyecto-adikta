@@ -1,13 +1,8 @@
-/* =========================
-   Componentes inspirados en Ant Design
-   Basado en: https://ant.design/docs/spec/introduce/
-   ========================= */
 
-/* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--ant-primary-color) 0%, #096dd9 100%);
   color: #ffffff;
-  padding: 64px 4%; /* Espaciado de Ant Design (múltiplos de 8) */
+  padding: 64px 4%; 
 }
 
 .hero-content {
@@ -15,7 +10,7 @@
 }
 
 .hero h1 {
-  font-size: 38px; /* Tamaño de heading grande de Ant Design */
+  font-size: 38px; 
   font-weight: 600;
   margin-bottom: 16px;
   line-height: 1.23;
@@ -30,23 +25,23 @@
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* Espaciado de Ant Design */
+  gap: 16px; 
 }
 
-/* Botones estilo Ant Design */
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 15px; /* Padding estándar de botones Ant Design */
-  height: 32px; /* Altura estándar de botones Ant Design */
+  padding: 4px 15px; 
+  height: 32px; 
   border-radius: var(--ant-border-radius-base);
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
   border: 1px solid var(--ant-border-color-base);
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Transición suave de Ant Design */
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); 
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
 }
 
@@ -101,11 +96,10 @@
   color: var(--ant-primary-color-hover);
 }
 
-/* Cards estilo Ant Design */
 .card {
   background-color: #ffffff;
   border-radius: var(--ant-border-radius-base);
-  padding: 24px; /* Padding estándar de Ant Design */
+  padding: 24px; 
   box-shadow: var(--ant-shadow-1-down);
   border: 1px solid #f0f0f0;
   transition: all 0.3s;
@@ -140,9 +134,9 @@
   margin-bottom: 8px;
 }
 
-/* Sección de confianza */
+
 .trust-section {
-  background-color: #001529; /* Color oscuro característico de Ant Design */
+  background-color: #001529; 
   color: #ffffff;
 }
 
@@ -166,7 +160,6 @@
   opacity: 0.9;
 }
 
-/* Formularios estilo Ant Design */
 .contact-list {
   list-style: none;
   margin-top: 16px;
@@ -199,8 +192,8 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 4px 11px; /* Padding estándar de inputs Ant Design */
-  height: 32px; /* Altura estándar de inputs Ant Design */
+  padding: 4px 11px; 
+  height: 32px; 
   border-radius: var(--ant-border-radius-base);
   border: 1px solid var(--ant-border-color-base);
   font-size: 14px;
@@ -225,9 +218,7 @@
   box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
 }
 
-/* =========================
-   Carrusel Misión/Visión/Valores estilo Ant Design
-   ========================= */
+
 .mv-carousel {
   background-color: #fafafa;
   padding: 64px 4%;
@@ -335,9 +326,7 @@
   border-radius: 4px;
 }
 
-/* =========================
-   Sección de Estadísticas/Impacto estilo Ant Design
-   ========================= */
+
 .impact {
   background-color: #001529;
   color: #ffffff;
@@ -417,9 +406,7 @@
   display: block;
 }
 
-/* =========================
-   Sección de Testimonios estilo Ant Design
-   ========================= */
+
 .testimonials {
   padding: 64px 4%;
   background-color: #ffffff;
@@ -508,7 +495,7 @@
   font-style: italic;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .hero {
     padding: 48px 4%;
