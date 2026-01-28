@@ -10,9 +10,9 @@ class CustomFooter extends HTMLElement {
           <div>
             <h4>Contacto</h4>
             <ul>
-              <li>Teléfono: 02 204-6510</li>
-              <li>WhatsApp: +593 99 252 0315</li>
-              <li>Email: informacion@adiktapc.net</li>
+              <li>Teléfono: 02 2046 510</li>
+              <li>WhatsApp: +593 98 3868 358</li>
+              <li>Email: informacion@represmundial.com</li>
             </ul>
           </div>
           <div>
