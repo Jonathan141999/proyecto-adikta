@@ -1,0 +1,40 @@
+/* Estilos para las nuevas secciones */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+  
+.service-card {
+    background-color: #ffffff;
+    border-radius: var(--ant-border-radius-base);
+    padding: 24px;
+    box-shadow: var(--ant-shadow-1-down);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s;
+    text-align: center;
+}
+  
+.service-card:hover {
+    box-shadow: var(--ant-shadow-2-down);
+    transform: translateY(-5px);
+}
+  
+.service-card .icon {
+    font-size: 40px;
+    color: var(--ant-primary-color);
+    margin-bottom: 16px;
+}
+  
+.service-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+  
+.service-card p {
+    color: var(--ant-text-color-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}

@@ -103,6 +103,8 @@
   box-shadow: var(--ant-shadow-1-down);
   border: 1px solid #f0f0f0;
   transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -121,6 +123,7 @@
   font-size: 14px;
   color: var(--ant-text-color-secondary);
   margin-bottom: 16px;
+  flex-grow: 1;
 }
 
 .product-card ul {

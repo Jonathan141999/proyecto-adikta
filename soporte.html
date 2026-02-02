@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte | Adikt@ PC</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <custom-navbar></custom-navbar>
+
+  <main>
+    <section class="page-header">
+      <h1>Soporte Técnico</h1>
+      <p>Asistencia y recursos para tus equipos Adikt@ PC.</p>
+    </section>
+
+    <section class="section">
+      <div class="two-columns">
+        <article>
+          <h2>Canales de soporte</h2>
+          <p>
+            Si necesitas ayuda con tu equipo, puedes contactarnos a través de los siguientes canales,
+            o puedes dejarnos un mensaje en el formulario.
+          </p>
+          <ul class="contact-list">
+            <li><strong>Teléfono:</strong> 02 204-6510</li>
+            <li><strong>WhatsApp:</strong> +593 99 252 0315</li>
+            <li><strong>Email:</strong> soporte@adiktapc.net</li>
+            <li><strong>Horario:</strong> Lunes a Viernes, 08:00 a 17:30</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Enviar una solicitud</h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <input type="text" id="asunto" name="asunto" placeholder="Ej: Problema de encendido">
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Describe tu problema</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <custom-footer></custom-footer>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  
+  <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>

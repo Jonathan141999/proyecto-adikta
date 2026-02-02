@@ -18,8 +18,10 @@ class CustomFooter extends HTMLElement {
           <div>
             <h4>Enlaces</h4>
             <ul>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="servicios.html">Servicios</a></li>
               <li><a href="soporte.html">Soporte</a></li>
-              <li><a href="distribuidores.html">Distribuidores</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
               <li><a href="legal.html">Términos y privacidad</a></li>
             </ul>
           </div>
