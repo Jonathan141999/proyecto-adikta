@@ -6,77 +6,143 @@
   <title>Productos | Adikt@ PC</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/productos.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="antialiased page-products">
   <custom-navbar></custom-navbar>
 
-  <main>
-    <section class="page-header">
-      <h1>Nuestros Productos</h1>
-      <p>Equipos y soluciones para todas tus necesidades.</p>
-    </section>
+  <section class="hero hero-gradient hero-full">
+    <div class="hero-container">
+      <h1 class="hero-title">Tecnología que Impulsa tu Mundo</h1>
+      <p class="hero-subtitle">Descubre nuestra selección exclusiva de hardware premium diseñado para profesionales que no aceptan menos que la perfección.</p>
+      <a href="#catalog" class="btn btn-primary hero-cta">Explorar Catálogo <span class="material-symbols-outlined icon-space">arrow_forward</span></a>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="section-title">
-        <h2>Catálogo de productos</h2>
-        <p>Descubre nuestra variedad de equipos de alta calidad.</p>
+  <main class="container-lg main-content" id="catalog">
+    <div class="catalog-layout">
+      <aside class="catalog-aside">
+        <div>
+          <h3 class="filter-title">Categoría</h3>
+          <ul class="filters-list">
+            <li class="filter-row">
+              <span class="filter-item">Laptops</span>
+              <span class="badge badge-muted">12</span>
+            </li>
+            <li class="filter-row">
+              <span class="filter-item active">Desktop PCs</span>
+              <span class="badge badge-primary">08</span>
+            </li>
+            <li class="filter-row">
+              <span class="filter-item">Monitores</span>
+              <span class="badge badge-muted">15</span>
+            </li>
+            <li class="filter-row">
+              <span class="filter-item">Periféricos</span>
+              <span class="badge badge-muted">24</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="filter-title">Rango de Precio</h3>
+          <input class="custom-range range-input" max="5000" min="0" step="100" type="range"/>
+          <div class="range-labels">
+            <span>$0</span>
+            <span>$5,000+</span>
+          </div>
+        </div> 
+        <div>
+          <h3 class="filter-title">Marca</h3>
+          <div class="filters-list">
+            <label class="filter-row">
+              <input checked class="filter-checkbox" type="checkbox" />
+              <span class="filter-item">Premium Tech</span>
+            </label>
+            <label class="filter-row">
+              <input class="filter-checkbox" type="checkbox" />
+              <span class="filter-item">Global Vision</span>
+            </label>
+            <label class="filter-row">
+              <input class="filter-checkbox" type="checkbox" />
+              <span class="filter-item">Adikt@ Series</span>
+            </label>
+          </div>
+        </div> 
+        <div>
+          <h3 class="filter-title">Valoración</h3>
+          <div class="filters-list">
+            <label class="filter-row">
+              <input class="filter-checkbox" type="checkbox" />
+              <div class="rating-stars">
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+              </div>
+            </label>
+          </div>
+        </div> 
+      </aside>
+      <div class="catalog-content">
+        <div class="section-header">
+          <h2 class="section-heading">Selección Destacada</h2>
+          <div class="controls">
+            <span class="sort-label">Ordenar por:</span>
+            <select class="sort-select">
+              <option>Más recientes</option>
+              <option>Precio: Menor a Mayor</option>
+              <option>Precio: Mayor a Menor</option>
+            </select>
+          </div>
+        </div> 
+
+        <div class="products-grid">
+
+          <div class="product-card">
+            <div class="product-media media-wrapper">
+              <span class="badge badge-new">New</span>
+              <img alt="High-end Laptop" class="product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUo83onOQba5AB5b61AdFZ3-LpI_KWAsKw10t34yVHzEiPkICa13nhQtdovQNQwYvjMtlAgxMJJS8CO49iXMQgp12U1E8c4Qp9VvyyZsVxBbkpwWQBbCbIVNyrXuzFlITvWly29uTc52wOh2QMNhif_LhkbFDgRxpgzzLKJ8OZhbYFAlLXnMS7Id-BX5tTciIUqSohRk2TZHpM3KPsW2abh_6y_5P2tF21KhqHtPiNVncI5cAQhTTfsLRSYgDv6oWXuB_J8r6soPY" />
+              <div class="media-overlay"></div>
+              <button class="add-cart-btn">
+                <span class="material-symbols-outlined">add_shopping_cart</span>
+              </button>
+            </div> 
+            <div class="card-body">
+              <p class="product-category">Laptops</p>
+              <h3 class="product-title">Adikt@ Laptop Pro 15"</h3>
+              <p class="product-price">$1,899.00</p> 
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pagination">
+          <button class="pagination-btn icon-btn">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <span class="pagination-ellipsis">...</span>
+          <button class="pagination-btn icon-btn">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div> 
+
       </div>
-      <div class="cards-grid cards-products">
-        <article class="card product-card">
-          <h3><i class="fa-solid fa-laptop icon-primary"></i>Adikt@ Laptop Pro 15"</h3>
-          <ul>
-            <li><i class="fa-solid fa-microchip icon-primary icon-small"></i>Procesador Intel Core i7</li>
-            <li><i class="fa-solid fa-memory icon-primary icon-small"></i>16 GB RAM</li>
-            <li><i class="fa-solid fa-hard-drive icon-primary icon-small"></i>SSD 1 TB</li>
-            <li><i class="fa-solid fa-display icon-primary icon-small"></i>Pantalla Full HD</li>
-          </ul>
-          <a href="#" class="btn btn-outline product-cta">Ver detalles</a>
-        </article>
-        <article class="card product-card">
-          <h3><i class="fa-solid fa-desktop icon-primary"></i>Adikt@ Desktop Gaming X</h3>
-          <ul>
-            <li><i class="fa-solid fa-microchip icon-primary icon-small"></i>Procesador AMD Ryzen 7</li>
-            <li><i class="fa-solid fa-memory icon-primary icon-small"></i>32 GB RAM</li>
-            <li><i class="fa-solid fa-hard-drive icon-primary icon-small"></i>SSD 1 TB + HDD 2 TB</li>
-            <li><i class="fa-solid fa-gamepad icon-primary icon-small"></i>Tarjeta gráfica RTX 3070</li>
-          </ul>
-          <a href="#" class="btn btn-outline product-cta">Ver detalles</a>
-        </article>
-        <article class="card product-card">
-          <h3><i class="fa-solid fa-display icon-primary"></i>Adikt@ Monitor UltraWide</h3>
-          <ul>
-            <li><i class="fa-solid fa-tv icon-primary icon-small"></i>34 pulgadas UltraWide QHD</li>
-            <li><i class="fa-solid fa-sync-alt icon-primary icon-small"></i>144Hz Tasa de Refresco</li>
-            <li><i class="fa-solid fa-tint icon-primary icon-small"></i>Tecnología HDR</li>
-            <li><i class="fa-solid fa-ethernet icon-primary icon-small"></i>Puertos HDMI/DisplayPort</li>
-          </ul>
-          <a href="#" class="btn btn-outline product-cta">Ver detalles</a>
-        </article>
-        <article class="card product-card">
-          <h3><i class="fa-solid fa-keyboard icon-primary"></i>Adikt@ Teclado Mecánico RGB</h3>
-          <ul>
-            <li><i class="fa-solid fa-toggle-on icon-primary icon-small"></i>Switches Cherry MX Red</li>
-            <li><i class="fa-solid fa-lightbulb icon-primary icon-small"></i>Retroiluminación RGB</li>
-            <li><i class="fa-solid fa-grip-lines icon-primary icon-small"></i>Diseño ergonómico</li>
-            <li><i class="fa-solid fa-usb icon-primary icon-small"></i>Conexión USB-C</li>
-          </ul>
-          <a href="#" class="btn btn-outline product-cta">Ver detalles</a>
-        </article>
-      </div>
-    </section>
+    </div>
   </main>
 
   <custom-footer></custom-footer>
 
   <script src="components/navbar.js"></script>
   <script src="components/footer.js"></script>
-  
   <script src="assets/js/mobile-menu.js"></script>
 </body>
 </html>

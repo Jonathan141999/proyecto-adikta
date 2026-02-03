@@ -5,9 +5,11 @@
   padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
 body {
 
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   color: rgba(0, 0, 0, 0.85); 
   background-color: #fafafa; 
   line-height: 1.5715; 
@@ -15,6 +17,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 :root {
   --ant-primary-color: #1890ff; 
@@ -26,4 +30,5 @@ body {
   --ant-border-radius-base: 2px; 
   --ant-shadow-1-down: 0 2px 8px rgba(0, 0, 0, 0.15);
   --ant-shadow-2-down: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --site-transition: 180ms ease;
 }

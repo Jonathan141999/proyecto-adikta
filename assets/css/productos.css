@@ -1,0 +1,9 @@
+.hero-gradient {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://static.photos/technology/1200x630/35.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  .hero-gradient { height: 52vh; }
+}
