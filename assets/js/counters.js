@@ -1,4 +1,3 @@
-// Contadores animados estilo Ant Design
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".impact-card h3");
   let activated = false;
@@ -7,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach(counter => {
       const target = +counter.getAttribute("data-target");
       let current = 0;
-      const increment = target / 160; // Velocidad de animación
+      const increment = target / 160;
 
       const updateCounter = () => {
         current += increment;

@@ -7,7 +7,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="assets/css/common.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,52 +19,70 @@
   <custom-navbar></custom-navbar>
 
   <main>
-    <section class="page-header">
-      <h1>Contáctanos</h1>
-      <p>Estamos aquí para ayudarte con tus consultas, soporte y requerimientos comerciales.</p>
-    </section>
-
-    <section class="section">
-      <div class="two-columns">
-        <article>
-          <h2>Información de contacto</h2>
-          <ul class="contact-list">
-            <li><strong>Teléfono:</strong> 02 204-6510</li>
-            <li><strong>WhatsApp:</strong> +593 983868358</li>
-            <li><strong>Email:</strong> informacion@represmundial.com</li>
-            <li><strong>Horario:</strong> Lunes a Viernes, 08:00 a 17:00</li>
-          </ul>
-          <p>
-            También puedes escribirnos a través del siguiente formulario y uno de nuestros asesores
-            se pondrá en contacto contigo.
-          </p>
-        </article>
-
-        <article>
-          <h2>Formulario de contacto</h2>
-          <form class="contact-form">
-            <div class="form-group">
-              <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="asunto">Asunto</label>
-              <input type="text" id="asunto" name="asunto">
-            </div>
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-          </form>
-        </article>
+    <section class="hero hero-gradient hero-full contact-hero-blue">
+      <div class="hero-container">
+        <h1 class="hero-title">Ponte en Contacto</h1>
+        <p class="hero-subtitle">Expertos en tecnología a tu disposición. Cuéntanos cómo podemos ayudarte.</p>
       </div>
     </section>
 
+    <section class="section contact-section">
+      <div class="container contact-grid">
+        <div class="form-card">
+          <h3>Formulario de contacto</h3>
+          <p class="muted">Completa el siguiente formulario y te responderemos en menos de 24 horas.</p>
+
+          <form class="contact-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez">
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="juan@ejemplo.com">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?">
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Enviar mensaje <i class="fa-solid fa-arrow-right icon-space"></i></button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="location-col">
+          <div class="location-card">
+            <h4>Nuestra Ubicación</h4>
+            <div class="loc-item"><i class="fa-solid fa-phone"></i><div><small>TELÉFONO</small><div class="loc-value">02 2046 510</div></div></div>
+            <div class="loc-item"><i class="fa-brands fa-whatsapp"></i><div><small>CORREO</small><div class="loc-value">contacto@represmundial.com</div></div></div>
+            <div class="loc-item"><i class="fa-solid fa-clock"></i><div><small>HORARIO</small><div class="loc-value">Lun - Vie: 8:00am - 17:00pm</div></div></div>
+
+            <div class="map-placeholder">Mapa - Próximamente</div>
+          </div>
+
+          <div class="social-card">
+            <h5>Síguenos en redes</h5>
+            <div class="social-icons">
+              <a class="social-icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a class="social-icon" href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    
     <section class="section section-alt">
       <div class="section-title">
         <h2>Ubicación</h2>

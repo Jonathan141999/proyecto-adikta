@@ -3,5 +3,43 @@
 .two-columns article h2 {
     margin-bottom: 0.6rem;
   }
+ 
+/* Nosotros page styles */
+.hero-full { padding: 72px 0; }
+.hero-container { max-width: 1100px; margin: 0 auto; text-align: center; color: #fff; }
+.hero-title { font-size: 44px; margin: 0 0 12px; font-weight: 800; }
+.hero-subtitle { font-size: 16px; margin: 0 auto; max-width: 820px; opacity: .95; }
+
+.about-cards { margin-top: -60px; padding: 40px 16px 60px; position: relative; z-index: 3; }
+.two-column-cards { display: grid; grid-template-columns: 1fr 360px; gap: 28px; max-width: 1100px; margin: 0 auto; align-items: start; }
+
+.about-card { border-radius: 14px; padding: 22px; background: #fff; box-shadow: 0 10px 30px rgba(2,6,23,0.06); }
+.card-elevated { position: relative; }
+.card-tag { font-size: 12px; color: #6b7280; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; }
+
+.card-primary { background: linear-gradient(180deg,#0ea5e9,#0066d6); color: #fff; padding: 30px; }
+.card-primary .card-tag.light { color: rgba(255,255,255,0.85); }
+.card-primary h3 { margin-top: 6px; margin-bottom: 14px; }
+.value-list { list-style: none; padding: 0; margin: 0; }
+.value-list li { margin-bottom: 14px; }
+.value-list li span { display: block; color: rgba(255,255,255,0.92); opacity: .95; font-weight: 400; }
+
+/* replaced small images with stats + CTA */
+.about-stats { display:flex; gap:18px; margin-top: 18px; align-items:stretch; }
+.stat-item { background: #fff; padding: 12px 16px; border-radius: 10px; display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:96px; box-shadow: 0 8px 20px rgba(2,6,23,0.06); }
+.stat-value { font-size:1.4rem; font-weight:800; color: #0b63b8; }
+.stat-label { font-size:0.9rem; color:#475569; margin-top:6px; }
+.about-cta { padding:0.5rem 0.9rem; border-radius:8px; }
+
+@media (max-width:900px){
+  .about-stats{flex-wrap:wrap}
+  .stat-item{min-width:70px}
+}
+
+@media (max-width: 900px) {
+  .two-column-cards { grid-template-columns: 1fr; }
+  .about-cards { margin-top: 0; }
+  .hero-title { font-size: 32px; }
+}
   
  

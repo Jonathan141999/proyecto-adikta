@@ -1,4 +1,3 @@
-// Carrusel de Misión/Visión/Valores - Estilo Ant Design
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".mv-slide");
   const dots = document.querySelectorAll(".mv-dot");
@@ -16,32 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     isAnimating = true;
 
-    // Quitar slide actual
     slides[currentIndex].classList.remove("active");
     if (dots[currentIndex]) dots[currentIndex].classList.remove("active");
 
-    // Intervalo vacío para transición
     setTimeout(() => {
       currentIndex = newIndex;
 
       slides[currentIndex].classList.add("active");
       if (dots[currentIndex]) dots[currentIndex].classList.add("active");
 
-      // Permitir siguiente animación
       setTimeout(() => {
         isAnimating = false;
       }, 400);
     }, 200);
   }
 
-  // Dots
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
       changeSlide(index);
     });
   });
 
-  // Flechas
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
       const nextIndex = (currentIndex + 1) % slides.length;
@@ -56,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Swipe móvil
   let startX = 0;
   let endX = 0;
 
@@ -76,19 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isAnimating) return;
 
     if (swipeDistance > 0) {
-      // Swipe izquierda → siguiente
       const nextIndex = (currentIndex + 1) % slides.length;
       changeSlide(nextIndex);
     } else {
-      // Swipe derecha → anterior
       const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
       changeSlide(prevIndex);
     }
   }
-
-  // Auto-play opcional (comentado por defecto)
-  // setInterval(() => {
-  //   const nextIndex = (currentIndex + 1) % slides.length;
-  //   changeSlide(nextIndex);
-  // }, 5000);
 });

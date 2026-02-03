@@ -13,7 +13,6 @@ class CustomNavbar extends HTMLElement {
             <li><a href="index.html" class="${this.isActive('index.html')}">Inicio</a></li>
             <li><a href="productos.html" class="${this.isActive('productos.html')}">Productos</a></li>
             <li><a href="servicios.html" class="${this.isActive('servicios.html')}">Servicios</a></li>
-            <li><a href="soporte.html" class="${this.isActive('soporte.html')}">Soporte</a></li>
             <li><a href="nosotros.html" class="${this.isActive('nosotros.html')}">Nosotros</a></li>
             <li><a href="contacto.html" class="${this.isActive('contacto.html')}">Contacto</a></li>
           </ul>

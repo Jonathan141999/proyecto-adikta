@@ -7,8 +7,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/productos.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,7 +17,7 @@
 <body class="antialiased page-products">
   <custom-navbar></custom-navbar>
 
-  <section class="hero hero-gradient hero-full">
+  <section class="hero hero-gradient hero-full" style="background-image: url('assets/img/hero-productos.jpg');">
     <div class="hero-container">
       <h1 class="hero-title">Tecnología que Impulsa tu Mundo</h1>
       <p class="hero-subtitle">Descubre nuestra selección exclusiva de hardware premium diseñado para profesionales que no aceptan menos que la perfección.</p>
@@ -26,69 +27,6 @@
 
   <main class="container-lg main-content" id="catalog">
     <div class="catalog-layout">
-      <aside class="catalog-aside">
-        <div>
-          <h3 class="filter-title">Categoría</h3>
-          <ul class="filters-list">
-            <li class="filter-row">
-              <span class="filter-item">Laptops</span>
-              <span class="badge badge-muted">12</span>
-            </li>
-            <li class="filter-row">
-              <span class="filter-item active">Desktop PCs</span>
-              <span class="badge badge-primary">08</span>
-            </li>
-            <li class="filter-row">
-              <span class="filter-item">Monitores</span>
-              <span class="badge badge-muted">15</span>
-            </li>
-            <li class="filter-row">
-              <span class="filter-item">Periféricos</span>
-              <span class="badge badge-muted">24</span>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="filter-title">Rango de Precio</h3>
-          <input class="custom-range range-input" max="5000" min="0" step="100" type="range"/>
-          <div class="range-labels">
-            <span>$0</span>
-            <span>$5,000+</span>
-          </div>
-        </div> 
-        <div>
-          <h3 class="filter-title">Marca</h3>
-          <div class="filters-list">
-            <label class="filter-row">
-              <input checked class="filter-checkbox" type="checkbox" />
-              <span class="filter-item">Premium Tech</span>
-            </label>
-            <label class="filter-row">
-              <input class="filter-checkbox" type="checkbox" />
-              <span class="filter-item">Global Vision</span>
-            </label>
-            <label class="filter-row">
-              <input class="filter-checkbox" type="checkbox" />
-              <span class="filter-item">Adikt@ Series</span>
-            </label>
-          </div>
-        </div> 
-        <div>
-          <h3 class="filter-title">Valoración</h3>
-          <div class="filters-list">
-            <label class="filter-row">
-              <input class="filter-checkbox" type="checkbox" />
-              <div class="rating-stars">
-                <span class="material-symbols-outlined">star</span>
-                <span class="material-symbols-outlined">star</span>
-                <span class="material-symbols-outlined">star</span>
-                <span class="material-symbols-outlined">star</span>
-                <span class="material-symbols-outlined">star</span>
-              </div>
-            </label>
-          </div>
-        </div> 
-      </aside>
       <div class="catalog-content">
         <div class="section-header">
           <h2 class="section-heading">Selección Destacada</h2>
@@ -107,19 +45,126 @@
           <div class="product-card">
             <div class="product-media media-wrapper">
               <span class="badge badge-new">New</span>
-              <img alt="High-end Laptop" class="product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUo83onOQba5AB5b61AdFZ3-LpI_KWAsKw10t34yVHzEiPkICa13nhQtdovQNQwYvjMtlAgxMJJS8CO49iXMQgp12U1E8c4Qp9VvyyZsVxBbkpwWQBbCbIVNyrXuzFlITvWly29uTc52wOh2QMNhif_LhkbFDgRxpgzzLKJ8OZhbYFAlLXnMS7Id-BX5tTciIUqSohRk2TZHpM3KPsW2abh_6y_5P2tF21KhqHtPiNVncI5cAQhTTfsLRSYgDv6oWXuB_J8r6soPY" />
-              <div class="media-overlay"></div>
-              <button class="add-cart-btn">
-                <span class="material-symbols-outlined">add_shopping_cart</span>
-              </button>
-            </div> 
+              <img alt="High-end Laptop" class="product-image" src="assets/img/laptop.jpg" />
+            </div>
             <div class="card-body">
               <p class="product-category">Laptops</p>
               <h3 class="product-title">Adikt@ Laptop Pro 15"</h3>
-              <p class="product-price">$1,899.00</p> 
+              <ul class="product-features">
+                <li>Procesador Intel Core i5</li>
+                <li>8 GB RAM</li>
+                <li>SSD 512 GB</li>
+              </ul>
+              <p class="product-price">$1,899.00</p>
+              <a class="product-cta" href="productos.html">Ver detalles</a>
             </div>
           </div>
 
+          <div class="product-card">
+            <div class="product-media media-wrapper">
+              <img alt="Memoria RAM 16GB" class="product-image" src="assets/img/ram.jpg" />
+            </div>
+            <div class="card-body">
+              <p class="product-category">Memorias RAM</p>
+              <h3 class="product-title">DDR4 16GB 3200MHz</h3>
+              <ul class="product-features">
+                <li>16 GB (2x8GB)</li>
+                <li>Velocidad 3200 MHz</li>
+                <li>Latencia CL16</li>
+              </ul>
+              <p class="product-price">$69.00</p>
+              <a class="product-cta" href="productos.html">Ver detalles</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-media media-wrapper">
+              <img alt="SSD NVMe 1TB" class="product-image" src="assets/img/ssd.jpg" />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-body">
+              <p class="product-category">Almacenamiento</p>
+              <h3 class="product-title">SSD NVMe 1TB</h3>
+              <ul class="product-features">
+                <li>Interfaz NVMe PCIe</li>
+                <li>Lectura 3500 MB/s</li>
+                <li>Garantía 5 años</li>
+              </ul>
+              <p class="product-price">$129.00</p>
+              <a class="product-cta" href="productos.html">Ver detalles</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-media media-wrapper">
+              <img alt="HDD 2TB" class="product-image" src="assets/img/hdd.jpg" />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-body">
+              <p class="product-category">Almacenamiento</p>
+              <h3 class="product-title">HDD 2TB 7200RPM</h3>
+              <ul class="product-features">
+                <li>2 TB</li>
+                <li>Rotación 7200 RPM</li>
+                <li>Con cache de 256MB</li>
+              </ul>
+              <p class="product-price">$54.00</p>
+              <a class="product-cta" href="productos.html">Ver detalles</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-media media-wrapper">
+              <img alt="Fuente 650W" class="product-image" src="assets/img/psu.jpg" />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-body">
+              <p class="product-category">Fuentes</p>
+              <h3 class="product-title">PSU 650W Gold</h3>
+              <ul class="product-features">
+                <li>650W certificación Gold</li>
+                <li>Modular</li>
+                <li>Protecciones OVP/UVP/OPP</li>
+              </ul>
+              <p class="product-price">$89.00</p>
+              <a class="product-cta" href="productos.html">Ver detalles</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-media media-wrapper">
+              <img alt="Monitor 24 pulgadas" class="product-image" src="assets/img/monitor.jpg" />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-body">
+              <p class="product-category">Monitores</p>
+              <h3 class="product-title">Monitor 24" Full HD</h3>
+              <ul class="product-features">
+                <li>Pantalla Full HD</li>
+                <li>75Hz, IPS</li>
+                <li>Sin marco</li>
+              </ul>
+              <p class="product-price">$159.00</p>
+              <a class="product-cta" href="productos.html">Ver detalles</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-body">
+              <div class="product-media media-wrapper">
+              <img alt="Teclado mecánico" class="product-image" src="assets/img/keyboard.jpg" />
+              <div class="media-overlay"></div>
+            </div>
+              <p class="product-category">Periféricos</p>
+              <h3 class="product-title">Teclado mecánico RGB</h3>
+              <ul class="product-features">
+                <li>Switches táctiles</li>
+                <li>Retroiluminación RGB</li>
+                <li>Con reposamuñecas</li>
+              </ul>
+              <p class="product-price">$79.00</p>
+              <a class="product-cta" href="productos.html">Ver detalles</a>
+            </div>
+          </div>
         </div>
 
         <div class="pagination">
