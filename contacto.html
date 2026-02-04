@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Adikt@ PC</title>
+  <title data-i18n="page_title_contact">Contacto | Adikt@ PC</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -22,57 +22,57 @@
   <main>
     <section class="hero hero-gradient hero-full contact-hero-blue">
       <div class="hero-container">
-        <h1 class="hero-title">Ponte en Contacto</h1>
-        <p class="hero-subtitle">Expertos en tecnología a tu disposición. Cuéntanos cómo podemos ayudarte.</p>
+        <h1 class="hero-title" data-i18n="contact_hero_title">Ponte en Contacto</h1>
+        <p class="hero-subtitle" data-i18n="contact_hero_subtitle">Expertos en tecnología a tu disposición. Cuéntanos cómo podemos ayudarte.</p>
       </div>
     </section>
 
     <section class="section contact-section">
       <div class="container contact-grid">
         <div class="form-card">
-          <h3>Formulario de contacto</h3>
-          <p class="muted">Completa el siguiente formulario y te responderemos en menos de 24 horas.</p>
+          <h3 data-i18n="contact_form_title">Formulario de contacto</h3>
+          <p class="muted" data-i18n="contact_form_description">Completa el siguiente formulario y te responderemos en menos de 24 horas.</p>
 
           <form class="contact-form">
             <div class="form-grid">
               <div class="form-group">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez">
+                <label for="nombre" data-i18n="contact_form_name_label">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" data-i18n-placeholder="contact_form_name_placeholder" placeholder="Ej. Juan Pérez">
               </div>
               <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="juan@ejemplo.com">
+                <label for="email" data-i18n="contact_form_email_label">Correo electrónico</label>
+                <input type="email" id="email" name="email" data-i18n-placeholder="contact_form_email_placeholder" placeholder="juan@ejemplo.com">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="asunto">Asunto</label>
-              <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?">
+              <label for="asunto" data-i18n="contact_form_subject_label">Asunto</label>
+              <input type="text" id="asunto" name="asunto" data-i18n-placeholder="contact_form_subject_placeholder" placeholder="¿En qué podemos ayudarte?">
             </div>
 
             <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..."></textarea>
+              <label for="mensaje" data-i18n="contact_form_message_label">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="6" data-i18n-placeholder="contact_form_message_placeholder" placeholder="Escribe tu mensaje aquí..."></textarea>
             </div>
 
             <div>
-              <button type="submit" class="btn btn-primary">Enviar mensaje <i class="fa-solid fa-arrow-right icon-space"></i></button>
+              <button type="submit" class="btn btn-primary"><span data-i18n="contact_form_submit_button">Enviar mensaje</span> <i class="fa-solid fa-arrow-right icon-space"></i></button>
             </div>
           </form>
         </div>
 
         <aside class="location-col">
           <div class="location-card">
-            <h4>Nuestra Ubicación</h4>
-            <div class="loc-item"><i class="fa-solid fa-phone"></i><div><small>TELÉFONO</small><div class="loc-value">02 2046 510</div></div></div>
-            <div class="loc-item"><i class="fa-brands fa-whatsapp"></i><div><small>CORREO</small><div class="loc-value">contacto@represmundial.com</div></div></div>
-            <div class="loc-item"><i class="fa-solid fa-clock"></i><div><small>HORARIO</small><div class="loc-value">Lun - Vie: 8:00am - 17:00pm</div></div></div>
+            <h4 data-i18n="location_card_title">Nuestra Ubicación</h4>
+            <div class="loc-item"><i class="fa-solid fa-phone"></i><div><small data-i18n="location_phone_label">TELÉFONO</small><div class="loc-value">02 2046 510</div></div></div>
+            <div class="loc-item"><i class="fa-brands fa-whatsapp"></i><div><small data-i18n="location_email_label">CORREO</small><div class="loc-value">contacto@adikta.com</div></div></div>
+            <div class="loc-item"><i class="fa-solid fa-clock"></i><div><small data-i18n="location_hours_label">HORARIO</small><div class="loc-value" data-i18n="location_hours_value">Lun - Vie: 8:00am - 17:00pm</div></div></div>
 
-            <div class="map-placeholder">Mapa - Próximamente</div>
+    
           </div>
 
           <div class="social-card">
-            <h5>Síguenos en redes</h5>
+            <h5 data-i18n="social_card_title">Síguenos en redes</h5>
             <div class="social-icons">
               <a class="social-icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
               <a class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -88,46 +88,43 @@
       <div class="location-background-map"></div>
       <div class="location-content-card">
         <div class="location-left-col">
-          <span class="location-tag">NUESTRA RED</span>
-          <h2>Ubicación</h2>
-          <p>Próximamente encontrarás aquí un mapa interactivo con nuestra ubicación principal y puntos de atención. Por ahora, puedes comunicarte vía telefónica o correo para más detalles.</p>
+          <span class="location-tag" data-i18n="location_network_tag">NUESTRA RED</span>
+          <h2 data-i18n="location_section_title">Ubicación</h2>
+          <p data-i18n="location_section_description">Próximamente encontrarás aquí un mapa interactivo con nuestra ubicación principal y puntos de atención. Por ahora, puedes comunicarte vía telefónica o correo para más detalles.</p>
           <div class="location-contact-info">
             <div class="info-item">
               <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
               <div>
-                <span>Llámanos ahora</span>
-                <strong>+1 (234) 567-890</strong>
+                <span data-i18n="location_call_label">Llámanos ahora</span>
+                <strong>2046510</strong>
               </div>
             </div>
             <div class="info-item">
               <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
               <div>
-                <span>Escríbenos</span>
-                <strong>hola@nuestrocorreo.com</strong>
+                <span data-i18n="location_email_us_label">Escríbenos</span>
+                <strong>contacto@adikta.com</strong>
               </div>
             </div>
           </div>
         </div>
         <div class="location-right-col">
           <div class="office-info">
-            <h4><i class="fa-solid fa-building"></i> Oficina Central</h4>
-            <p><i class="fa-solid fa-location-dot"></i> Avenida de la Innovación 450, Piso 12, Distrito Tecnológico, Ciudad Central</p>
-            <small>Abierto de Lunes a Viernes (09:00 - 18:00)</small>
+            <h4 data-i18n="office_info_title"><i class="fa-solid fa-building"></i> Oficina Central</h4>
+            <p data-i18n="office_info_address"><i class="fa-solid fa-location-dot"></i> Rio San pedro y Rio conambo</p>
+            <small data-i18n="office_info_hours">Abierto de Lunes a Viernes (08:00 - 17:00)</small>
           </div>
           <div class="service-points">
-            <h4><i class="fa-solid fa-map-pin"></i> Puntos de Atención</h4>
+            <h4 data-i18n="service_points_title"><i class="fa-solid fa-map-pin"></i> Atención</h4>
             <div class="points-container">
               <div class="point-card">
-                <h5>Zona Norte</h5>
-                <p>Centro Comercial El Parque, Nivel 1</p>
+                <h5 data-i18n="service_point_north_title">Valle de Tumbaco</h5>
+                <p data-i18n="service_point_north_address">Empresa REPRESMUNDIAL CIA. LTDA.</p>
               </div>
-              <div class="point-card">
-                <h5>Zona Sur</h5>
-                <p>Boulevard Gastronómico, Local 4B</p>
-              </div>
+          
             </div>
           </div>
-          <a href="#" class="btn-directions"><i class="fa-solid fa-diamond-turn-right"></i> Obtener indicaciones</a>
+          <a href="#" class="btn-directions"><i class="fa-solid fa-diamond-turn-right"></i> <span data-i18n="get_directions_button">Obtener indicaciones</span></a>
         </div>
       </div>
     </section>
@@ -138,5 +135,6 @@
   <script src="components/navbar.js"></script>
   <script src="components/footer.js"></script>
   <script src="assets/js/mobile-menu.js"></script>
+  <script src="assets/js/lang.js"></script>
 </body>
 </html>
