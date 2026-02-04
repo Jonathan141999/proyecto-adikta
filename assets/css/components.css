@@ -382,15 +382,6 @@ a, button, input, select {
   opacity: 0.9;
 }
 
-.contact-list {
-  list-style: none;
-  margin-top: 16px;
-}
-
-.contact-list li + li {
-  margin-top: 12px;
-}
-
 .contact-form {
   background-color: #ffffff;
   padding: 24px;
@@ -398,6 +389,72 @@ a, button, input, select {
   box-shadow: var(--ant-shadow-1-down);
   border: 1px solid #f0f0f0;
 }
+
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; align-items: center; }
+.nav-item { position: relative; }
+.dropdown-toggle { display: inline-flex; align-items: center; gap: 0.5rem; color: inherit; text-decoration: none; cursor: pointer; }
+.dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; background: #ffffff; min-width: 320px; border-radius: 8px; box-shadow: 0 12px 40px rgba(2,6,23,0.12); padding: 0.5rem; display: none; z-index: 60; }
+.nav-item.open .dropdown-menu { display: block; }
+.alianzas-panel { width: auto; max-width: 360px; }
+.alianzas-content { display: block; }
+.alianzas-list { padding: 0.3rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.alliance-item { display: block; padding: 0.6rem 0.9rem; color: #475569; font-weight: 600; border-radius: 6px; transition: color 0.18s ease, transform 0.18s ease, background 0.18s ease; cursor: pointer; text-decoration: none; }
+.alliance-item.hover, .alliance-item:hover { color: var(--ant-primary-color); transform: translateX(6px); background: rgba(29,78,216,0.04); }
+
+.alianza-entry { padding: 0.25rem; border-radius: 6px; }
+.alianza-entry + .alianza-entry { margin-top: 0.35rem; }
+.alianza-entry:hover { background: rgba(29,78,216,0.03); }
+.alliance-info { font-size: 0.86rem; color: #6b7280; margin-top: 0.28rem; line-height: 1.25; }
+.alianza-entry .alliance-item { padding: 0.5rem 0.8rem; }
+
+/* PDF modal styles */
+.pdf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 20px;
+}
+.pdf-modal {
+  width: 100%;
+  max-width: 1100px;
+  height: calc(100% - 80px);
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-8px);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+  opacity: 0;
+}
+.pdf-modal.open { transform: translateY(0); opacity: 1; }
+.pdf-modal-close { position: absolute; right: 14px; top: 12px; z-index: 5; border: none; background: transparent; font-size: 22px; cursor: pointer; color: #111827; }
+.pdf-modal-body { flex: 1 1 auto; min-height: 0; }
+.pdf-iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+@media (max-width: 768px) {
+  .pdf-modal { max-width: 100%; height: calc(100% - 40px); border-radius: 4px; }
+  .pdf-modal-close { right: 8px; top: 8px; }
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu { position: static; width: 100%; box-shadow: none; border-radius: 0; }
+  .alianzas-content { grid-template-columns: 1fr; }
+}
+
+/* Navbar dropdown for Alianzas */
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; align-items: center; }
+.nav-item { position: relative; }
+.dropdown-toggle { display: inline-flex; align-items: center; gap: 0.5rem; color: inherit; text-decoration: none; cursor: pointer; }
+.dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; background: #ffffff; min-width: 220px; border-radius: 6px; box-shadow: 0 8px 30px rgba(2,6,23,0.08); padding: 0.5rem 0; display: none; z-index: 60; }
+  /* removed hover open to require click to open dropdowns */
+.dropdown-item { padding: 0.6rem 1rem; color: #475569; font-weight: 400; transition: all 0.18s ease; cursor: default; }
+.dropdown-item.alliance-item:hover { color: var(--ant-primary-color); transform: translateX(6px); background: rgba(29,78,216,0.03); }
+
 
 .form-group {
   margin-bottom: 24px;

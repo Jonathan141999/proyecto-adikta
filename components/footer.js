@@ -23,7 +23,7 @@ class CustomFooter extends HTMLElement {
             <ul>
               <li><i class="fa-solid fa-phone"></i> 02 2046 510</li>
               <li><i class="fa-brands fa-whatsapp"></i> +593 98 3868 358</li>
-              <li><i class="fa-solid fa-envelope"></i> contacto@adikta.com</li>
+              <li><i class="fa-solid fa-envelope"></i> informacion@adiktapc.net</li>
             </ul>
           </div>
 

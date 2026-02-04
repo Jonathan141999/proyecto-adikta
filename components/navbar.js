@@ -11,6 +11,23 @@ class CustomNavbar extends HTMLElement {
         <nav class="main-nav">
           <ul>
             <li><a href="index.html" class="${this.isActive('index.html')}" data-i18n="nav_home">Inicio</a></li>
+            <li class="nav-item dropdown" id="alianzasNav">
+              <a href="#" class="dropdown-toggle" id="alianzasToggle" aria-haspopup="true" aria-expanded="false">Alianzas <i class="fa-solid fa-caret-down"></i></a>
+              <div class="dropdown-menu alianzas-panel" role="menu" aria-label="Alianzas Panel">
+                <div class="alianzas-content">
+                  <div class="alianzas-list">
+                    <div class="alianza-entry">
+                      <a class="alliance-item" href="https://represmundial.com/" target="_blank" rel="noopener">REPRESMUNDIAL CIA. LTDA.</a>
+                      <div class="alliance-info">Rio Conambo e5-05 Quito - Ecuador<br>Teléfono: +593 2046510</div>
+                    </div>
+                    <div class="alianza-entry">
+                      <a class="alliance-item" href="https://tecintec.com/" target="_blank" rel="noopener">TECINTEC</a>
+                      <div class="alliance-info">1861 NW S River Dr, Miami, FL, 33125 Terrazas, Ofic.2301<br>Teléfonos:  +1 (645) 223-5620 / +593 2046796 </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li><a href="productos.html" class="${this.isActive('productos.html')}" data-i18n="nav_products">Productos</a></li>
             <li><a href="servicios.html" class="${this.isActive('servicios.html')}" data-i18n="nav_services">Servicios</a></li>
             <li><a href="nosotros.html" class="${this.isActive('nosotros.html')}" data-i18n="nav_about">Nosotros</a></li>
@@ -21,11 +38,44 @@ class CustomNavbar extends HTMLElement {
       </header>
     `;
 
-    // Ensure lang.js is loaded and functions are available
-    // And call setLanguage after the button is in the DOM
     if (typeof setLanguage === 'function' && typeof currentLang !== 'undefined') {
-      // Initialize language for the navbar content and the button itself
       setLanguage(currentLang);
+    }
+
+    const navRoot = this.querySelector('.main-nav');
+    const alianzasNav = this.querySelector('#alianzasNav');
+    const alianzasToggle = this.querySelector('#alianzasToggle');
+    const alianzasPanel = this.querySelector('.alianzas-panel');
+    if (alianzasNav && alianzasToggle && alianzasPanel) {
+      let alianzasCloseTimer = null;
+      function openAlianzas() { clearTimeout(alianzasCloseTimer); alianzasNav.classList.add('open'); alianzasToggle.setAttribute('aria-expanded', 'true'); }
+      function scheduleCloseAlianzas() { clearTimeout(alianzasCloseTimer); alianzasCloseTimer = setTimeout(function () { alianzasNav.classList.remove('open'); alianzasToggle.setAttribute('aria-expanded', 'false'); }, 450); }
+
+      alianzasToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (alianzasNav.classList.contains('open')) {
+          alianzasNav.classList.remove('open');
+          alianzasToggle.setAttribute('aria-expanded', 'false');
+        } else {
+          openAlianzas();
+        }
+      });
+
+      alianzasPanel.addEventListener('mouseenter', openAlianzas);
+      alianzasPanel.addEventListener('mouseleave', scheduleCloseAlianzas);
+
+      const items = alianzasPanel.querySelectorAll('.alliance-item');
+      items.forEach(function (it) {
+        it.addEventListener('mouseenter', function () { clearTimeout(alianzasCloseTimer); it.classList.add('hover'); });
+        it.addEventListener('mouseleave', function () { it.classList.remove('hover'); scheduleCloseAlianzas(); });
+      });
+
+      document.addEventListener('click', function (ev) {
+        if (!alianzasNav.contains(ev.target)) {
+          alianzasNav.classList.remove('open');
+          alianzasToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     }
   }
 
