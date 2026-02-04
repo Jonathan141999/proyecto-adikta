@@ -12,7 +12,7 @@ class CustomNavbar extends HTMLElement {
           <ul>
             <li><a href="index.html" class="${this.isActive('index.html')}" data-i18n="nav_home">Inicio</a></li>
             <li class="nav-item dropdown" id="alianzasNav">
-              <a href="#" class="dropdown-toggle" id="alianzasToggle" aria-haspopup="true" aria-expanded="false">Alianzas <i class="fa-solid fa-caret-down"></i></a>
+              <a href="#" class="dropdown-toggle" id="alianzasToggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav_alliances">Alianzas</span> <i class="fa-solid fa-caret-down"></i></a>
               <div class="dropdown-menu alianzas-panel" role="menu" aria-label="Alianzas Panel">
                 <div class="alianzas-content">
                   <div class="alianzas-list">
