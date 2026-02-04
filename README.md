@@ -4,7 +4,7 @@
 
 ---
 
-## 🎯 Sobre el Proyecto
+## Sobre el Proyecto
 
 Este proyecto web representa el lanzamiento oficial de la marca **ADIKTA** al mercado internacional. Surgido inicialmente como trabajo universitario, el proyecto evolucionó hasta convertirse en una iniciativa real y operativa: **la página web de ADIKTA está actualmente en producción**, sirviendo como plataforma digital oficial de la marca para clientes nacionales e internacionales.
 
@@ -12,7 +12,7 @@ ADIKTA es una marca ecuatoriana de tecnología con más de **11 años de experie
 
 ---
 
-## 📄 Páginas del Sitio
+## Páginas del Sitio
 
 | Página | Archivo | Descripción |
 |--------|---------|-------------|
@@ -25,7 +25,7 @@ ADIKTA es una marca ecuatoriana de tecnología con más de **11 años de experie
 
 ---
 
-## 🛠 Tecnologías
+## Tecnologías
 
 - **HTML5** — Estructura semántica
 - **Tailwind CSS** — Estilos y diseño responsivo
@@ -35,7 +35,7 @@ ADIKTA es una marca ecuatoriana de tecnología con más de **11 años de experie
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 proyecto-adikta/
@@ -57,7 +57,7 @@ proyecto-adikta/
 
 ---
 
-## ✨ Características Principales
+## Características Principales
 
 - **Soporte multidioma (ES/EN)** — Intercambio de idioma en la navegación mediante `lang.js`
 - **Componentes reutilizables** — `<custom-navbar>` y `<custom-footer>` como Web Components
@@ -70,7 +70,7 @@ proyecto-adikta/
 
 ---
 
-## 🚀 Cómo Ejecutar
+## Cómo Ejecutar
 
 1. Clonar o descargar el repositorio
 2. Abrir `index.html` en un navegador, o
@@ -78,13 +78,4 @@ proyecto-adikta/
 
 No se requieren dependencias adicionales; los estilos se cargan vía CDN (Tailwind, Font Awesome).
 
----
 
-## 📞 Contacto del Proyecto
-
-- **Correo:** informacion@adiktapc.net  
-- **Teléfono:** 02 2046 510  
-
----
-
-*© 2026 ADIKTA — Representaciones Internacionales REPRES MUNDIAL CÍA. LTDA. Todos los derechos reservados.*
