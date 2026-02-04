@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos | Adikt@ PC</title>
+  <title data-i18n="page_title_productos">Productos | Adikt@ PC</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -19,9 +19,9 @@
 
   <section class="hero hero-gradient hero-full" style="background-image: url('assets/img/hero-productos.jpg');">
     <div class="hero-container">
-      <h1 class="hero-title">Tecnología que Impulsa tu Mundo</h1>
-      <p class="hero-subtitle">Descubre nuestra selección exclusiva de hardware premium diseñado para profesionales que no aceptan menos que la perfección.</p>
-      <a href="#catalog" class="btn btn-primary hero-cta">Explorar Catálogo <span class="material-symbols-outlined icon-space">arrow_forward</span></a>
+      <h1 class="hero-title" data-i18n="products_hero_title">Tecnología que Impulsa tu Mundo</h1>
+      <p class="hero-subtitle" data-i18n="products_hero_subtitle">Descubre nuestra selección exclusiva de hardware premium diseñado para profesionales que no aceptan menos que la perfección.</p>
+      <a href="#catalog" class="btn btn-primary hero-cta"><span data-i18n="products_hero_cta">Explorar Catálogo</span> <span class="material-symbols-outlined icon-space">arrow_forward</span></a>
     </div>
   </section>
 
@@ -29,13 +29,13 @@
     <div class="catalog-layout">
       <div class="catalog-content">
         <div class="section-header">
-          <h2 class="section-heading">Selección Destacada</h2>
+          <h2 class="section-heading" data-i18n="products_section_title">Selección Destacada</h2>
           <div class="controls">
-            <span class="sort-label">Ordenar por:</span>
+            <span class="sort-label" data-i18n="products_sort_label">Ordenar por:</span>
             <select class="sort-select">
-              <option>Más recientes</option>
-              <option>Precio: Menor a Mayor</option>
-              <option>Precio: Mayor a Menor</option>
+              <option data-i18n="products_sort_recent">Más recientes</option>
+              <option data-i18n="products_sort_price_low">Precio: Menor a Mayor</option>
+              <option data-i18n="products_sort_price_high">Precio: Mayor a Menor</option>
             </select>
           </div>
         </div> 
@@ -48,15 +48,15 @@
               <img alt="High-end Laptop" class="product-image" src="assets/img/laptop.jpg" />
             </div>
             <div class="card-body">
-              <p class="product-category">Laptops</p>
-              <h3 class="product-title">Adikt@ Laptop Pro 15"</h3>
+              <p class="product-category" data-i18n="product_category_laptops">Laptops</p>
+              <h3 class="product-title" data-i18n="product_laptop_title">Adikt@ Laptop Pro 15"</h3>
               <ul class="product-features">
-                <li>Procesador Intel Core i5</li>
-                <li>8 GB RAM</li>
-                <li>SSD 512 GB</li>
+                <li data-i18n="laptop_spec1">Procesador Intel Core i5</li>
+                <li data-i18n="laptop_spec2">8 GB RAM</li>
+                <li data-i18n="laptop_spec3">SSD 512 GB</li>
               </ul>
               <p class="product-price">$1,899.00</p>
-              <a class="product-cta" href="productos.html">Ver detalles</a>
+              <a class="product-cta" href="productos.html" data-i18n="product_view_details">Ver detalles</a>
             </div>
           </div>
 
@@ -65,15 +65,15 @@
               <img alt="Memoria RAM 16GB" class="product-image" src="assets/img/ram.jpg" />
             </div>
             <div class="card-body">
-              <p class="product-category">Memorias RAM</p>
-              <h3 class="product-title">DDR4 16GB 3200MHz</h3>
+              <p class="product-category" data-i18n="product_category_ram">Memorias RAM</p>
+              <h3 class="product-title" data-i18n="product_ram_title">DDR4 16GB 3200MHz</h3>
               <ul class="product-features">
                 <li>16 GB (2x8GB)</li>
                 <li>Velocidad 3200 MHz</li>
                 <li>Latencia CL16</li>
               </ul>
               <p class="product-price">$69.00</p>
-              <a class="product-cta" href="productos.html">Ver detalles</a>
+              <a class="product-cta" href="productos.html" data-i18n="product_view_details">Ver detalles</a>
             </div>
           </div>
           <div class="product-card">
@@ -82,15 +82,15 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category">Almacenamiento</p>
-              <h3 class="product-title">SSD NVMe 1TB</h3>
+              <p class="product-category" data-i18n="product_category_storage">Almacenamiento</p>
+              <h3 class="product-title" data-i18n="product_ssd_title">SSD NVMe 1TB</h3>
               <ul class="product-features">
                 <li>Interfaz NVMe PCIe</li>
                 <li>Lectura 3500 MB/s</li>
                 <li>Garantía 5 años</li>
               </ul>
               <p class="product-price">$129.00</p>
-              <a class="product-cta" href="productos.html">Ver detalles</a>
+              <a class="product-cta" href="productos.html" data-i18n="product_view_details">Ver detalles</a>
             </div>
           </div>
 
@@ -100,15 +100,15 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category">Almacenamiento</p>
-              <h3 class="product-title">HDD 2TB 7200RPM</h3>
+              <p class="product-category" data-i18n="product_category_storage">Almacenamiento</p>
+              <h3 class="product-title" data-i18n="product_hdd_title">HDD 2TB 7200RPM</h3>
               <ul class="product-features">
                 <li>2 TB</li>
                 <li>Rotación 7200 RPM</li>
                 <li>Con cache de 256MB</li>
               </ul>
               <p class="product-price">$54.00</p>
-              <a class="product-cta" href="productos.html">Ver detalles</a>
+              <a class="product-cta" href="productos.html" data-i18n="product_view_details">Ver detalles</a>
             </div>
           </div>
 
@@ -118,15 +118,15 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category">Fuentes</p>
-              <h3 class="product-title">PSU 650W Gold</h3>
+              <p class="product-category" data-i18n="product_category_psu">Fuentes</p>
+              <h3 class="product-title" data-i18n="product_psu_title">PSU 650W Gold</h3>
               <ul class="product-features">
                 <li>650W certificación Gold</li>
                 <li>Modular</li>
                 <li>Protecciones OVP/UVP/OPP</li>
               </ul>
               <p class="product-price">$89.00</p>
-              <a class="product-cta" href="productos.html">Ver detalles</a>
+              <a class="product-cta" href="productos.html" data-i18n="product_view_details">Ver detalles</a>
             </div>
           </div>
 
@@ -136,15 +136,15 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category">Monitores</p>
-              <h3 class="product-title">Monitor 24" Full HD</h3>
+              <p class="product-category" data-i18n="product_category_monitors">Monitores</p>
+              <h3 class="product-title" data-i18n="product_monitor_title">Monitor 24" Full HD</h3>
               <ul class="product-features">
                 <li>Pantalla Full HD</li>
                 <li>75Hz, IPS</li>
                 <li>Sin marco</li>
               </ul>
               <p class="product-price">$159.00</p>
-              <a class="product-cta" href="productos.html">Ver detalles</a>
+              <a class="product-cta" href="productos.html" data-i18n="product_view_details">Ver detalles</a>
             </div>
           </div>
 
@@ -154,15 +154,15 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category">Periféricos</p>
-              <h3 class="product-title">Teclado mecánico RGB</h3>
+              <p class="product-category" data-i18n="product_category_peripherals">Periféricos</p>
+              <h3 class="product-title" data-i18n="product_keyboard_title">Teclado mecánico RGB</h3>
               <ul class="product-features">
                 <li>Switches táctiles</li>
                 <li>Retroiluminación RGB</li>
                 <li>Con reposamuñecas</li>
               </ul>
               <p class="product-price">$79.00</p>
-              <a class="product-cta" href="productos.html">Ver detalles</a>
+              <a class="product-cta" href="productos.html" data-i18n="product_view_details">Ver detalles</a>
             </div>
           </div>
         </div>
