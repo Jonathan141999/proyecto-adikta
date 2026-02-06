@@ -53,15 +53,22 @@ const translations = {
     "impact_card2_label": "Clientes corporativos",
     "impact_card3_label": "Proyectos realizados",
     "impact_card4_label": "Equipos tecnológicos vendidos",
-    "testimonials_title": "Lo que dicen nuestros clientes",
-    "testimonials_subtitle": "Conoce las experiencias de quienes confían en",
-    "testimonials_subtitle_strong": "Adikt@ PC",
-    "testimonial1_role": "Director de Tecnologías de la Información (CIO) | Ministerio de Salud Pública (MSP)",
-    "testimonial1_quote": "\"Necesitábamos estandarizar infraestructura y asegurar continuidad operativa. El equipo llegó con diagnóstico claro, propuestas aterrizadas y ejecución impecable. Cumplieron plazos, documentaron todo y dejaron soporte funcionando de verdad. Se nota cuando un proveedor entiende misión crítica\".",
-    "testimonial2_role": "Coordinadora Nacional de Transformación Digital | Ministerio de Relaciones Exteriores y Movilidad Humana",
-    "testimonial2_quote": "\"El principal desafío fue integrar procesos, tecnología y equipos en un entorno con alta dependencia operativa. El equipo logró ordenar el proyecto de principio a fin: diagnóstico, implementación y acompañamiento continuo. Se involucraron más allá de la entrega, asegurando adopción real y estabilidad en los servicios críticos\".",
-    "testimonial3_role": "Coordinador de Infraestructura Tecnológica | CELEC EP – Unidad Cuenca",
-    "testimonial3_quote": "\"El equipo técnico de REPRESMUNDIAL CIA. LTDA. demostró en todo momento un alto nivel de profesionalismo y un trato respetuoso hacia nuestro personal. Trabajaron con orden, cumpliendo protocolos y manteniendo una comunicación clara durante toda la ejecución. Es un proveedor confiable, que entiende la criticidad operativa y actúa con responsabilidad\".",
+    "testimonials_v2_small_title": "TESTIMONIOS Y CASOS DE ÉXITO",
+    "testimonials_v2_title": "Experiencias de nuestros aliados.",
+    "testimonials_v2_description": "Descubre cómo hemos impulsado el éxito de diversas empresas, transformando desafíos operativos en ventajas competitivas mediante soluciones tecnológicas de vanguardia.",
+    "testimonial_v2_main_quote": "\\"Nuestra colaboración estratégica con el equipo permitió una optimización sin precedentes en la cadena de suministro. El enfoque consultivo y la ejecución técnica impecable aseguraron el retorno de inversión en tiempo récord.\\"",
+    "testimonial_v2_main_author_name": "Ing. Roberto Méndez",
+    "testimonial_v2_main_author_title": "Director de Operaciones | Corporación Regional",
+    "testimonial_v2_side1_quote": "\\"Logramos unificar nuestra infraestructura bajo estándares internacionales de seguridad, garantizando la escalabilidad que nuestro crecimiento demandaba.\\"",
+    "testimonial_v2_side1_author_name": "Sofía Martínez",
+    "testimonial_v2_side1_author_title": "CHIEF TECHNOLOGY OFFICER | GLOBAL FINTECH",
+    "testimonial_v2_side2_quote": "\\"Más que un proveedor, encontramos un socio estratégico que entiende las complejidades del mercado actual y responde con agilidad y precisión técnica.\\"",
+    "testimonial_v2_side2_author_name": "Juan Pablo Ferro",
+    "testimonial_v2_side2_author_title": "GERENTE GENERAL | LOGÍSTICA AVANZADA",
+    "testimonials_v2_companies_title": "EMPRESAS QUE IMPULSAN EL CAMBIO",
+    "testimonials_v2_company1": "INDUSTRIA FARMACÉUTICA",
+    "testimonials_v2_company2": "SECTOR ENERGÉTICO",
+    "testimonials_v2_company3": "SERVICIOS FINANCIEROS",
     "trust_title": "Marca ecuatoriana con respaldo",
     "trust_item1": "Más de 11 años en el mercado.",
     "trust_item2": "Soporte técnico especializado.",
@@ -170,12 +177,12 @@ const translations = {
     "product_category_psu": "Fuentes",
     "product_category_monitors": "Monitores",
     "product_category_peripherals": "Periféricos",
-    "product_laptop_title": "Adikt@ Laptop Pro 15\"",
+    "product_laptop_title": "Adikt@ Laptop Pro 15\\"",
     "product_ram_title": "DDR4 16GB 3200MHz",
     "product_ssd_title": "SSD NVMe 1TB",
     "product_hdd_title": "HDD 2TB 7200RPM",
     "product_psu_title": "PSU 650W Gold",
-    "product_monitor_title": "Monitor 24\" Full HD",
+    "product_monitor_title": "Monitor 24\\" Full HD",
     "product_keyboard_title": "Teclado mecánico RGB",
     "product_view_details": "Ver detalles",
     "page_title_servicios": "Servicios | Adikt@ PC",
@@ -256,15 +263,22 @@ const translations = {
     "impact_card2_label": "Corporate clients",
     "impact_card3_label": "Projects completed",
     "impact_card4_label": "Technology equipment sold",
-    "testimonials_title": "What our clients say",
-    "testimonials_subtitle": "Learn about the experiences of those who trust in",
-    "testimonials_subtitle_strong": "Adikt@ PC",
-    "testimonial1_role": "Director of Information Technologies (CIO) | Ministry of Public Health (MSP)",
-    "testimonial1_quote": "\"We needed to standardize infrastructure and ensure operational continuity. The team arrived with a clear diagnosis, grounded proposals and impeccable execution. They met deadlines, documented everything and left support really working. It shows when a provider understands critical mission.\"",
-    "testimonial2_role": "National Coordinator of Digital Transformation | Ministry of Foreign Affairs and Human Mobility",
-    "testimonial2_quote": "\"The main challenge was to integrate processes, technology and teams in an environment with high operational dependence. The team managed to organize the project from beginning to end: diagnosis, implementation and continuous support. They got involved beyond delivery, ensuring real adoption and stability in critical services.\"",
-    "testimonial3_role": "Coordinator of Technological Infrastructure | CELEC EP – Cuenca Unit",
-    "testimonial3_quote": "\"The technical team of REPRESMUNDIAL CIA. LTDA. demonstrated at all times a high level of professionalism and a respectful treatment towards our staff. They worked in order, complying with protocols and maintaining a clear communication throughout the execution. It is a reliable provider, who understands operational criticality and acts responsibly.\"",
+    "testimonials_v2_small_title": "TESTIMONIALS AND SUCCESS STORIES",
+    "testimonials_v2_title": "Experiences of our allies.",
+    "testimonials_v2_description": "Discover how we have driven the success of various companies, transforming operational challenges into competitive advantages through cutting-edge technological solutions.",
+    "testimonial_v2_main_quote": "\\"Our strategic collaboration with the team allowed for unprecedented optimization in the supply chain. The consultative approach and impeccable technical execution ensured a record time return on investment.\\"",
+    "testimonial_v2_main_author_name": "Ing. Roberto Méndez",
+    "testimonial_v2_main_author_title": "Operations Director | Regional Corporation",
+    "testimonial_v2_side1_quote": "\\"We managed to unify our infrastructure under international security standards, guaranteeing the scalability that our growth demanded.\\"",
+    "testimonial_v2_side1_author_name": "Sofía Martínez",
+    "testimonial_v2_side1_author_title": "CHIEF TECHNOLOGY OFFICER | GLOBAL FINTECH",
+    "testimonial_v2_side2_quote": "\\"More than a provider, we found a strategic partner who understands the complexities of the current market and responds with agility and technical precision.\\"",
+    "testimonial_v2_side2_author_name": "Juan Pablo Ferro",
+    "testimonial_v2_side2_author_title": "GENERAL MANAGER | ADVANCED LOGISTICS",
+    "testimonials_v2_companies_title": "COMPANIES DRIVING CHANGE",
+    "testimonials_v2_company1": "PHARMACEUTICAL INDUSTRY",
+    "testimonials_v2_company2": "ENERGY SECTOR",
+    "testimonials_v2_company3": "FINANCIAL SERVICES",
     "trust_title": "Ecuadorian brand with backing",
     "trust_item1": "More than 11 years in the market.",
     "trust_item2": "Specialized technical support.",
@@ -324,130 +338,6 @@ const translations = {
     "about_stat_projects": "Projects",
     "about_cta_work": "Work with us",
     "about_tag_proposal": "OUR PROPOSAL",
-    "about_proposal_title": "Solutions designed for tomorrow",
-    "about_proposal_item1_title": "Pro Equipment",
-    "about_proposal_item1_desc": "Designed for study, work, and entertainment.",
-    "about_proposal_item2_title": "Real Warranty",
-    "about_proposal_item2_desc": "Official technical service and clear warranties on every component.",
-    "about_proposal_item3_title": "Support",
-    "about_proposal_item3_desc": "Direct support to distributors and end customers.",
-    "mission_badge": "MISSION",
-    "mission_text": "Provide reliable and accessible technological solutions that drive the growth of people, businesses, and institutions. Supply quality equipment with specialized support and clear warranties, accompanying our clients at every stage of their digital transformation.",
-    "vision_badge": "VISION",
-    "vision_text": "To be a reference brand in the Ecuadorian technology market, recognized for its quality, innovation, and after-sales service. We aspire to be the preferred strategic partner for companies seeking reliable technology and comprehensive solutions.",
-    "values_badge": "VALUES",
-    "values_text": "Commitment: We deliver on what we promise. Responsibility: We act with integrity and transparency. Innovation: We constantly seek to improve and adapt. Closeness: We maintain a close and personalized relationship with each client.",
-    "contact_us_title": "Contact Us",
-    "contact_us_subtitle": "Interested in working with us or have any questions?",
-    "contact_us_text": "We are always looking for new talent and collaboration opportunities. If you would like more information, feel free to get in touch.",
-    "contact_us_button": "Contact Us",
-    "page_title_productos": "Products | Adikt@ PC",
-    "products_hero_title": "Technology that Powers Your World",
-    "products_hero_subtitle": "Discover our exclusive selection of premium hardware designed for professionals who accept nothing less than perfection.",
-    "products_hero_cta": "Explore Catalog",
-    "products_section_title": "Featured Selection",
-    "products_sort_label": "Sort by:",
-    "products_sort_recent": "Most recent",
-    "products_sort_price_low": "Price: Low to High",
-    "products_sort_price_high": "Price: High to Low",
-    "product_category_laptops": "Laptops",
-    "product_category_ram": "RAM Memory",
-    "product_category_storage": "Storage",
-    "product_category_psu": "Power Supplies",
-    "product_category_monitors": "Monitors",
-    "product_category_peripherals": "Peripherals",
-    "product_laptop_title": "Adikt@ Laptop Pro 15\"",
-    "product_ram_title": "DDR4 16GB 3200MHz",
-    "product_ssd_title": "SSD NVMe 1TB",
-    "product_hdd_title": "HDD 2TB 7200RPM",
-    "product_psu_title": "PSU 650W Gold",
-    "product_monitor_title": "24\" Full HD Monitor",
-    "product_keyboard_title": "RGB Mechanical Keyboard",
-    "product_view_details": "View details",
-    "page_title_servicios": "Services | Adikt@ PC",
-    "services_hero_tag": "DIGITAL EXPERTISE",
-    "services_hero_title": "OUR SERVICES",
-    "services_hero_subtitle": "We transform conventional infrastructures into intelligent digital ecosystems with a disruptive and asymmetric approach.",
-    "services_hero_cta": "Explore solutions",
-    "service1_number": "01",
-    "service1_title": "Specialized Technical Support",
-    "service1_description": "We don't just solve problems, we optimize your workflow. Our hybrid assistance ensures that your technology is an engine, not an obstacle.",
-    "service1_link": "See more",
-    "service2_number": "02",
-    "service2_title": "Proactive Cybersecurity",
-    "service2_description": "360-degree digital shielding. We use predictive intelligence to neutralize threats before they affect your critical infrastructure.",
-    "service2_link": "See more",
-    "service3_number": "03",
-    "service3_title": "Cloud Native Solutions",
-    "service3_description": "We migrate your business to the cloud with scalable architectures. Implementation of SaaS, IaaS, and hybrid environments designed for massive growth.",
-    "service3_link": "See more",
-    "service4_number": "04",
-    "service4_title": "Consulting and Outsourcing",
-    "service4_description": "Outsource your IT department with high-level experts. Technology strategy that perfectly aligns with your business objectives.",
-    "service4_link": "See more",
-    "cta_title": "Ready to break the mold?",
-    "cta_subtitle": "Let's talk about how our asymmetric vision can power your next great IT solution.",
-    "cta_button1": "START PROJECT",
-    "cta_button2": "LEARN MORE"
-  }
-};
-
-let currentLang = localStorage.getItem('lang') || 'es'; // Default to Spanish
-
-function setLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem('lang', lang);
-
-  // Text content (titles, labels, etc.)
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[currentLang] && translations[currentLang][key]) {
-      if (element.tagName.toLowerCase() === 'title') {
-        document.title = translations[currentLang][key];
-      } else {
-        element.textContent = translations[currentLang][key];
-      }
-    }
-  });
-
-  // Placeholders (inputs, textareas) – allow elements that ONLY have data-i18n-placeholder
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-    const placeholderKey = element.getAttribute('data-i18n-placeholder');
-    if (placeholderKey && translations[currentLang] && translations[currentLang][placeholderKey]) {
-      element.setAttribute('placeholder', translations[currentLang][placeholderKey]);
-    }
-  });
-  // Update button text
-  const langSwitchButton = document.getElementById('langSwitch');
-  if (langSwitchButton) {
-    langSwitchButton.textContent = currentLang === 'es' ? 'EN' : 'ES';
-  }
-}
-
-function initLanguageButton() {
-  const langSwitchButton = document.getElementById('langSwitch');
-  if (langSwitchButton) {
-    // Remove existing listeners to avoid duplicates
-    const newButton = langSwitchButton.cloneNode(true);
-    langSwitchButton.parentNode.replaceChild(newButton, langSwitchButton);
-    
-    // Set button text
-    newButton.textContent = currentLang === 'es' ? 'EN' : 'ES';
-    
-    // Add click listener
-    newButton.addEventListener('click', () => {
-      const newLang = currentLang === 'es' ? 'en' : 'es';
-      setLanguage(newLang);
-    });
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  setLanguage(currentLang);
-  initLanguageButton();
-  
-  // Also check after a short delay in case navbar creates button dynamically
-  setTimeout(() => {
-    initLanguageButton();
-  }, 100);
-});
+    .
+    .
+    .

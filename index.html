@@ -9,6 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/testimonials-v2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -182,82 +183,68 @@
       </div>
     </section>
 
-    <section class="testimonials" id="testimonios">
-      <div class="testimonials-container">
-        <h2 class="testimonials-subtitle-red" data-i18n="testimonials_title">Lo que dicen nuestros clientes</h2>
-        <p class="testimonials-subtitle" data-i18n="testimonials_subtitle">
-          Conoce las experiencias de quienes confían en <strong data-i18n="testimonials_subtitle_strong">Adikt@ PC</strong>
-        </p>
-
-        <div class="testimonials-cards">
-          <div class="testimonial-card">
-            <div class="avatar">
-              <i class="fa-solid fa-user avatar-icon"></i>
+    <section class="section testimonials-section-v2">
+      <div class="testimonials-container-v2">
+        <div class="testimonial-main">
+          <p class="testimonial-subtitle-alt" data-i18n="testimonials_v2_small_title">TESTIMONIOS Y CASOS DE ÉXITO</p>
+          <h2 class="testimonial-title-alt" data-i18n="testimonials_v2_title">Experiencias de nuestros aliados.</h2>
+          <p class="testimonial-description" data-i18n="testimonials_v2_description">Descubre cómo hemos impulsado el éxito de diversas empresas, transformando desafíos operativos en ventajas competitivas mediante soluciones tecnológicas de vanguardia.</p>
+          <div class="testimonial-card-large">
+            <span class="quote-icon">"</span>
+            <p class="quote-text" data-i18n="testimonial_v2_main_quote">"Nuestra colaboración estratégica con el equipo permitió una optimización sin precedentes en la cadena de suministro. El enfoque consultivo y la ejecución técnica impecable aseguraron el retorno de inversión en tiempo récord."</p>
+            <div class="author-info">
+              <div class="author-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <p class="author-name" data-i18n="testimonial_v2_main_author_name">Ing. Roberto Méndez</p>
+                <p class="author-title" data-i18n="testimonial_v2_main_author_title">Director de Operaciones | Corporación Regional</p>
+              </div>
             </div>
-
-            <h3>Andrés C.</h3>
-            <span class="role" data-i18n="testimonial1_role">
-              Director de Tecnologías de la Información (CIO) |
-              Ministerio de Salud Pública (MSP)
-            </span>
-
-            <p class="quote" data-i18n="testimonial1_quote">
-              "Necesitábamos estandarizar infraestructura
-              y asegurar continuidad operativa.
-              El equipo llegó con diagnóstico claro, propuestas
-              aterrizadas y ejecución impecable. Cumplieron
-              plazos, documentaron todo y dejaron soporte
-              funcionando de verdad. Se nota cuando
-              un proveedor entiende misión crítica".
-            </p>
           </div>
-
-          <div class="testimonial-card">
-            <div class="avatar">
-              <i class="fa-solid fa-user avatar-icon"></i>
+        </div>
+        <div class="testimonials-sidebar">
+          <div class="testimonial-card-small">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
             </div>
-
-            <h3>Carolina M.</h3>
-            <span class="role" data-i18n="testimonial2_role">
-              Coordinadora Nacional de Transformación Digital |
-              Ministerio de Relaciones Exteriores y Movilidad Humana
-            </span>
-
-            <p class="quote" data-i18n="testimonial2_quote">
-              "El principal desafío fue integrar procesos,
-              tecnología y equipos en un entorno con alta
-              dependencia operativa. El equipo logró ordenar
-              el proyecto de principio a fin: diagnóstico,
-              implementación y acompañamiento continuo.
-              Se involucraron más allá de la entrega,
-              asegurando adopción real y estabilidad
-              en los servicios críticos".
-            </p>
-
+            <p class="quote-text-small" data-i18n="testimonial_v2_side1_quote">"Logramos unificar nuestra infraestructura bajo estándares internacionales de seguridad, garantizando la escalabilidad que nuestro crecimiento demandaba."</p>
+            <div class="author-info-small">
+              <div class="author-avatar-small initial-avatar">SM</div>
+              <div>
+                <p class="author-name-small" data-i18n="testimonial_v2_side1_author_name">Sofía Martínez</p>
+                <p class="author-title-small" data-i18n="testimonial_v2_side1_author_title">CHIEF TECHNOLOGY OFFICER | GLOBAL FINTECH</p>
+              </div>
+            </div>
           </div>
-
-          <div class="testimonial-card">
-            <div class="avatar">
-              <i class="fa-solid fa-user avatar-icon"></i>
+          <div class="testimonial-card-small">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
             </div>
-
-            <h3>Ricardo L.</h3>
-            <span class="role" data-i18n="testimonial3_role">
-              Coordinador de Infraestructura Tecnológica |
-              CELEC EP – Unidad Cuenca
-            </span>
-
-            <p class="quote" data-i18n="testimonial3_quote">
-              "El equipo técnico de REPRESMUNDIAL CIA. LTDA.
-              demostró en todo momento un alto nivel de
-              profesionalismo y un trato respetuoso hacia
-              nuestro personal. Trabajaron con orden,
-              cumpliendo protocolos y manteniendo una
-              comunicación clara durante toda la ejecución.
-              Es un proveedor confiable, que entiende la
-              criticidad operativa y actúa con responsabilidad".
-            </p>
-
+            <p class="quote-text-small" data-i18n="testimonial_v2_side2_quote">"Más que un proveedor, encontramos un socio estratégico que entiende las complejidades del mercado actual y responde con agilidad y precisión técnica."</p>
+            <div class="author-info-small">
+              <div class="author-avatar-small initial-avatar">JP</div>
+              <div>
+                <p class="author-name-small" data-i18n="testimonial_v2_side2_author_name">Juan Pablo Ferro</p>
+                <p class="author-title-small" data-i18n="testimonial_v2_side2_author_title">GERENTE GENERAL | LOGÍSTICA AVANZADA</p>
+              </div>
+            </div>
+          </div>
+          <div class="companies-section">
+            <h3 class="companies-title" data-i18n="testimonials_v2_companies_title">EMPRESAS QUE IMPULSAN EL CAMBIO</h3>
+            <div class="company-buttons">
+              <button class="btn btn-outline" data-i18n="testimonials_v2_company1">INDUSTRIA FARMACÉUTICA</button>
+              <button class="btn btn-outline" data-i18n="testimonials_v2_company2">SECTOR ENERGÉTICO</button>
+              <button class="btn btn-outline" data-i18n="testimonials_v2_company3">SERVICIOS FINANCIEROS</button>
+            </div>
           </div>
         </div>
       </div>
