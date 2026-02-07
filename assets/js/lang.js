@@ -12,6 +12,7 @@ const translations = {
     "hero_tag": "Marca ecuatoriana de tecnología para el mundo",
     "hero_title": "Adikt@ PC – Tecnología confiable para tu día a día",
     "hero_subtitle": "Más de 11 años de experiencia brindando soluciones en cómputo a nivel nacional para hogar, educación y negocios.",
+    "hero_commercial_reach": "Nuestros productos se comercializan en Estados Unidos, Ecuador, Colombia y Perú.",
     "hero_btn_products": "Ver productos",
     "hero_btn_service": "Servicio técnico",
     "solutions_title": "Nuestras soluciones",
@@ -56,13 +57,13 @@ const translations = {
     "testimonials_v2_small_title": "TESTIMONIOS Y CASOS DE ÉXITO",
     "testimonials_v2_title": "Experiencias de nuestros aliados.",
     "testimonials_v2_description": "Descubre cómo hemos impulsado el éxito de diversas empresas, transformando desafíos operativos en ventajas competitivas mediante soluciones tecnológicas de vanguardia.",
-    "testimonial_v2_main_quote": "\\"Nuestra colaboración estratégica con el equipo permitió una optimización sin precedentes en la cadena de suministro. El enfoque consultivo y la ejecución técnica impecable aseguraron el retorno de inversión en tiempo récord.\\"",
+    "testimonial_v2_main_quote": "\"Nuestra colaboración estratégica con el equipo permitió una optimización sin precedentes en la cadena de suministro. El enfoque consultivo y la ejecución técnica impecable aseguraron el retorno de inversión en tiempo récord.\"",
     "testimonial_v2_main_author_name": "Ing. Roberto Méndez",
     "testimonial_v2_main_author_title": "Director de Operaciones | Corporación Regional",
-    "testimonial_v2_side1_quote": "\\"Logramos unificar nuestra infraestructura bajo estándares internacionales de seguridad, garantizando la escalabilidad que nuestro crecimiento demandaba.\\"",
+    "testimonial_v2_side1_quote": "\"Logramos unificar nuestra infraestructura bajo estándares internacionales de seguridad, garantizando la escalabilidad que nuestro crecimiento demandaba.\"",
     "testimonial_v2_side1_author_name": "Sofía Martínez",
     "testimonial_v2_side1_author_title": "CHIEF TECHNOLOGY OFFICER | GLOBAL FINTECH",
-    "testimonial_v2_side2_quote": "\\"Más que un proveedor, encontramos un socio estratégico que entiende las complejidades del mercado actual y responde con agilidad y precisión técnica.\\"",
+    "testimonial_v2_side2_quote": "\"Más que un proveedor, encontramos un socio estratégico que entiende las complejidades del mercado actual y responde con agilidad y precisión técnica.\"",
     "testimonial_v2_side2_author_name": "Juan Pablo Ferro",
     "testimonial_v2_side2_author_title": "GERENTE GENERAL | LOGÍSTICA AVANZADA",
     "testimonials_v2_companies_title": "EMPRESAS QUE IMPULSAN EL CAMBIO",
@@ -177,14 +178,33 @@ const translations = {
     "product_category_psu": "Fuentes",
     "product_category_monitors": "Monitores",
     "product_category_peripherals": "Periféricos",
-    "product_laptop_title": "Adikt@ Laptop Pro 15\\"",
+    "product_laptop_title": "Adikt@ Laptop Pro 15\"",
     "product_ram_title": "DDR4 16GB 3200MHz",
     "product_ssd_title": "SSD NVMe 1TB",
     "product_hdd_title": "HDD 2TB 7200RPM",
     "product_psu_title": "PSU 650W Gold",
-    "product_monitor_title": "Monitor 24\\" Full HD",
+    "product_monitor_title": "Monitor 24\" Full HD",
     "product_keyboard_title": "Teclado mecánico RGB",
     "product_view_details": "Ver detalles",
+    "ram_spec1": "16 GB (2x8GB)",
+    "ram_spec2": "Velocidad 3200 MHz",
+    "ram_spec3": "Latencia CL16",
+    "ssd_spec1": "Interfaz NVMe PCIe",
+    "ssd_spec2": "Lectura 3500 MB/s",
+    "ssd_spec3": "Garantía 5 años",
+    "hdd_spec1": "2 TB",
+    "hdd_spec2": "Rotación 7200 RPM",
+    "hdd_spec3": "Con cache de 256MB",
+    "psu_spec1": "650W certificación Gold",
+    "psu_spec2": "Modular",
+    "psu_spec3": "Protecciones OVP/UVP/OPP",
+    "monitor_spec1": "Pantalla Full HD",
+    "monitor_spec2": "75Hz, IPS",
+    "monitor_spec3": "Sin marco",
+    "keyboard_spec1": "Switches táctiles",
+    "keyboard_spec2": "Retroiluminación RGB",
+    "keyboard_spec3": "Con reposamuñecas",
+    "product_ram_price": "$69.00",
     "page_title_servicios": "Servicios | Adikt@ PC",
     "services_hero_tag": "EXPERTISE DIGITAL",
     "services_hero_title": "NUESTROS SERVICIOS",
@@ -222,6 +242,7 @@ const translations = {
     "hero_tag": "Ecuadorian technology brand for the world.",
     "hero_title": "Adikt@ PC – Reliable technology for your daily life",
     "hero_subtitle": "More than 11 years of experience providing computing solutions nationwide for home, education, and business.",
+    "hero_commercial_reach": "Our products are commercialized in the United States, Ecuador, Colombia and Peru.",
     "hero_btn_products": "View products",
     "hero_btn_service": "Technical service",
     "solutions_title": "Our Solutions",
@@ -266,13 +287,13 @@ const translations = {
     "testimonials_v2_small_title": "TESTIMONIALS AND SUCCESS STORIES",
     "testimonials_v2_title": "Experiences of our allies.",
     "testimonials_v2_description": "Discover how we have driven the success of various companies, transforming operational challenges into competitive advantages through cutting-edge technological solutions.",
-    "testimonial_v2_main_quote": "\\"Our strategic collaboration with the team allowed for unprecedented optimization in the supply chain. The consultative approach and impeccable technical execution ensured a record time return on investment.\\"",
+    "testimonial_v2_main_quote": "\"Our strategic collaboration with the team allowed for unprecedented optimization in the supply chain. The consultative approach and impeccable technical execution ensured a record time return on investment.\"",
     "testimonial_v2_main_author_name": "Ing. Roberto Méndez",
     "testimonial_v2_main_author_title": "Operations Director | Regional Corporation",
-    "testimonial_v2_side1_quote": "\\"We managed to unify our infrastructure under international security standards, guaranteeing the scalability that our growth demanded.\\"",
+    "testimonial_v2_side1_quote": "\"We managed to unify our infrastructure under international security standards, guaranteeing the scalability that our growth demanded.\"",
     "testimonial_v2_side1_author_name": "Sofía Martínez",
     "testimonial_v2_side1_author_title": "CHIEF TECHNOLOGY OFFICER | GLOBAL FINTECH",
-    "testimonial_v2_side2_quote": "\\"More than a provider, we found a strategic partner who understands the complexities of the current market and responds with agility and technical precision.\\"",
+    "testimonial_v2_side2_quote": "\"More than a provider, we found a strategic partner who understands the complexities of the current market and responds with agility and technical precision.\"",
     "testimonial_v2_side2_author_name": "Juan Pablo Ferro",
     "testimonial_v2_side2_author_title": "GENERAL MANAGER | ADVANCED LOGISTICS",
     "testimonials_v2_companies_title": "COMPANIES DRIVING CHANGE",
@@ -338,6 +359,225 @@ const translations = {
     "about_stat_projects": "Projects",
     "about_cta_work": "Work with us",
     "about_tag_proposal": "OUR PROPOSAL",
-    .
-    .
-    .
+    "page_title_productos": "Products | Adikt@ PC",
+    "products_hero_title": "Technology that Drives Your World",
+    "products_hero_subtitle": "Discover our exclusive selection of premium hardware designed for professionals who demand nothing less than perfection.",
+    "products_hero_cta": "Explore Catalog",
+    "products_section_title": "Featured Selection",
+    "products_sort_label": "Sort by:",
+    "products_sort_recent": "Most Recent",
+    "products_sort_price_low": "Price: Low to High",
+    "products_sort_price_high": "Price: High to Low",
+    "product_category_laptops": "Laptops",
+    "product_category_ram": "RAM Memory",
+    "product_category_storage": "Storage",
+    "product_category_psu": "Power Supplies",
+    "product_category_monitors": "Monitors",
+    "product_category_peripherals": "Peripherals",
+    "product_view_details": "View Details",
+    "product_keyboard_title": "RGB Mechanical Keyboard",
+    "ram_spec1": "16 GB (2x8GB)",
+    "ram_spec2": "3200 MHz Speed",
+    "ram_spec3": "CL16 Latency",
+    "ssd_spec1": "NVMe PCIe Interface",
+    "ssd_spec2": "3500 MB/s Read",
+    "ssd_spec3": "5-year Warranty",
+    "hdd_spec1": "2 TB",
+    "hdd_spec2": "7200 RPM Rotation",
+    "hdd_spec3": "With 256MB Cache",
+    "psu_spec1": "650W Gold certified",
+    "psu_spec2": "Modular",
+    "psu_spec3": "OVP/UVP/OPP Protections",
+    "monitor_spec1": "Full HD Display",
+    "monitor_spec2": "75Hz, IPS",
+    "monitor_spec3": "Frameless",
+    "keyboard_spec1": "Tactile Switches",
+    "keyboard_spec2": "Retroiluminación RGB",
+    "keyboard_spec3": "With Wrist Rest",
+    "page_title_servicios": "Services | Adikt@ PC",
+    "services_hero_tag": "DIGITAL EXPERTISE",
+    "services_hero_title": "OUR SERVICES",
+    "services_hero_subtitle": "We transform conventional infrastructures into intelligent digital ecosystems with a disruptive and asymmetrical approach.",
+    "services_hero_cta": "Explore solutions",
+    "service1_number": "01",
+    "service1_title": "Specialized Technical Support",
+    "service1_description": "We don't just solve problems, we optimize your workflow. Our hybrid assistance ensures your technology is an engine, not an obstacle.",
+    "service1_link": "View more",
+    "service2_number": "02",
+    "service2_title": "Proactive Cybersecurity",
+    "service2_description": "360-degree digital shielding. We use predictive intelligence to neutralize threats before they affect your critical infrastructure.",
+    "service2_link": "View more",
+    "service3_number": "03",
+    "service3_title": "Cloud-Native Solutions",
+    "service3_description": "We migrate your business to the cloud with scalable architectures. Implementation of SaaS, IaaS, and hybrid environments designed for massive growth.",
+    "service3_link": "View more",
+    "service4_number": "04",
+    "service4_title": "Consulting and Outsourcing",
+    "service4_description": "Outsource your IT department with high-level experts. Technology strategy that perfectly aligns with your business objectives.",
+    "service4_link": "View more",
+    "cta_title": "Ready to break the mold?",
+    "cta_subtitle": "Let's talk about how our asymmetrical vision can empower your next big IT solution.",
+    "cta_button1": "START PROJECT",
+    "cta_button2": "LEARN MORE",
+    "page_title_nosotros": "About Us | Adikt@ PC",
+    "about_hero_title": "About Adikt@ PC",
+    "about_hero_subtitle": "Ecuadorian brand dedicated to offering cutting-edge technological solutions, driving the digital future of our region.",
+    "about_tag_who": "WHO WE ARE",
+    "about_history_title": "Our History and Trajectory",
+    "about_history_p1": "Adikt@ PC was born with the goal of bringing technology closer to people and businesses throughout the country, offering reliable equipment, specialized support, and a close service experience.",
+    "about_history_p2": "We have more than 11 years of experience in the market, working alongside distributors and strategic partners who share our values of innovation and commitment.",
+    "about_stat_years": "Years",
+    "about_stat_clients": "Clients",
+    "about_stat_projects": "Projects",
+    "about_cta_work": "Work with us",
+    "about_tag_proposal": "OUR PROPOSAL",
+    "about_proposal_title": "Solutions designed for tomorrow",
+    "about_proposal_item1_title": "Pro Equipment",
+    "about_proposal_item1_desc": "Designed for study, work and entertainment.",
+    "about_proposal_item2_title": "Real Warranty",
+    "about_proposal_item2_desc": "Official technical service and clear guarantees on each component.",
+    "about_proposal_item3_title": "Support",
+    "about_proposal_item3_desc": "Direct support to distributors and end customers.",
+    "mission_badge": "MISSION",
+    "mission_text": "To provide reliable and accessible technological solutions that drive the growth of individuals, businesses, and institutions. To provide quality equipment with specialized support and clear guarantees, accompanying our clients at every stage of their digital transformation.",
+    "vision_badge": "VISION",
+    "vision_text": "To be a benchmark brand in the Ecuadorian technological market, recognized for its quality, innovation, and after-sales service. We aspire to be the preferred strategic partner for companies seeking reliable technology and comprehensive solutions.",
+    "values_badge": "VALUES",
+    "values_text": "Commitment: We deliver on our promises. Responsibility: We act with integrity and transparency. Innovation: We constantly seek to improve and adapt. Closeness: We maintain a close and personalized relationship with each client.",
+    "contact_us_title": "Contact Us",
+    "contact_us_subtitle": "Interested in working with us or have any questions?",
+    "contact_us_text": "We are always looking for new talent and collaboration opportunities. If you would like more information, do not hesitate to contact us.",
+    "contact_us_button": "Contact Us",
+    "page_title_legal": "Terms and Privacy | Adikt@ PC",
+    "legal_header_title": "Terms and Privacy",
+    "legal_header_subtitle": "Legal information about the use of our website and services.",
+    "terms_conditions_title": "Terms and Conditions",
+    "terms_conditions_paragraph1": "Welcome to Adikt@ PC. By accessing and using our website, you agree to comply with and be bound by the following terms and conditions of use. If you disagree with any part of these terms, you must not use our website.",
+    "terms_conditions_subtitle1": "1. Website Use",
+    "terms_conditions_paragraph2": "The content of the pages of this website is for your general information and use only. It is subject to change without notice. Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose.",
+    "terms_conditions_subtitle2": "2. Intellectual Property",
+    "terms_conditions_paragraph3": "This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.",
+    "privacy_policy_title": "Privacy Policy",
+    "privacy_policy_paragraph1": "This privacy policy sets out how Adikt@ PC uses and protects any information that you give us when you use this website.",
+    "privacy_policy_subtitle1": "1. Information We Collect",
+    "privacy_policy_paragraph2": "We may collect the following information: name, contact information including email address, and demographic information such as postcode, preferences and interests.",
+    "privacy_policy_subtitle2": "2. Use of Information",
+    "privacy_policy_paragraph3": "We use this information to understand your needs and provide you with a better service, and in particular for the following reasons: internal record keeping, we may use the information to improve our products and services, we may periodically send promotional emails about new products, special offers or other information which we think you may find interesting.",
+    "privacy_policy_subtitle3": "3. Security",
+    "privacy_policy_paragraph4": "We are committed to ensuring that your information is secure. In order to prevent unauthorised access or disclosure, we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online.",
+    "product_ram_price": "$69.00"
+  }
+};
+
+/* Language switching logic */
+(function () {
+  window.currentLang = localStorage.getItem('siteLang') || document.documentElement.lang || 'es';
+
+  function applyTranslations(lang) {
+    const dict = translations[lang] || {};
+    try { console.log('[lang] applyTranslations start for', lang); } catch (e) {}
+
+    // Prefer iterating over known keys to ensure consistent application
+    Object.keys(dict).forEach(function (key) {
+      const txt = dict[key];
+      const nodes = document.querySelectorAll('[data-i18n="' + key + '"]');
+      try { console.log('[lang] key', key, 'found', nodes ? nodes.length : 0, 'nodes'); } catch (e) {}
+      if (!nodes || nodes.length === 0) return;
+      nodes.forEach(function (el) {
+        const tag = el.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA') {
+          if (el.hasAttribute('placeholder')) el.setAttribute('placeholder', txt);
+          else el.value = txt;
+        } else if (tag === 'TITLE') {
+          document.title = txt;
+          try { el.innerHTML = txt; } catch (e) {}
+        } else if (tag === 'OPTION') {
+          // option inside select
+          el.textContent = txt;
+        } else {
+          // preserve inline HTML if translation contains markup
+          try { el.innerHTML = txt; } catch (e) { el.textContent = txt; }
+        }
+      });
+    });
+    try { console.log('[lang] applyTranslations end for', lang); } catch (e) {}
+
+    // Fallback: apply for any remaining elements with data-i18n but no dict entry
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      const key = el.getAttribute('data-i18n');
+      if (dict.hasOwnProperty(key)) return; // already handled
+      // keep existing text if no translation provided
+    });
+
+    document.documentElement.lang = lang;
+
+    const btn = document.getElementById('langSwitch');
+    if (btn) {
+      const label = lang === 'es' ? 'Switch to English' : 'Cambiar a Español';
+      btn.setAttribute('aria-label', label);
+      const textEl = btn.querySelector('.lang-switch-text');
+      if (textEl) {
+        textEl.textContent = lang === 'es' ? 'EN' : 'ES';
+      } else {
+        btn.textContent = lang === 'es' ? 'EN' : 'ES';
+      }
+    }
+  }
+
+  window.setLanguage = function (lang) {
+    window.currentLang = lang;
+    try { localStorage.setItem('siteLang', lang); } catch (e) {}
+    applyTranslations(lang);
+  };
+
+  // Delegated click handler for the language switch button
+  document.addEventListener('click', function (e) {
+    const sw = e.target.closest && e.target.closest('#langSwitch');
+    if (!sw) return;
+    e.preventDefault();
+    const next = window.currentLang === 'es' ? 'en' : 'es';
+    window.setLanguage(next);
+  });
+
+  // Initialize after DOM and custom elements are ready
+  function initLang() {
+    setLanguage(window.currentLang);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLang);
+  } else {
+    setTimeout(initLang, 0);
+  }
+
+  // Observe DOM mutations and re-apply translations for dynamically added content
+  try {
+    let _langDebounce = null;
+    const observer = new MutationObserver(function (mutations) {
+      if (_langDebounce) clearTimeout(_langDebounce);
+      _langDebounce = setTimeout(function () {
+        try { applyTranslations(window.currentLang); } catch (e) { /* ignore */ }
+      }, 120);
+    });
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true });
+    } else {
+      document.addEventListener('DOMContentLoaded', function () {
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
+    }
+  } catch (e) {
+    // If MutationObserver not available, translations still apply on init
+  }
+
+  // Dispatch an event when translations have been initialized so other components can react
+  try {
+    setTimeout(function () {
+      const evt = new CustomEvent('lang:ready', { detail: { lang: window.currentLang } });
+      window.dispatchEvent(evt);
+    }, 0);
+  } catch (e) {}
+
+  // Expose helper for debugging
+  try { window.applyTranslationsDebug = applyTranslations; } catch (e) {}
+
+})();

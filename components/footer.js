@@ -43,6 +43,22 @@ class CustomFooter extends HTMLElement {
         </div>
       </footer>
     `;
+    // If lang.js hasn't loaded yet, wait a moment and apply translations when available
+    if (typeof window.setLanguage !== 'function') {
+      const _waitLangFooter = setInterval(function () {
+        if (typeof window.setLanguage === 'function') {
+          try { window.setLanguage(window.currentLang || document.documentElement.lang || 'es'); } catch (e) {}
+          clearInterval(_waitLangFooter);
+        }
+      }, 80);
+    }
+    // Also listen for the lang ready event
+    window.addEventListener('lang:ready', function (ev) {
+      try {
+        const lang = (ev && ev.detail && ev.detail.lang) ? ev.detail.lang : (window.currentLang || document.documentElement.lang || 'es');
+        if (typeof window.setLanguage === 'function') window.setLanguage(lang);
+      } catch (e) {}
+    });
   }
 }
 

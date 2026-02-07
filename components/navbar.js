@@ -33,13 +33,52 @@ class CustomNavbar extends HTMLElement {
             <li><a href="nosotros.html" class="${this.isActive('nosotros.html')}" data-i18n="nav_about">Nosotros</a></li>
             <li><a href="contacto.html" class="${this.isActive('contacto.html')}" data-i18n="nav_contact">Contacto</a></li>
           </ul>
-          <button id="langSwitch" aria-label="Change language" class="lang-switch-button"></button>
+          <button id="langSwitch" type="button" aria-label="Cambiar idioma / Change language" class="lang-switch-button"><span class="lang-switch-text">EN</span></button>
         </nav>
       </header>
     `;
 
     if (typeof setLanguage === 'function' && typeof currentLang !== 'undefined') {
       setLanguage(currentLang);
+    }
+
+    // If lang.js wasn't loaded yet, wait briefly until setLanguage is available and apply
+    if (typeof window.setLanguage !== 'function') {
+      const _waitLang = setInterval(function () {
+        if (typeof window.setLanguage === 'function') {
+          try { window.setLanguage(window.currentLang || document.documentElement.lang || 'es'); } catch (e) {}
+          clearInterval(_waitLang);
+        }
+      }, 80);
+    }
+    // React to explicit lang ready event when available
+    window.addEventListener('lang:ready', function (ev) {
+      try {
+        const lang = (ev && ev.detail && ev.detail.lang) ? ev.detail.lang : (window.currentLang || document.documentElement.lang || 'es');
+        if (typeof window.setLanguage === 'function') window.setLanguage(lang);
+        updateBtnText();
+      } catch (e) {}
+    });
+
+    const langBtn = this.querySelector('#langSwitch');
+    if (langBtn) {
+      langBtn.type = 'button';
+      const updateBtnText = function () {
+        const text = (typeof window.currentLang !== 'undefined' && window.currentLang === 'en') ? 'ES' : 'EN';
+        const textEl = langBtn.querySelector('.lang-switch-text');
+        if (textEl) textEl.textContent = text;
+        else langBtn.textContent = text;
+      };
+      updateBtnText();
+      langBtn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (typeof window.setLanguage === 'function') {
+          const next = window.currentLang === 'es' ? 'en' : 'es';
+          window.setLanguage(next);
+          updateBtnText();
+        }
+      });
     }
 
     const navRoot = this.querySelector('.main-nav');

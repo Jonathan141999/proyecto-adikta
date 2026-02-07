@@ -77,8 +77,8 @@ header.site-header .main-nav a.active {
   border-radius: 999px;
   border: 1px solid var(--ant-border-color-base);
   background-color: #f9fafb;
-  color: #0f172a;
-  font-size: 11px;
+  color: #0f172a !important;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -87,6 +87,11 @@ header.site-header .main-nav a.active {
   align-items: center;
   justify-content: center;
   line-height: 1;
+  pointer-events: auto;
+}
+
+.lang-switch-button .lang-switch-text {
+  color: inherit;
 }
 
 .lang-switch-button:hover {
