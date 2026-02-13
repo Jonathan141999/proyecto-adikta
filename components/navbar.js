@@ -1,5 +1,56 @@
 class CustomNavbar extends HTMLElement {
+  mapPageForLang(page, lang) {
+    const safePage = String(page || "index.html").toLowerCase();
+    const pageKeyByFile = {
+      "index.html": "home",
+      "productos.html": "products",
+      "products.html": "products",
+      "servicios.html": "services",
+      "services.html": "services",
+      "nosotros.html": "about",
+      "about.html": "about",
+      "contacto.html": "contact",
+      "contact.html": "contact",
+      "legal.html": "legal",
+      "terms.html": "legal"
+    };
+    const pageByLang = {
+      home: { es: "index.html", en: "index.html" },
+      products: { es: "productos.html", en: "products.html" },
+      services: { es: "servicios.html", en: "services.html" },
+      about: { es: "nosotros.html", en: "about.html" },
+      contact: { es: "contacto.html", en: "contact.html" },
+      legal: { es: "legal.html", en: "terms.html" }
+    };
+    const key = pageKeyByFile[safePage];
+    if (!key) return safePage;
+    const safeLang = lang === "en" ? "en" : "es";
+    return pageByLang[key][safeLang];
+  }
+
+  getCurrentFileName() {
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    const last = pathSegments.length ? pathSegments[pathSegments.length - 1] : 'index.html';
+    return last.indexOf('.') === -1 ? 'index.html' : last;
+  }
+
+  getSwitchPath(targetLang) {
+    const fileName = this.getCurrentFileName();
+    const targetFile = this.mapPageForLang(fileName, targetLang);
+    if (window.location.protocol === 'file:') {
+      const segments = window.location.pathname.split('/').filter(Boolean);
+      const langIdx = segments.length >= 2 ? segments.length - 2 : -1;
+      if (langIdx >= 0 && (segments[langIdx] === 'es' || segments[langIdx] === 'en')) {
+        segments[langIdx] = targetLang;
+      }
+      segments[segments.length - 1] = targetFile;
+      return '/' + segments.join('/');
+    }
+    return `/${targetLang}/${targetFile}`;
+  }
+
   connectedCallback() {
+    const self = this;
     this.innerHTML = `
       <header class="site-header">
         <div class="logo">
@@ -103,8 +154,16 @@ class CustomNavbar extends HTMLElement {
           ev.stopPropagation();
           const targetLang = opt.getAttribute('data-lang-option');
           closeLangMenu();
-          if (typeof window.setLanguage === 'function' && targetLang) {
-            window.setLanguage(targetLang, { redirect: true });
+          if (!targetLang) return;
+
+          // Keep state in sync, but always navigate with a deterministic URL map.
+          if (typeof window.setLanguage === 'function') {
+            window.setLanguage(targetLang, { redirect: false });
+          }
+          try { localStorage.setItem('site_lang', targetLang); } catch (e) {}
+          const targetPath = self.getSwitchPath(targetLang);
+          if (window.location.pathname !== targetPath) {
+            window.location.assign(targetPath);
           }
         });
       });
@@ -172,18 +231,21 @@ class CustomNavbar extends HTMLElement {
 
   getLangPath(page) {
     const currentLang = document.documentElement.lang;
+    const pageName = this.mapPageForLang(page, currentLang);
     if (window.location.protocol === 'file:') {
-      return `../${currentLang}/${page}`;
+      return `../${currentLang}/${pageName}`;
     }
-    return `/${currentLang}/${page}`;
+    return `/${currentLang}/${pageName}`;
   }
 
   isActive(page) {
     const currentPathname = window.location.pathname;
     const pathSegments = currentPathname.startsWith('/') ? currentPathname.substring(1).split('/') : currentPathname.split('/');
     const currentPageName = pathSegments[pathSegments.length - 1];
+    const currentLang = document.documentElement.lang;
+    const expectedPageName = this.mapPageForLang(page, currentLang);
 
-    return currentPageName === page ? 'active' : '';
+    return currentPageName === expectedPageName ? 'active' : '';
   }
 }
 

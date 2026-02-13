@@ -481,6 +481,27 @@ const translations = {
   var STORAGE_KEY = 'site_lang';
   var SUPPORTED_LANGS = { es: true, en: true };
   var DEFAULT_LANG = 'es';
+  var PAGE_BY_LANG = {
+    home: { es: 'index.html', en: 'index.html' },
+    products: { es: 'productos.html', en: 'products.html' },
+    services: { es: 'servicios.html', en: 'services.html' },
+    about: { es: 'nosotros.html', en: 'about.html' },
+    contact: { es: 'contacto.html', en: 'contact.html' },
+    legal: { es: 'legal.html', en: 'terms.html' }
+  };
+  var PAGE_KEY_BY_FILE = {
+    'index.html': 'home',
+    'productos.html': 'products',
+    'products.html': 'products',
+    'servicios.html': 'services',
+    'services.html': 'services',
+    'nosotros.html': 'about',
+    'about.html': 'about',
+    'contacto.html': 'contact',
+    'contact.html': 'contact',
+    'legal.html': 'legal',
+    'terms.html': 'legal'
+  };
 
   function normalizeLang(lang) {
     return SUPPORTED_LANGS[lang] ? lang : DEFAULT_LANG;
@@ -507,9 +528,17 @@ const translations = {
     return last;
   }
 
+  function getLocalizedPageName(pageName, lang) {
+    var key = PAGE_KEY_BY_FILE[pageName];
+    if (!key) return pageName;
+    var entry = PAGE_BY_LANG[key];
+    if (!entry) return pageName;
+    return entry[normalizeLang(lang)] || pageName;
+  }
+
   function buildLocalizedPath(lang) {
     var safeLang = normalizeLang(lang);
-    var page = getCurrentPageName();
+    var page = getLocalizedPageName(getCurrentPageName(), safeLang);
 
     if (window.location.protocol === 'file:') {
       var segments = window.location.pathname.split('/').filter(Boolean);
