@@ -19,10 +19,14 @@ class CustomFooter extends HTMLElement {
           </div>
 
           <div class="footer-col footer-contact">
-            <h5 data-i18n="footer_contact_title">CONTACTO</h5>
+            <h5 data-i18n="footer_contact_title">CONTACTO ECUADOR</h5>
             <ul>
-              <li><i class="fa-solid fa-phone"></i> 02 2046 510</li>
-              <li><i class="fa-brands fa-whatsapp"></i> +593 98 3868 358</li>
+              <li><i class="fa-solid fa-phone"></i> +(593) 2-204-6510</li>
+              <li><i class="fa-brands fa-whatsapp"></i> +(593) 99 252 0315</li>
+              <li><i class="fa-solid fa-envelope"></i> informacion@adiktapc.net</li>
+            
+            <h5 data-i18n="footer_contact_title_1">CONTACTO USA</h5>
+              <li><i class="fa-solid fa-phone"></i> +1 (645) 223-5620 </li>
               <li><i class="fa-solid fa-envelope"></i> informacion@adiktapc.net</li>
             </ul>
           </div>
@@ -38,7 +42,7 @@ class CustomFooter extends HTMLElement {
         </div>
 
         <div class="footer-bottom">
-          <div class="footer-bottom-left" data-i18n="footer_copyright_left">© 2026 Adikt@ PC — Representaciones Internacionales REPRES MUNDIAL CÍA. LTDA.</div>
+          <div class="footer-bottom-left" data-i18n="footer_copyright_left">© 2026 Adikt@ PC — Representaciones Internacionales REPRESMUNDIAL CÍA. LTDA.</div>
           <div class="footer-bottom-right" data-i18n="footer_copyright_right">Todos los derechos reservados.</div>
         </div>
       </footer>
