@@ -606,84 +606,7 @@ a, button, input, select {
 }
 
 
-.impact {
-  background-color: #001529;
-  color: #ffffff;
-  padding: 64px 4%;
-}
-
-.impact-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.impact h2 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  line-height: 1.2;
-}
-
-.impact h2 span {
-  color: var(--ant-primary-color);
-}
-
-.impact > .impact-container > p {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 48px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-.impact-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.impact-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--ant-border-radius-base);
-  padding: 32px 24px;
-  position: relative;
-  transition: all 0.3s;
-}
-
-.impact-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 3px;
-  background-color: var(--ant-primary-color);
-  border-radius: 0 0 2px 2px;
-}
-
-.impact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(24, 144, 255, 0.2);
-  border-color: var(--ant-primary-color);
-}
-
-.impact-card h3 {
-  font-size: 36px;
-  color: var(--ant-primary-color);
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.impact-card span {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
-  display: block;
-}
+/* Reglas de .impact eliminadas (sección removida) */
 
 
 .testimonials {
@@ -792,14 +715,7 @@ a, button, input, select {
     display: none;
   }
 
-  .impact-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .impact-card h3 {
-    font-size: 28px;
-  }
+  /* Reglas responsive de .impact eliminadas */
 
   .testimonials-cards {
     grid-template-columns: 1fr;
@@ -807,11 +723,5 @@ a, button, input, select {
 }
 
 @media (max-width: 520px) {
-  .impact-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .impact-card h3 {
-    font-size: 24px;
-  }
+  /* Reglas responsive de .impact eliminadas */
 }
