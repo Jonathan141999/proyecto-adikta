@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,16 @@
 
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="../assets/css/contacto.css">
+  <link rel="stylesheet" href="../assets/css/mapa.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
+
 <body class="antialiased">
   <custom-navbar></custom-navbar>
 
@@ -23,7 +29,8 @@
     <section class="hero hero-gradient hero-full contact-hero-blue">
       <div class="hero-container">
         <h1 class="hero-title" data-i18n="contact_hero_title">Ponte en Contacto</h1>
-        <p class="hero-subtitle" data-i18n="contact_hero_subtitle">Expertos en tecnologÃ­a a tu disposiciÃ³n. CuÃ©ntanos cÃ³mo podemos ayudarte.</p>
+        <p class="hero-subtitle" data-i18n="contact_hero_subtitle">Expertos en tecnologÃ­a a tu disposiciÃ³n. CuÃ©ntanos
+          cÃ³mo podemos ayudarte.</p>
       </div>
     </section>
 
@@ -31,32 +38,38 @@
       <div class="container contact-grid">
         <div class="form-card">
           <h3 data-i18n="contact_form_title">Formulario de contacto</h3>
-          <p class="muted" data-i18n="contact_form_description">Completa el siguiente formulario y te responderemos en menos de 24 horas.</p>
+          <p class="muted" data-i18n="contact_form_description">Completa el siguiente formulario y te responderemos en
+            menos de 24 horas.</p>
 
           <form class="contact-form">
             <div class="form-grid">
               <div class="form-group">
                 <label for="nombre" data-i18n="contact_form_name_label">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" data-i18n-placeholder="contact_form_name_placeholder" placeholder="Ej. Juan PÃ©rez">
+                <input type="text" id="nombre" name="nombre" data-i18n-placeholder="contact_form_name_placeholder"
+                  placeholder="Ej. Juan PÃ©rez">
               </div>
               <div class="form-group">
                 <label for="email" data-i18n="contact_form_email_label">Correo electrÃ³nico</label>
-                <input type="email" id="email" name="email" data-i18n-placeholder="contact_form_email_placeholder" placeholder="juan@ejemplo.com">
+                <input type="email" id="email" name="email" data-i18n-placeholder="contact_form_email_placeholder"
+                  placeholder="juan@ejemplo.com">
               </div>
             </div>
 
             <div class="form-group">
               <label for="asunto" data-i18n="contact_form_subject_label">Asunto</label>
-              <input type="text" id="asunto" name="asunto" data-i18n-placeholder="contact_form_subject_placeholder" placeholder="Â¿En quÃ© podemos ayudarte?">
+              <input type="text" id="asunto" name="asunto" data-i18n-placeholder="contact_form_subject_placeholder"
+                placeholder="Â¿En quÃ© podemos ayudarte?">
             </div>
 
             <div class="form-group">
               <label for="mensaje" data-i18n="contact_form_message_label">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="6" data-i18n-placeholder="contact_form_message_placeholder" placeholder="Escribe tu mensaje aquÃ­..."></textarea>
+              <textarea id="mensaje" name="mensaje" rows="6" data-i18n-placeholder="contact_form_message_placeholder"
+                placeholder="Escribe tu mensaje aquÃ­..."></textarea>
             </div>
 
             <div>
-              <button type="submit" class="btn btn-primary"><span data-i18n="contact_form_submit_button">Enviar mensaje</span> <i class="fa-solid fa-arrow-right icon-space"></i></button>
+              <button type="submit" class="btn btn-primary"><span data-i18n="contact_form_submit_button">Enviar
+                  mensaje</span> <i class="fa-solid fa-arrow-right icon-space"></i></button>
             </div>
           </form>
         </div>
@@ -64,11 +77,23 @@
         <aside class="location-col">
           <div class="location-card">
             <h4 data-i18n="location_card_title">Nuestra UbicaciÃ³n</h4>
-            <div class="loc-item"><i class="fa-solid fa-phone"></i><div><small data-i18n="location_phone_label">TELÃ‰FONO</small><div class="loc-value">02 2046 510</div></div></div>
-            <div class="loc-item"><i class="fa-brands fa-whatsapp"></i><div><small data-i18n="location_email_label">CORREO</small><div class="loc-value">informacion@adiktapc.net</div></div></div>
-            <div class="loc-item"><i class="fa-solid fa-clock"></i><div><small data-i18n="location_hours_label">HORARIO</small><div class="loc-value" data-i18n="location_hours_value">Lun - Vie: 8:00am - 17:00pm</div></div></div>
+            <div class="loc-item"><i class="fa-solid fa-phone"></i>
+              <div><small data-i18n="location_phone_label">TELÃ‰FONO</small>
+                <div class="loc-value">02 2046 510</div>
+              </div>
+            </div>
+            <div class="loc-item"><i class="fa-brands fa-whatsapp"></i>
+              <div><small data-i18n="location_email_label">CORREO</small>
+                <div class="loc-value">informacion@adiktapc.net</div>
+              </div>
+            </div>
+            <div class="loc-item"><i class="fa-solid fa-clock"></i>
+              <div><small data-i18n="location_hours_label">HORARIO</small>
+                <div class="loc-value" data-i18n="location_hours_value">Lun - Vie: 8:00am - 17:00pm</div>
+              </div>
+            </div>
 
-    
+
           </div>
 
           <div class="social-card">
@@ -83,14 +108,14 @@
         </aside>
       </div>
     </section>
-    
+
     <section class="location-section-container">
       <div class="location-background-map"></div>
       <div class="location-content-card">
         <div class="location-left-col">
-          <span class="location-tag" data-i18n="location_network_tag">NUESTRA RED</span>
-          <h2 data-i18n="location_section_title">UbicaciÃ³n</h2>
-          <p data-i18n="location_section_description">PrÃ³ximamente encontrarÃ¡s aquÃ­ un mapa interactivo con nuestra ubicaciÃ³n principal y puntos de atenciÃ³n. Por ahora, puedes comunicarte vÃ­a telefÃ³nica o correo para mÃ¡s detalles.</p>
+          <span class="location-tag" data-i18n="location_network_tag">OUR NETWORK</span>
+          <h2 data-i18n="location_section_title">Location</h2>
+          <div id="map"></div>
           <div class="location-contact-info">
             <div class="info-item">
               <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
@@ -109,20 +134,33 @@
           </div>
         </div>
         <div class="location-right-col">
-           <div class="office-info">
-            <h4 data-i18n="office_info_title"><i class="fa-solid fa-building"></i> Oficina Central</h4>
-            <p data-i18n="office_info_address"><i class="fa-solid fa-location-dot"></i> Rio San pedro y Rio conambo</p>
-            <div class="loc-item"><i class="fa-solid fa-phone"></i><div><small data-i18n="location_phone_label">TELÃ‰FONO</small><div class="loc-value">+(593) 2-204-6510 </div></div></div>
-            <small data-i18n="office_info_hours">Abierto de Lunes a Viernes (08:00 - 17:00)</small>
-          </div>
-          <div class="office-info">
-            <h4 data-i18n="office_info_title_1"><i class="fa-solid fa-building"></i> Oficina EE.UU.</h4>
-            <p data-i18n="office_info_address_1"><i class="fa-solid fa-location-dot"></i> 1861 NW S River Dr, Miami, FL, 33123 - Terrazas, Office 2301</p>
-            <div class="loc-item"><i class="fa-solid fa-phone"></i><div><small data-i18n="location_phone_label">TELÃ‰FONO</small><div class="loc-value">+1 (645) 223-5620 </div></div></div>
-            <small data-i18n="office_info_hours_1">Abierto de Lunes a Viernes (08:00 - 17:00)</small>
-          </div>
+          <div class="location-details-container">
+            <div class="office-info">
+              <h4 data-i18n="office_info_title"><i class="fa-solid fa-building"></i> Oficina Central</h4>
+              <p data-i18n="office_info_address"><i class="fa-solid fa-location-dot"></i> Rio San pedro y Rio conambo
+              </p>
+              <div class="loc-item"><i class="fa-solid fa-phone"></i>
+                <div><small data-i18n="location_phone_label">TELÉFONO</small>
+                  <div class="loc-value">+(593) 2-204-6510 </div>
+                </div>
+              </div>
+              <small data-i18n="office_info_hours">Abierto de Lunes a Viernes (08:00 - 17:00)</small>
+            </div>
+            <div class="office-info">
+              <h4 data-i18n="office_info_title_1"><i class="fa-solid fa-building"></i> Oficina EE.UU.</h4>
+              <p data-i18n="office_info_address_1"><i class="fa-solid fa-location-dot"></i> 1861 NW S River Dr, Miami,
+                FL, 33123 - Terrazas, Office 2301</p>
+              <div class="loc-item"><i class="fa-solid fa-phone"></i>
+                <div><small data-i18n="location_phone_label">TELÉFONO</small>
+                  <div class="loc-value">+1 (645) 223-5620 </div>
+                </div>
+              </div>
+              <small data-i18n="office_info_hours_1">Abierto de Lunes a Viernes (08:00 - 17:00)</small>
+            </div>
 
-          <a href="#" class="btn-directions"><i class="fa-solid fa-diamond-turn-right"></i> <span data-i18n="get_directions_button">Obtener indicaciones</span></a>
+            <a href="#" class="btn-directions"><i class="fa-solid fa-diamond-turn-right"></i> <span
+                data-i18n="get_directions_button">Obtener indicaciones</span></a>
+          </div>
         </div>
       </div>
     </section>
@@ -133,6 +171,12 @@
   <script src="../components/navbar.js"></script>
   <script src="../components/footer.js"></script>
   <script src="../assets/js/mobile-menu.js"></script>
+  <script src="../assets/js/mobile-menu.js"></script>
   <script src="../assets/js/lang.js"></script>
+
+  <!-- Leaflet JS & Custom Script -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="../assets/js/mapa.js"></script>
 </body>
+
 </html>
