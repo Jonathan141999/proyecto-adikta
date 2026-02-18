@@ -1,27 +1,34 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="page_title_productos">Productos | Adikt@ PC</title>
+  <title data-i18n="page_title_productos">Products | Adikt@ PC</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="../assets/css/productos.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
+
 <body class="antialiased page-products">
   <custom-navbar></custom-navbar>
 
   <section class="hero hero-gradient hero-full" style="background-image: url('../assets/img/hero-productos.jpg');">
     <div class="hero-container">
-      <h1 class="hero-title" data-i18n="products_hero_title">TecnologÃ­a que Impulsa tu Mundo</h1>
-      <p class="hero-subtitle" data-i18n="products_hero_subtitle">Descubre nuestra selecciÃ³n exclusiva de hardware premium diseÃ±ado para profesionales que no aceptan menos que la perfecciÃ³n.</p>
-      <a href="#" class="btn btn-primary hero-cta open-catalog" data-pdf="../assets/pdf/Fichas.pdf"><span data-i18n="products_hero_cta">Explorar CatÃ¡logo</span> <span class="material-symbols-outlined icon-space">arrow_forward</span></a>
+      <h1 class="hero-title" data-i18n="products_hero_title">Technology that Drives Your World</h1>
+      <p class="hero-subtitle" data-i18n="products_hero_subtitle">Discover our exclusive selection of premium hardware
+        designed for professionals who demand nothing less than perfection.</p>
+      <a href="#" class="btn btn-primary hero-cta open-catalog" data-pdf="../assets/pdf/Fichas.pdf"><span
+          data-i18n="products_hero_cta">Explore Catalog</span> <span
+          class="material-symbols-outlined icon-space">arrow_forward</span></a>
     </div>
   </section>
 
@@ -29,18 +36,16 @@
     <div class="catalog-layout">
       <div class="catalog-content">
         <div class="section-header">
-          <h2 class="section-heading" data-i18n="products_section_title">SelecciÃ³n Destacada</h2>
-          <div class="controls">
-            <span class="sort-label" data-i18n="products_sort_label">Ordenar por:</span>
-            <select class="sort-select">
-              <option data-i18n="products_sort_recent">MÃ¡s recientes</option>
-              <option data-i18n="products_sort_price_low">Precio: Menor a Mayor</option>
-              <option data-i18n="products_sort_price_high">Precio: Mayor a Menor</option>
-            </select>
-          </div>
-        </div> 
+          <h2 class="section-heading" data-i18n="products_section_title">Featured Selection</h2>
+        </div>
 
-        <div class="products-grid">
+        <div class="product-tabs">
+          <button class="tab-btn active" data-filter="original">Our Products</button>
+          <button class="tab-btn" data-filter="software_libre">Open Source Software</button>
+          <button class="tab-btn" data-filter="software_privado">Proprietary Software</button>
+        </div>
+
+        <div class="products-grid" id="products-grid">
 
           <div class="product-card">
             <div class="product-media media-wrapper">
@@ -51,12 +56,12 @@
               <p class="product-category" data-i18n="product_category_laptops">Laptops</p>
               <h3 class="product-title" data-i18n="product_laptop_title">Adikt@ Laptop Pro 15"</h3>
               <ul class="product-features">
-                <li data-i18n="laptop_spec1">Procesador Intel Core i5</li>
+                <li data-i18n="laptop_spec1">Intel Core i5 Processor</li>
                 <li data-i18n="laptop_spec2">8 GB RAM</li>
-                <li data-i18n="laptop_spec3">SSD 512 GB</li>
+                <li data-i18n="laptop_spec3">512 GB SSD</li>
               </ul>
               <p class="product-price">$980.00</p>
-              <a class="product-cta" href="products.html" data-i18n="product_view_details">Ver detalles</a>
+              <a class="product-cta" href="products.html" data-i18n="product_view_details">View details</a>
             </div>
           </div>
 
@@ -65,15 +70,15 @@
               <img alt="Memoria RAM 16GB" class="product-image" src="../assets/img/ram.jpg" />
             </div>
             <div class="card-body">
-              <p class="product-category" data-i18n="product_category_ram">Memorias RAM</p>
+              <p class="product-category" data-i18n="product_category_ram">RAM Memory</p>
               <h3 class="product-title" data-i18n="product_ram_title">DDR4 16GB 3200MHz</h3>
               <ul class="product-features">
                 <li data-i18n="ram_spec1">16 GB (2x8GB)</li>
-                <li data-i18n="ram_spec2">Velocidad 3200 MHz</li>
-                <li data-i18n="ram_spec3">Latencia CL16</li>
+                <li data-i18n="ram_spec2">3200 MHz Speed</li>
+                <li data-i18n="ram_spec3">CL16 Latency</li>
               </ul>
               <p class="product-price">$155.00</p>
-              <a class="product-cta" href="products.html" data-i18n="product_view_details">Ver detalles</a>
+              <a class="product-cta" href="products.html" data-i18n="product_view_details">View details</a>
             </div>
           </div>
           <div class="product-card">
@@ -82,15 +87,15 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category" data-i18n="product_category_storage">Almacenamiento</p>
+              <p class="product-category" data-i18n="product_category_storage">Storage</p>
               <h3 class="product-title" data-i18n="product_ssd_title">SSD NVMe 1TB</h3>
               <ul class="product-features">
-                <li data-i18n="ssd_spec1">Interfaz NVMe PCIe</li>
-                <li data-i18n="ssd_spec2">Lectura 3500 MB/s</li>
-                <li data-i18n="ssd_spec3">GarantÃ­a 5 aÃ±os</li>
+                <li data-i18n="ssd_spec1">NVMe PCIe Interface</li>
+                <li data-i18n="ssd_spec2">3500 MB/s Read</li>
+                <li data-i18n="ssd_spec3">5-year Warranty</li>
               </ul>
-               <p class="product-price">$80.00</p>
-              <a class="product-cta" href="products.html" data-i18n="product_view_details">Ver detalles</a>
+              <p class="product-price">$80.00</p>
+              <a class="product-cta" href="products.html" data-i18n="product_view_details">View details</a>
             </div>
           </div>
 
@@ -100,15 +105,15 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category" data-i18n="product_category_storage">Almacenamiento</p>
+              <p class="product-category" data-i18n="product_category_storage">Storage</p>
               <h3 class="product-title" data-i18n="product_hdd_title">HDD 2TB 7200RPM</h3>
               <ul class="product-features">
                 <li data-i18n="hdd_spec1">2 TB</li>
-                <li data-i18n="hdd_spec2">RotaciÃ³n 7200 RPM</li>
-                <li data-i18n="hdd_spec3">Con cache de 256MB</li>
+                <li data-i18n="hdd_spec2">7200 RPM Rotation</li>
+                <li data-i18n="hdd_spec3">With 256MB Cache</li>
               </ul>
-               <p class="product-price">$180.00</p>
-              <a class="product-cta" href="products.html" data-i18n="product_view_details">Ver detalles</a>
+              <p class="product-price">$180.00</p>
+              <a class="product-cta" href="products.html" data-i18n="product_view_details">View details</a>
             </div>
           </div>
 
@@ -118,15 +123,15 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category" data-i18n="product_category_psu">Fuentes</p>
+              <p class="product-category" data-i18n="product_category_psu">Power Supplies</p>
               <h3 class="product-title" data-i18n="product_psu_title">PSU 650W Gold</h3>
               <ul class="product-features">
-                <li data-i18n="psu_spec1">650W certificaciÃ³n Gold</li>
+                <li data-i18n="psu_spec1">650W Gold certified</li>
                 <li data-i18n="psu_spec2">Modular</li>
-                <li data-i18n="psu_spec3">Protecciones OVP/UVP/OPP</li>
+                <li data-i18n="psu_spec3">OVP/UVP/OPP Protections</li>
               </ul>
-               <p class="product-price">$150.00</p>
-              <a class="product-cta" href="products.html" data-i18n="product_view_details">Ver detalles</a>
+              <p class="product-price">$150.00</p>
+              <a class="product-cta" href="products.html" data-i18n="product_view_details">View details</a>
             </div>
           </div>
 
@@ -136,33 +141,33 @@
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category" data-i18n="product_category_monitors">Monitores</p>
+              <p class="product-category" data-i18n="product_category_monitors">Monitors</p>
               <h3 class="product-title" data-i18n="product_monitor_title">Monitor 24" Full HD</h3>
               <ul class="product-features">
-                <li data-i18n="monitor_spec1">Pantalla Full HD</li>
+                <li data-i18n="monitor_spec1">Full HD Display</li>
                 <li data-i18n="monitor_spec2">75Hz, IPS</li>
-                <li data-i18n="monitor_spec3">Sin marco</li>
+                <li data-i18n="monitor_spec3">Frameless</li>
               </ul>
               <p class="product-price">$150.00</p>
-              <a class="product-cta" href="products.html" data-i18n="product_view_details">Ver detalles</a>
+              <a class="product-cta" href="products.html" data-i18n="product_view_details">View details</a>
             </div>
           </div>
 
           <div class="product-card">
             <div class="product-media media-wrapper">
-              <img alt="Teclado mecÃ¡nico" class="product-image" src="../assets/img/keyboard.jpg" />
+              <img alt="Teclado mecánico" class="product-image" src="../assets/img/keyboard.jpg" />
               <div class="media-overlay"></div>
             </div>
             <div class="card-body">
-              <p class="product-category" data-i18n="product_category_peripherals">PerifÃ©ricos</p>
-              <h3 class="product-title" data-i18n="product_keyboard_title">Teclado mecÃ¡nico RGB</h3>
+              <p class="product-category" data-i18n="product_category_peripherals">Peripherals</p>
+              <h3 class="product-title" data-i18n="product_keyboard_title">RGB Mechanical Keyboard</h3>
               <ul class="product-features">
-                <li data-i18n="keyboard_spec1">Switches tÃ¡ctiles</li>
-                <li data-i18n="keyboard_spec2">RetroiluminaciÃ³n RGB</li>
-                <li data-i18n="keyboard_spec3">Con reposamuÃ±ecas</li>
+                <li data-i18n="keyboard_spec1">Tactile Switches</li>
+                <li data-i18n="keyboard_spec2">RGB Backlighting</li>
+                <li data-i18n="keyboard_spec3">With Wrist Rest</li>
               </ul>
-               <p class="product-price">$50.00</p>
-              <a class="product-cta" href="products.html" data-i18n="product_view_details">Ver detalles</a>
+              <p class="product-price">$50.00</p>
+              <a class="product-cta" href="products.html" data-i18n="product_view_details">View details</a>
             </div>
           </div>
         </div>
@@ -178,8 +183,18 @@
           <button class="pagination-btn icon-btn">
             <span class="material-symbols-outlined">chevron_right</span>
           </button>
-        </div> 
+        </div>
 
+      </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="product-modal-overlay">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="modal-close">&times;</button>
+        <div class="modal-body" id="modal-body">
+          <!-- Product details will be injected here by JS -->
+        </div>
       </div>
     </div>
   </main>
@@ -191,6 +206,7 @@
   <script src="../assets/js/mobile-menu.js"></script>
   <script src="../assets/js/lang.js"></script>
   <script src="../assets/js/pdf-modal.js"></script>
+  <script src="../assets/js/productos.js"></script>
 </body>
-</html>
 
+</html>

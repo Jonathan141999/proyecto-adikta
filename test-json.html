@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JSON</title>
+</head>
+
+<body>
+    <h1>Test de Carga de JSON</h1>
+    <div id="resultado"></div>
+
+    <script>
+        async function testJSON() {
+            const resultado = document.getElementById('resultado');
+            try {
+                console.log('Cargando JSON...');
+                const response = await fetch('./assets/json/fichas_adikta.json');
+                console.log('Respuesta:', response.status);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('JSON cargado:', data);
+
+                resultado.innerHTML = `
+          <h2>✅ JSON cargado correctamente</h2>
+          <p><strong>Software Libre - All in One:</strong> ${data.productos.software_libre.computadores_todo_en_uno.length} productos</p>
+          <p><strong>Software Libre - Escritorio:</strong> ${data.productos.software_libre.computadores_escritorio.length} productos</p>
+          <p><strong>Software Privado - All in One:</strong> ${data.productos.software_privado.computadores_todo_en_uno.length} productos</p>
+          <p><strong>Software Privado - Escritorio:</strong> ${data.productos.software_privado.computadores_escritorio.length} productos</p>
+          <p><strong>Software Privado - Portátiles:</strong> ${data.productos.software_privado.computadores_portatiles.length} productos</p>
+          <hr>
+          <h3>Primer producto de Software Libre - All in One:</h3>
+          <pre>${JSON.stringify(data.productos.software_libre.computadores_todo_en_uno[0], null, 2)}</pre>
+        `;
+            } catch (error) {
+                console.error('Error:', error);
+                resultado.innerHTML = `<h2 style="color: red;">❌ Error al cargar JSON</h2><p>${error.message}</p>`;
+            }
+        }
+
+        testJSON();
+    </script>
+</body>
+
+</html>

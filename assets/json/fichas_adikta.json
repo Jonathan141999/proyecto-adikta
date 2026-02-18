@@ -1,0 +1,1359 @@
+{
+  "fabricante": "Represmundial Cía. Ltda.",
+  "marca": "Adikt@",
+  "sitio_web": "www.adiktapc.net",
+  "contacto": {
+    "direccion": "Rio San Pedro E5-05 y Rio Conambo (El Arenal) a 8 cuadras de la A. Interoceánica",
+    "ciudad": "Tumbaco - Ecuador",
+    "telefonos": ["2046-444", "2046-510", "2047-047"]
+  },
+  "productos": {
+    "software_libre": {
+      "sistema_operativo": "LINUX (Ubuntu / CentOS)",
+      "software_licenciado": "N/A",
+      "computadores_todo_en_uno": [
+        {
+          "id": "aio-sl-1",
+          "nombre": "Computador Todo en Uno Software Libre Modelo 1 Generación 13",
+          "modelo": "AIOI5-13400",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13400",
+            "nucleos": 10,
+            "hilos": 16,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "20 MB"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "23.8\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sl-2",
+          "nombre": "Computador Todo en Uno Software Libre Modelo 2 Generación 13",
+          "modelo": "AIOI7-13700",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 16,
+            "hilos": 24,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "23.8\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sl-3",
+          "nombre": "Computador Todo en Uno Software Libre Modelo 3 Generación 13",
+          "modelo": "AIOI7-13700-27",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 16,
+            "hilos": 24,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "27\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sl-4",
+          "nombre": "Computador Todo en Uno Software Libre Modelo 4 Generación 13",
+          "modelo": "AIOI5-13400 H",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13400",
+            "nucleos": 10,
+            "hilos": 16,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "20 MB"
+          },
+          "motherboard": {
+            "chipset": "H670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "23.8\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sl-5",
+          "nombre": "Computador Todo en Uno Software Libre Modelo 5 Generación 13",
+          "modelo": "AIOI7-13700 H",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 16,
+            "hilos": 24,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "motherboard": {
+            "chipset": "H670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "23.8\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sl-6",
+          "nombre": "Computador Todo en Uno Software Libre Modelo 6 Generación 13",
+          "modelo": "AIOI7-13700-27 H",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 16,
+            "hilos": 24,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "motherboard": {
+            "chipset": "H670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "27\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        }
+      ],
+      "computadores_escritorio": [
+        {
+          "id": "est-sl-1",
+          "nombre": "Computador Escritorio Software Libre Modelo 1 Generación 13",
+          "modelo": "ESTI5-13400Q670F",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13400",
+            "nucleos": 16,
+            "hilos": 10,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "20 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "19.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sl-2",
+          "nombre": "Computador Escritorio Software Libre Modelo 2 Generación 13",
+          "modelo": "ESTI7-13700Q670F",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 24,
+            "hilos": 16,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "21.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sl-3",
+          "nombre": "Computador Escritorio Software Libre Modelo 3 Generación 13",
+          "modelo": "ESTI5-13500Q670F",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13500",
+            "nucleos": 20,
+            "hilos": 14,
+            "frecuencia_turbo_max": "4.8 GHz",
+            "cache": "24 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "19.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sl-4",
+          "nombre": "Computador Escritorio Software Libre Modelo 4 Generación 13",
+          "modelo": "ESTI5-13400B660",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13400",
+            "nucleos": 16,
+            "hilos": 10,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "20 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "B660",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "19.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sl-5",
+          "nombre": "Computador Escritorio Software Libre Modelo 5 Generación 13",
+          "modelo": "ESTI7-13700B660",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 24,
+            "hilos": 16,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "B660",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "21.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sl-6",
+          "nombre": "Computador Escritorio Software Libre Modelo 6 Generación 13",
+          "modelo": "ESTI5-13500B660",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13500",
+            "nucleos": 20,
+            "hilos": 14,
+            "frecuencia_turbo_max": "4.8 GHz",
+            "cache": "24 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "B660",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "19.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        }
+      ]
+    },
+    "software_privado": {
+      "sistema_operativo": "Windows 11 Profesional",
+      "software_licenciado": "Licencia Windows 11 Profesional",
+      "computadores_todo_en_uno": [
+        {
+          "id": "aio-sp-1",
+          "nombre": "Computador Todo en Uno Software Privado Modelo 1 Generación 13",
+          "modelo": "AIOI5-13400",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13400",
+            "nucleos": 10,
+            "hilos": 16,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "20 MB"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "23.8\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sp-2",
+          "nombre": "Computador Todo en Uno Software Privado Modelo 2 Generación 13",
+          "modelo": "AIOI7-13700",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 16,
+            "hilos": 24,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "23.8\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sp-3",
+          "nombre": "Computador Todo en Uno Software Privado Modelo 3 Generación 13",
+          "modelo": "AIOI7-13700-27",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 16,
+            "hilos": 24,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "27\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sp-4",
+          "nombre": "Computador Todo en Uno Software Privado Modelo 4 Generación 13",
+          "modelo": "AIOI5-13400 H",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13400",
+            "nucleos": 10,
+            "hilos": 16,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "20 MB"
+          },
+          "motherboard": {
+            "chipset": "H670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "23.8\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sp-5",
+          "nombre": "Computador Todo en Uno Software Privado Modelo 5 Generación 13",
+          "modelo": "AIOI7-13700 H",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 16,
+            "hilos": 24,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "motherboard": {
+            "chipset": "H670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "23.8\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "aio-sp-6",
+          "nombre": "Computador Todo en Uno Software Privado Modelo 6 Generación 13",
+          "modelo": "AIOI7-13700-27 H",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 16,
+            "hilos": 24,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "motherboard": {
+            "chipset": "H670",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000) - Bluetooth tarjeta Wireless",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["1x RJ-45", "1x HDMI", "1x combo audífono/micrófono", "3x USB 3.2", "1x USB-C"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB",
+            "expandible": "64 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "27\"",
+            "tipo": "LED FHD borde delgado Anti-Reflejo"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "accesorios": ["Cámara Web interna", "Micrófono incorporado", "Parlantes internos"],
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        }
+      ],
+      "computadores_escritorio": [
+        {
+          "id": "est-sp-1",
+          "nombre": "Computador Escritorio Software Privado Modelo 1 Generación 13",
+          "modelo": "ESTI5-13400Q670F",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13400",
+            "nucleos": 16,
+            "hilos": 10,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "20 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "19.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sp-2",
+          "nombre": "Computador Escritorio Software Privado Modelo 2 Generación 13",
+          "modelo": "ESTI7-13700Q670F",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 24,
+            "hilos": 16,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "21.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sp-3",
+          "nombre": "Computador Escritorio Software Privado Modelo 3 Generación 13",
+          "modelo": "ESTI5-13500Q670F",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13500",
+            "nucleos": 20,
+            "hilos": 14,
+            "frecuencia_turbo_max": "4.8 GHz",
+            "cache": "24 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "Q670",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "19.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sp-4",
+          "nombre": "Computador Escritorio Software Privado Modelo 4 Generación 13",
+          "modelo": "ESTI5-13400B660",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13400",
+            "nucleos": 16,
+            "hilos": 10,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "20 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "B660",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "19.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sp-5",
+          "nombre": "Computador Escritorio Software Privado Modelo 5 Generación 13",
+          "modelo": "ESTI7-13700B660",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7 13700",
+            "nucleos": 24,
+            "hilos": 16,
+            "frecuencia_turbo_max": "5.2 GHz",
+            "cache": "30 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "B660",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "21.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        },
+        {
+          "id": "est-sp-6",
+          "nombre": "Computador Escritorio Software Privado Modelo 6 Generación 13",
+          "modelo": "ESTI5-13500B660",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5 13500",
+            "nucleos": 20,
+            "hilos": 14,
+            "frecuencia_turbo_max": "4.8 GHz",
+            "cache": "24 MB"
+          },
+          "chasis": {
+            "color": "Negro",
+            "tamaño": "Mini Tower o SFF"
+          },
+          "motherboard": {
+            "chipset": "B660",
+            "ranuras_ram": "4 ranuras SO-DIMM DDR4",
+            "red_lan": "1 Puerto de Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0",
+            "puertos": ["4x USB 3.2", "1x USB-C 3.2", "1x HDMI", "1x RJ-45 LAN", "1x jack audio y micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB en un solo DIMM",
+            "expandible": "128 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 2280",
+            "capacidad": "500-512 GB"
+          },
+          "monitor": {
+            "tamaño": "19.5\"",
+            "tipo": "LED",
+            "entrada_video": "HDMI (incluye cable)"
+          },
+          "fuente_energia": {
+            "voltaje": "120 V"
+          },
+          "mouse": {
+            "interfaz": "USB",
+            "tipo": "Óptico"
+          },
+          "teclado": {
+            "interfaz": "USB",
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Completo con Teclado Numérico"
+          },
+          "nota": "El mouse, teclado y monitor deberán ser la misma marca."
+        }
+      ],
+      "computadores_portatiles": [
+        {
+          "id": "lap-sp-1",
+          "nombre": "Computador Portátil Modelo 1 Generación 13",
+          "modelo": "LAP14-I5-1335U",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5-1335U",
+            "nucleos": 10,
+            "hilos": 12,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "12 MB"
+          },
+          "motherboard": {
+            "chipset": "Intel integrada al procesador",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0 DISCRETO",
+            "puertos": ["2x USB 3.1", "1x alimentación/entrada DC", "1x USB Tipo C", "1x HDMI", "1x Ethernet Gigabit RJ-45", "1x combo auriculares/micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB 3200 MHz SO-DIMM DDR4",
+            "expandible_minima": "32 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 PCIe NVMe",
+            "capacidad": "500 GB"
+          },
+          "pantalla": {
+            "tamaño": "14.0\"",
+            "tipo": "LED"
+          },
+          "adaptador_energia": {
+            "voltaje": "19.5 V"
+          },
+          "mouse": {
+            "tactil": "Mouse táctil integrado",
+            "externo": "USB / Óptico"
+          },
+          "teclado": {
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Estándar de tamaño completo"
+          },
+          "accesorios": ["Candado de seguridad para laptops", "Mochila incluida"]
+        },
+        {
+          "id": "lap-sp-2",
+          "nombre": "Computador Portátil Modelo 2 Generación 13",
+          "modelo": "LAP14-I7-1355U",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7-1355U",
+            "nucleos": 10,
+            "hilos": 12,
+            "frecuencia_turbo_max": "5.0 GHz",
+            "cache": "12 MB"
+          },
+          "motherboard": {
+            "chipset": "Intel integrada al procesador",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0 DISCRETO",
+            "puertos": ["2x USB 3.1", "1x alimentación/entrada DC", "1x USB Tipo C", "1x HDMI", "1x Ethernet Gigabit RJ-45", "1x combo auriculares/micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB 3200 MHz SO-DIMM DDR4",
+            "expandible_minima": "32 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 PCIe NVMe",
+            "capacidad": "500 GB"
+          },
+          "pantalla": {
+            "tamaño": "14.0\"",
+            "tipo": "LED"
+          },
+          "adaptador_energia": {
+            "voltaje": "19.5 V"
+          },
+          "mouse": {
+            "tactil": "Mouse táctil integrado",
+            "externo": "USB / Óptico"
+          },
+          "teclado": {
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Estándar de tamaño completo"
+          },
+          "accesorios": ["Candado de seguridad para laptops", "Mochila incluida"]
+        },
+        {
+          "id": "lap-sp-3",
+          "nombre": "Computador Portátil Modelo 3 Generación 13",
+          "modelo": "LAP156-I5-1335U",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I5-1335U",
+            "nucleos": 10,
+            "hilos": 12,
+            "frecuencia_turbo_max": "4.6 GHz",
+            "cache": "12 MB"
+          },
+          "motherboard": {
+            "chipset": "Intel integrada al procesador",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0 DISCRETO",
+            "puertos": ["2x USB 3.1", "1x alimentación/entrada DC", "1x USB Tipo C", "1x HDMI", "1x Ethernet Gigabit RJ-45", "1x combo auriculares/micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB 3200 MHz SO-DIMM DDR4",
+            "expandible_minima": "32 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 PCIe NVMe",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "15.6\"",
+            "tipo": "LED"
+          },
+          "adaptador_energia": {
+            "voltaje": "19.5 V"
+          },
+          "mouse": {
+            "tactil": "Mouse táctil integrado",
+            "externo": "USB / Óptico"
+          },
+          "teclado": {
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Estándar de tamaño completo con teclado numérico"
+          },
+          "accesorios": ["Candado de seguridad para laptops", "Mochila incluida"]
+        },
+        {
+          "id": "lap-sp-4",
+          "nombre": "Computador Portátil Modelo 4 Generación 13",
+          "modelo": "LAP156-I5-1335U",
+          "nombre_completo": "ADIKT@ LAP156-I7-1355U",
+          "clase": "Corporativa",
+          "procesador": {
+            "marca": "INTEL",
+            "modelo": "I7-1355U",
+            "nucleos": 10,
+            "hilos": 12,
+            "frecuencia_turbo_max": "5.0 GHz",
+            "cache": "12 MB"
+          },
+          "motherboard": {
+            "chipset": "Intel integrada al procesador",
+            "ranuras_ram": "2 ranuras SO-DIMM DDR4",
+            "red_lan": "Red GbE (10/100/1000)",
+            "seguridad": "Chip TPM 2.0 DISCRETO",
+            "puertos": ["2x USB 3.1", "1x alimentación/entrada DC", "1x USB Tipo C", "1x HDMI", "1x Ethernet Gigabit RJ-45", "1x combo auriculares/micrófono"]
+          },
+          "memoria_ram": {
+            "instalada": "16 GB 3200 MHz SO-DIMM DDR4",
+            "expandible_minima": "32 GB",
+            "tipo": "DDR4"
+          },
+          "almacenamiento": {
+            "tipo": "SSD M.2 PCIe NVMe",
+            "capacidad": "1 TB"
+          },
+          "pantalla": {
+            "tamaño": "15.6\"",
+            "tipo": "LED"
+          },
+          "adaptador_energia": {
+            "voltaje": "19.5 V"
+          },
+          "mouse": {
+            "tactil": "Mouse táctil integrado",
+            "externo": "USB / Óptico"
+          },
+          "teclado": {
+            "idioma": "Latinoamericano (con ñ)",
+            "tamaño": "Estándar de tamaño completo con teclado numérico"
+          },
+          "accesorios": ["Candado de seguridad para laptops", "Mochila incluida"]
+        }
+      ]
+    }
+  }
+}

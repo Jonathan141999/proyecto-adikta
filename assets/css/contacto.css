@@ -3,7 +3,7 @@
 .location-section-container {
     position: relative;
     padding: 80px 4%;
-    background-color: #f4f6f8; 
+    background-color: #f4f6f8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,8 @@
     width: 100%;
     height: 100%;
     /* Placeholder for actual map background */
-    background-image: url('../img/mapa-placeholder.png'); /* You would replace this */
+    background-image: url('../img/mapa-placeholder.png');
+    /* You would replace this */
     background-size: cover;
     background-position: center;
     opacity: 0.5;
@@ -96,6 +97,13 @@
 .location-right-col {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.location-details-container {
+    display: flex;
+    flex-direction: column;
     gap: 24px;
 }
 
@@ -155,7 +163,8 @@
     font-weight: 700;
     text-decoration: none;
     border-radius: 12px;
-    margin-top: auto; /* Pushes button to the bottom */
+    margin-top: auto;
+    /* Pushes button to the bottom */
 }
 
 
