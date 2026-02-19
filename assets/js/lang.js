@@ -233,7 +233,10 @@ const translations = {
     "cta_title": "¿Listo para romper el molde?",
     "cta_subtitle": "Hablemos de cómo nuestra visión asimétrica puede potenciar su próxima gran solución IT.",
     "cta_button1": "COMENZAR PROYECTO",
-    "cta_button2": "SABER MÁS"
+    "cta_button2": "SABER MÁS",
+    "toast_success": "¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.",
+    "toast_error": "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.",
+    "toast_validation": "Por favor, completa todos los campos."
   },
   en: {
     "page_title_index": "Adikt@ PC | Innovative Technology",
@@ -472,7 +475,10 @@ const translations = {
     "privacy_policy_paragraph3": "We use this information to understand your needs and provide you with a better service, and in particular for the following reasons: internal record keeping, we may use the information to improve our products and services, we may periodically send promotional emails about new products, special offers or other information which we think you may find interesting.",
     "privacy_policy_subtitle3": "3. Security",
     "privacy_policy_paragraph4": "We are committed to ensuring that your information is secure. In order to prevent unauthorised access or disclosure, we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online.",
-    "product_ram_price": "$69.00"
+    "product_ram_price": "$69.00",
+    "toast_success": "Message sent successfully! We will get in touch with you soon.",
+    "toast_error": "There was an error sending the message. Please try again later.",
+    "toast_validation": "Please complete all fields."
   }
 };
 
@@ -572,7 +578,7 @@ const translations = {
           else el.value = txt;
         } else if (tag === 'TITLE') {
           document.title = txt;
-          try { el.innerHTML = txt; } catch (e) {}
+          try { el.innerHTML = txt; } catch (e) { }
         } else if (tag === 'OPTION') {
           el.textContent = txt;
         } else {
@@ -595,7 +601,7 @@ const translations = {
   function notifyLangReady(lang) {
     try {
       window.dispatchEvent(new CustomEvent('lang:ready', { detail: { lang: lang } }));
-    } catch (e) {}
+    } catch (e) { }
   }
 
   function setLanguage(lang, options) {
@@ -605,7 +611,7 @@ const translations = {
     var skipIfSamePath = !!opts.skipIfSamePath;
 
     window.currentLang = safeLang;
-    try { localStorage.setItem(STORAGE_KEY, safeLang); } catch (e) {}
+    try { localStorage.setItem(STORAGE_KEY, safeLang); } catch (e) { }
 
     applyTranslations(safeLang);
     notifyLangReady(safeLang);
@@ -622,7 +628,7 @@ const translations = {
     var pathLang = getPathLang();
     var htmlLang = normalizeLang(document.documentElement.lang || DEFAULT_LANG);
     var storedLang = null;
-    try { storedLang = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    try { storedLang = localStorage.getItem(STORAGE_KEY); } catch (e) { }
     var validStored = SUPPORTED_LANGS[storedLang] ? storedLang : null;
     return validStored || pathLang || htmlLang || DEFAULT_LANG;
   }
@@ -647,7 +653,7 @@ const translations = {
     var observer = new MutationObserver(function () {
       if (_langDebounce) clearTimeout(_langDebounce);
       _langDebounce = setTimeout(function () {
-        try { applyTranslations(window.currentLang || document.documentElement.lang || DEFAULT_LANG); } catch (e) {}
+        try { applyTranslations(window.currentLang || document.documentElement.lang || DEFAULT_LANG); } catch (e) { }
       }, 120);
     });
     if (document.body) {
@@ -657,5 +663,5 @@ const translations = {
         observer.observe(document.body, { childList: true, subtree: true });
       });
     }
-  } catch (e) {}
+  } catch (e) { }
 })();

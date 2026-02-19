@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="../assets/css/contacto.css">
   <link rel="stylesheet" href="../assets/css/mapa.css">
+  <link rel="stylesheet" href="../assets/css/toast.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
 
@@ -41,7 +42,7 @@
           <p class="muted" data-i18n="contact_form_description">Completa el siguiente formulario y te responderemos en
             menos de 24 horas.</p>
 
-          <form class="contact-form">
+          <form id="contact-form" class="contact-form">
             <div class="form-grid">
               <div class="form-group">
                 <label for="nombre" data-i18n="contact_form_name_label">Nombre completo</label>
@@ -174,9 +175,10 @@
   <script src="../assets/js/mobile-menu.js"></script>
   <script src="../assets/js/lang.js"></script>
 
-  <!-- Leaflet JS & Custom Script -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="../assets/js/mapa.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="../assets/js/contact-handler.js"></script>
 </body>
 
 </html>
