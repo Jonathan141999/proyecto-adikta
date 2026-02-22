@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ADIKTA — Tecnología de Alto Nivel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07090D;
+  --surface: #0E1117;
+  --panel: #141922;
+  --border: rgba(255,255,255,0.07);
+  --accent: #00D4FF;
+  --accent2: #FF6B35;
+  --text: #E8EDF2;
+  --muted: #556070;
+  --green: #00E676;
+  --red: #FF4444;
+  --wsp: #25D366;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(7,9,13,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.08em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;flex-shrink:0}
+.logo small{display:block;font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.18em;-webkit-text-fill-color:var(--muted);margin-top:-5px}
+nav{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
+.nav-chip{background:none;border:1px solid var(--border);color:var(--muted);padding:.35rem .9rem;border-radius:99px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:500;transition:all .2s}
+.nav-chip:hover,.nav-chip.active{background:var(--accent);border-color:var(--accent);color:#000}
+.cart-btn{background:linear-gradient(135deg,var(--accent),#0099BB);border:none;color:#000;padding:.5rem 1.1rem;border-radius:99px;cursor:pointer;font-weight:700;font-family:'DM Sans',sans-serif;font-size:.88rem;display:flex;align-items:center;gap:.5rem;transition:transform .2s,box-shadow .2s;flex-shrink:0}
+.cart-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,212,255,.35)}
+.cart-badge{background:var(--accent2);color:#fff;font-size:.68rem;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+/* HERO */
+.hero{padding:5.5rem 2rem 3.5rem;max-width:860px;margin:0 auto;text-align:center}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.2);color:var(--accent);padding:.3rem 1rem;border-radius:99px;font-size:.75rem;font-family:'JetBrains Mono',monospace;letter-spacing:.1em;margin-bottom:1.5rem}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,10vw,7.5rem);line-height:.92;letter-spacing:.02em;margin-bottom:1.5rem}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);font-size:1.05rem;max-width:480px;margin:0 auto 2rem;line-height:1.6}
+.hero-stats{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--accent)}
+.stat-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+
+/* FILTERS */
+.filters-bar{display:flex;gap:.6rem;padding:1.5rem 2rem;max-width:1280px;margin:0 auto;flex-wrap:wrap;align-items:center}
+.filters-label{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);letter-spacing:.12em;margin-right:.4rem}
+.fchip{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:.4rem 1rem;border-radius:8px;cursor:pointer;font-size:.8rem;font-weight:500;transition:all .2s;font-family:'DM Sans',sans-serif}
+.fchip:hover{border-color:var(--accent);color:var(--accent)}
+.fchip.active{background:rgba(0,212,255,.1);border-color:var(--accent);color:var(--accent)}
+.search-wrap{margin-left:auto;position:relative}
+.search-wrap input{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:.42rem 1rem .42rem 2.4rem;border-radius:8px;font-size:.83rem;width:210px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s}
+.search-wrap input:focus{border-color:var(--accent)}
+.search-wrap input::placeholder{color:var(--muted)}
+.search-wrap::before{content:'⌕';position:absolute;left:.72rem;top:50%;transform:translateY(-50%);color:var(--muted);font-size:1.1rem;pointer-events:none}
+
+/* GRID */
+.grid-wrap{padding:0 2rem 5rem;max-width:1280px;margin:0 auto}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem}
+
+/* CARD */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;cursor:pointer;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;display:flex;flex-direction:column;animation:fadeUp .5s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.card:hover{transform:translateY(-5px);border-color:rgba(0,212,255,.28);box-shadow:0 20px 50px rgba(0,0,0,.55),0 0 0 1px rgba(0,212,255,.08)}
+.card-badge{position:absolute;top:.9rem;left:.9rem;z-index:2;font-size:.68rem;font-weight:700;letter-spacing:.07em;padding:.22rem .6rem;border-radius:5px;text-transform:uppercase}
+.badge-new{background:var(--green);color:#000}
+.badge-sale{background:var(--accent2);color:#fff}
+.card-img{width:100%;height:200px;background:var(--panel);display:flex;align-items:center;justify-content:center;font-size:4.5rem;position:relative;overflow:hidden;flex-shrink:0}
+.card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--surface) 0%,transparent 55%)}
+.card-body{padding:1.1rem 1.2rem 1.2rem;display:flex;flex-direction:column;flex:1}
+.card-cat{font-size:.68rem;font-family:'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.35rem}
+.card-name{font-size:1.05rem;font-weight:600;line-height:1.3;margin-bottom:.35rem}
+.card-desc{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:.8rem;flex:1}
+.card-specs{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem}
+.spec{background:var(--panel);border:1px solid var(--border);font-size:.66rem;font-family:'JetBrains Mono',monospace;color:var(--muted);padding:.18rem .48rem;border-radius:4px}
+.card-footer{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.card-price{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;line-height:1}
+.card-price small{font-family:'DM Sans',sans-serif;font-size:.68rem;color:var(--muted);display:block;margin-bottom:-2px}
+.card-actions{display:flex;gap:.5rem}
+.btn-cart{background:linear-gradient(135deg,var(--accent),#0099BB);border:none;color:#000;padding:.48rem .9rem;border-radius:8px;cursor:pointer;font-weight:700;font-size:.8rem;font-family:'DM Sans',sans-serif;transition:transform .15s,box-shadow .15s;white-space:nowrap}
+.btn-cart:hover{transform:scale(1.04);box-shadow:0 4px 16px rgba(0,212,255,.4)}
+.btn-wsp-card{background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.3);color:var(--wsp);padding:.48rem .7rem;border-radius:8px;cursor:pointer;font-size:1rem;transition:all .2s;display:flex;align-items:center;justify-content:center;line-height:1}
+.btn-wsp-card:hover{background:var(--wsp);color:#fff;border-color:var(--wsp)}
+
+/* OVERLAY */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);z-index:200;display:none;align-items:center;justify-content:center;padding:1.5rem}
+.overlay.open{display:flex}
+
+/* DETAIL MODAL */
+.detail-modal{background:var(--surface);border:1px solid var(--border);border-radius:24px;width:100%;max-width:760px;max-height:90vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.detail-img-wrap{background:var(--panel);font-size:7rem;display:flex;align-items:center;justify-content:center;border-radius:24px 0 0 24px;min-height:340px}
+.detail-body{padding:2rem;display:flex;flex-direction:column;gap:.9rem}
+.detail-cat{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
+.detail-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;line-height:1.05}
+.detail-price{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;color:var(--accent);line-height:1}
+.detail-desc{color:var(--muted);font-size:.88rem;line-height:1.6}
+.detail-specs{display:flex;flex-wrap:wrap;gap:.4rem}
+.detail-actions{display:flex;flex-direction:column;gap:.65rem;margin-top:auto}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#0099BB);border:none;color:#000;padding:.85rem;border-radius:10px;cursor:pointer;font-weight:700;font-size:.95rem;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-primary:hover{box-shadow:0 8px 24px rgba(0,212,255,.35)}
+.btn-wsp-lg{background:var(--wsp);border:none;color:#fff;padding:.85rem;border-radius:10px;cursor:pointer;font-weight:700;font-size:.95rem;font-family:'DM Sans',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.btn-wsp-lg:hover{background:#1EB854;box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.modal-close{position:absolute;top:1rem;right:1rem;background:var(--panel);border:1px solid var(--border);color:var(--muted);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:5}
+.modal-close:hover{color:var(--text);border-color:var(--text)}
+
+/* CART MODAL */
+.cart-modal{background:var(--surface);border:1px solid var(--border);border-radius:24px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;padding:2rem;position:relative}
+.cart-h{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;margin-bottom:1.5rem;display:flex;align-items:baseline;gap:.75rem}
+.cart-h span{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);font-weight:400}
+.cart-items{display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.5rem}
+.citem{display:flex;align-items:center;gap:.9rem;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:.7rem 1rem}
+.citem-icon{font-size:1.8rem;width:44px;text-align:center;flex-shrink:0}
+.citem-info{flex:1;min-width:0}
+.citem-name{font-weight:600;font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.citem-price{color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:.82rem;margin-top:.1rem}
+.citem-rm{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1rem;padding:.2rem;transition:color .2s;flex-shrink:0}
+.citem-rm:hover{color:var(--red)}
+.cart-total-row{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:1.5rem}
+.cart-total-label{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.cart-total-val{font-family:'Bebas Neue',sans-serif;font-size:2.4rem}
+.pay-title{font-size:.72rem;font-family:'JetBrains Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.9rem}
+.pay-options{display:flex;flex-direction:column;gap:.75rem}
+.btn-payphone{background:linear-gradient(135deg,#6C3FF5,#9B6BFF);border:none;color:#fff;padding:.9rem 1rem;border-radius:10px;cursor:pointer;font-weight:700;font-size:.95rem;font-family:'DM Sans',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%}
+.btn-payphone:hover{box-shadow:0 8px 24px rgba(108,63,245,.45);transform:translateY(-1px)}
+.btn-wsp-pay{background:var(--wsp);border:none;color:#fff;padding:.9rem 1rem;border-radius:10px;cursor:pointer;font-weight:700;font-size:.95rem;font-family:'DM Sans',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%}
+.btn-wsp-pay:hover{background:#1EB854;box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.pay-note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:.25rem;line-height:1.5}
+.empty-cart{text-align:center;padding:3rem 1rem}
+.empty-cart-icon{font-size:3.5rem;opacity:.35;margin-bottom:1rem}
+.empty-cart p{color:var(--muted);font-size:.88rem}
+
+/* PAYPHONE OVERLAY */
+.pp-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:300;display:none;align-items:center;justify-content:center;padding:1.5rem}
+.pp-overlay.open{display:flex}
+.pp-box{background:var(--surface);border:1px solid var(--border);border-radius:20px;width:100%;max-width:460px;overflow:hidden;position:relative}
+.pp-header{padding:1.2rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.pp-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.05em}
+.pp-iframe{width:100%;height:520px;border:none;display:block}
+
+/* TOAST */
+#toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(120px);background:var(--green);color:#000;font-weight:700;padding:.7rem 1.5rem;border-radius:99px;z-index:999;font-size:.88rem;transition:transform .35s cubic-bezier(.34,1.56,.64,1);pointer-events:none;white-space:nowrap}
+#toast.show{transform:translateX(-50%) translateY(0)}
+
+/* WSP FLOAT */
+.wsp-float{position:fixed;bottom:2rem;right:2rem;z-index:90;background:var(--wsp);border:none;border-radius:50%;width:58px;height:58px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(37,211,102,.45);transition:transform .2s;animation:pulse-wsp 3s ease infinite}
+.wsp-float:hover{transform:scale(1.1)}
+@keyframes pulse-wsp{0%,100%{box-shadow:0 8px 32px rgba(37,211,102,.45)}50%{box-shadow:0 8px 48px rgba(37,211,102,.7),0 0 0 10px rgba(37,211,102,.1)}}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;max-width:1280px;margin:0 auto}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--muted);letter-spacing:.1em}
+.footer-copy{font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header{padding:0 1rem}
+  nav{display:none}
+  .hero{padding:4rem 1rem 2.5rem}
+  .filters-bar,.grid-wrap{padding-left:1rem;padding-right:1rem}
+  .detail-modal{grid-template-columns:1fr}
+  .detail-img-wrap{border-radius:24px 24px 0 0;min-height:180px;font-size:5rem}
+  .search-wrap input{width:150px}
+  .wsp-float{bottom:1.5rem;right:1.5rem;width:52px;height:52px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">ADIKTA<small>CATÁLOGO DIGITAL</small></div>
+  <nav>
+    <button class="nav-chip active" data-cat="all">Todos</button>
+    <button class="nav-chip" data-cat="laptop">Laptops</button>
+    <button class="nav-chip" data-cat="pc">PCs</button>
+    <button class="nav-chip" data-cat="accesorio">Accesorios</button>
+  </nav>
+  <button class="cart-btn" onclick="openCart()">
+    🛒 Carrito <span class="cart-badge" id="cart-count">0</span>
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag"><span class="live-dot"></span>PRODUCTOS DISPONIBLES AHORA</div>
+  <h1>TECH<br><em>PREMIUM</em><br>ECUADOR</h1>
+  <p>Laptops, PCs y accesorios de alto rendimiento. Envíos a todo Ecuador y Estados Unidos.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Garantía</div></div>
+    <div class="stat"><div class="stat-num">24H</div><div class="stat-label">Respuesta</div></div>
+    <div class="stat"><div class="stat-num">USD</div><div class="stat-label">Precios fijos</div></div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="filters-bar">
+  <span class="filters-label">FILTRAR_</span>
+  <button class="fchip active" data-cat="all">Todos</button>
+  <button class="fchip" data-cat="laptop">Laptops</button>
+  <button class="fchip" data-cat="pc">PCs de Escritorio</button>
+  <button class="fchip" data-cat="accesorio">Accesorios</button>
+  <div class="search-wrap"><input type="text" id="search" placeholder="Buscar producto..."></div>
+</div>
+
+<!-- GRID -->
+<section class="grid-wrap">
+  <div class="products-grid" id="grid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ADIKTA</div>
+  <div class="footer-copy">© 2025 CATÁLOGO ADIKTA — Todos los derechos reservados</div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<button class="wsp-float" onclick="wspGeneral()" title="Chatear por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</button>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- DETAIL MODAL -->
+<div class="overlay" id="detail-overlay" onclick="closeDetailBg(event)">
+  <div class="detail-modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeDetail()">✕</button>
+    <div class="detail-img-wrap" id="d-img"></div>
+    <div class="detail-body">
+      <div class="detail-cat" id="d-cat"></div>
+      <div class="detail-name" id="d-name"></div>
+      <div class="detail-price" id="d-price"></div>
+      <div class="detail-desc" id="d-desc"></div>
+      <div class="detail-specs" id="d-specs"></div>
+      <div class="detail-actions">
+        <button class="btn-primary" id="d-add">+ Agregar al carrito</button>
+        <button class="btn-wsp-lg" id="d-wsp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Consultar por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART MODAL -->
+<div class="overlay" id="cart-overlay" onclick="closeCartBg(event)">
+  <div class="cart-modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeCart()">✕</button>
+    <div class="cart-h">Tu Carrito <span id="cart-sub">0 productos</span></div>
+    <div id="cart-body"></div>
+  </div>
+</div>
+
+<!-- PAYPHONE OVERLAY -->
+<div class="pp-overlay" id="pp-overlay">
+  <div class="pp-box">
+    <div class="pp-header">
+      <div class="pp-title">💳 Pagar con Payphone</div>
+      <button class="modal-close" style="position:static;flex-shrink:0" onclick="closePP()">✕</button>
+    </div>
+    <iframe id="pp-iframe" class="pp-iframe" src="" title="Payphone Checkout"></iframe>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════
+// ⚙️  CONFIGURACIÓN — Reemplaza estos 3 valores
+// ══════════════════════════════════════════════════════
+const WHATSAPP    = "593983868358";           // Tu número con código de país
+const PP_TOKEN    = "TU_TOKEN_PAYPHONE_AQUI"; // Token de Payphone → app.payphone.co
+const PP_STORE_ID = "TU_STORE_ID_AQUI";       // Store ID de Payphone → app.payphone.co
+
+// ══════════════════════════════════════════════════════
+// 📦 PRODUCTOS — Edita, agrega o elimina los tuyos
+// ══════════════════════════════════════════════════════
+const productos = [
+  {
+    id:1, cat:"laptop", badge:"new", icon:"💻",
+    nombre:"Laptop ASUS VivoBook 15",
+    desc:"Ultradelgada ideal para trabajo y estudio. Excelente batería y diseño ligero.",
+    precio:549,
+    specs:["Intel Core i5-1235U","8GB RAM","512GB SSD","15.6\" FHD"]
+  },
+  {
+    id:2, cat:"laptop", badge:"sale", icon:"💻",
+    nombre:"Laptop Lenovo IdeaPad 3",
+    desc:"Rendimiento confiable para el día a día. Perfecta para estudiantes y profesionales.",
+    precio:429,
+    specs:["AMD Ryzen 5 5500U","8GB RAM","256GB SSD","15.6\" FHD"]
+  },
+  {
+    id:3, cat:"laptop", icon:"🎮",
+    nombre:"Laptop MSI Gaming Katana",
+    desc:"Potencia gaming sin compromisos. Alta tasa de refresco para experiencia fluida.",
+    precio:1099,
+    specs:["Intel Core i7-12650H","16GB RAM","RTX 4060","15.6\" 144Hz"]
+  },
+  {
+    id:4, cat:"laptop", badge:"new", icon:"💻",
+    nombre:"MacBook Air M2",
+    desc:"El laptop más delgado de Apple. Chip M2, batería de 18h, pantalla Liquid Retina.",
+    precio:1149,
+    specs:["Apple M2","8GB RAM","256GB SSD","13.6\" Liquid Retina"]
+  },
+  {
+    id:5, cat:"pc", icon:"🖥️",
+    nombre:"PC Escritorio ADIKTA Pro",
+    desc:"Torre de alto rendimiento con componentes de calidad. Lista para usar desde el día uno.",
+    precio:699,
+    specs:["Intel Core i7-12700","16GB DDR5","1TB SSD NVMe","RTX 3060"]
+  },
+  {
+    id:6, cat:"pc", icon:"🖥️",
+    nombre:"PC All-in-One HP 24",
+    desc:"Todo en uno elegante para el hogar u oficina. Sin cables, sin complicaciones.",
+    precio:599,
+    specs:["Intel Core i5-1235U","8GB RAM","512GB SSD","23.8\" FHD Touch"]
+  },
+  {
+    id:7, cat:"accesorio", badge:"sale", icon:"🖱️",
+    nombre:"Mouse Logitech MX Master 3S",
+    desc:"El mouse más avanzado para productividad. Scroll electromagnético ultra preciso.",
+    precio:89,
+    specs:["Inalámbrico Bluetooth","8000 DPI","7 botones","USB-C"]
+  },
+  {
+    id:8, cat:"accesorio", icon:"⌨️",
+    nombre:"Teclado Mecánico Keychron K2",
+    desc:"Compacto con switches de alta calidad. Compatible Mac y Windows.",
+    precio:119,
+    specs:["75% Layout","Switches Red","RGB Backlit","Bluetooth + USB"]
+  },
+  {
+    id:9, cat:"accesorio", icon:"🖥️",
+    nombre:"Monitor LG UltraWide 29\"",
+    desc:"Ultrawide para multitarea y creativos. Colores precisos y campo visual amplio.",
+    precio:299,
+    specs:["29\" IPS","2560x1080","75Hz","USB-C + HDMI"]
+  }
+];
+
+// ══════════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════════
+let carrito = [];
+let filtro  = 'all';
+let busq    = '';
+
+// ══════════════════════════════════════════════════════
+// RENDER GRID
+// ══════════════════════════════════════════════════════
+function renderGrid() {
+  const grid = document.getElementById('grid');
+  const lista = productos.filter(p => {
+    const catOk = filtro === 'all' || p.cat === filtro;
+    const busOk = p.nombre.toLowerCase().includes(busq.toLowerCase()) ||
+                  p.desc.toLowerCase().includes(busq.toLowerCase());
+    return catOk && busOk;
+  });
+
+  if (!lista.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:4rem 1rem;color:var(--muted)">
+      <div style="font-size:3rem;margin-bottom:1rem">🔍</div>
+      <p>Sin resultados para "<strong style="color:var(--text)">${busq}</strong>"</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = lista.map((p, i) => `
+    <div class="card" style="animation-delay:${i * 0.06}s" onclick="openDetail(${p.id})">
+      ${p.badge === 'new'  ? '<div class="card-badge badge-new">NUEVO</div>'  : ''}
+      ${p.badge === 'sale' ? '<div class="card-badge badge-sale">OFERTA</div>' : ''}
+      <div class="card-img">${p.icon}</div>
+      <div class="card-body">
+        <div class="card-cat">${p.cat.toUpperCase()}</div>
+        <div class="card-name">${p.nombre}</div>
+        <div class="card-desc">${p.desc}</div>
+        <div class="card-specs">${p.specs.map(s => `<span class="spec">${s}</span>`).join('')}</div>
+        <div class="card-footer">
+          <div class="card-price"><small>Precio</small>$${p.precio}</div>
+          <div class="card-actions">
+            <button class="btn-wsp-card" title="Consultar por WhatsApp"
+              onclick="event.stopPropagation();wspProducto(${p.id})">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </button>
+            <button class="btn-cart" onclick="event.stopPropagation();addCart(${p.id})">+ Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// ══════════════════════════════════════════════════════
+// CARRITO
+// ══════════════════════════════════════════════════════
+function addCart(id) {
+  const p = productos.find(x => x.id === id);
+  carrito.push({...p, uid: Date.now() + Math.random()});
+  updateCount();
+  toast('✓ ' + p.nombre + ' agregado');
+}
+function removeCart(uid) {
+  carrito = carrito.filter(i => i.uid !== uid);
+  updateCount();
+  renderCart();
+}
+function total() { return carrito.reduce((a, b) => a + b.precio, 0); }
+function updateCount() { document.getElementById('cart-count').textContent = carrito.length; }
+
+function renderCart() {
+  const body = document.getElementById('cart-body');
+  document.getElementById('cart-sub').textContent = carrito.length + ' producto' + (carrito.length !== 1 ? 's' : '');
+
+  if (!carrito.length) {
+    body.innerHTML = `<div class="empty-cart">
+      <div class="empty-cart-icon">🛒</div>
+      <p>Tu carrito está vacío.<br>Agrega productos para continuar.</p></div>`;
+    return;
+  }
+
+  const t = total();
+  body.innerHTML = `
+    <div class="cart-items">
+      ${carrito.map(item => `
+        <div class="citem">
+          <div class="citem-icon">${item.icon}</div>
+          <div class="citem-info">
+            <div class="citem-name">${item.nombre}</div>
+            <div class="citem-price">$${item.precio} USD</div>
+          </div>
+          <button class="citem-rm" onclick="removeCart(${item.uid})">✕</button>
+        </div>`).join('')}
+    </div>
+    <div class="cart-total-row">
+      <span class="cart-total-label">TOTAL A PAGAR</span>
+      <span class="cart-total-val">$${t} <small style="font-size:1rem;color:var(--muted)">USD</small></span>
+    </div>
+    <div class="pay-title">ELIGE TU MÉTODO DE PAGO</div>
+    <div class="pay-options">
+      <button class="btn-payphone" onclick="pagarPayphone()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="5" width="20" height="14" rx="2"/>
+          <path d="M2 10h20"/>
+        </svg>
+        Pagar con tarjeta — Payphone
+      </button>
+      <button class="btn-wsp-pay" onclick="wspCarrito()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Coordinar pago por WhatsApp
+      </button>
+      <p class="pay-note">Por WhatsApp coordinamos transferencia bancaria,<br>depósito o efectivo directamente contigo.</p>
+    </div>`;
+}
+
+// ══════════════════════════════════════════════════════
+// PAYPHONE
+// ══════════════════════════════════════════════════════
+function pagarPayphone() {
+  if (PP_TOKEN === 'TU_TOKEN_PAYPHONE_AQUI') {
+    toast('⚠️ Configura tu Token de Payphone primero');
+    return;
+  }
+  const t   = total();
+  const ref = 'ADIKTA-' + Date.now();
+  const url = 'https://pay.payphonetodoesposible.com/api/button/Venta'
+    + '?token='           + encodeURIComponent(PP_TOKEN)
+    + '&amount='          + (t * 100)
+    + '&amountWithTax=0'
+    + '&tax=0'
+    + '&amountWithoutTax='+ (t * 100)
+    + '&currency=USD'
+    + '&reference='       + ref
+    + '&responseUrl='     + encodeURIComponent(window.location.href)
+    + '&cancellationUrl=' + encodeURIComponent(window.location.href)
+    + '&storeId='         + encodeURIComponent(PP_STORE_ID)
+    + '&lang=es';
+  document.getElementById('pp-iframe').src = url;
+  document.getElementById('pp-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePP() {
+  document.getElementById('pp-overlay').classList.remove('open');
+  document.getElementById('pp-iframe').src = '';
+  document.body.style.overflow = '';
+}
+
+// ══════════════════════════════════════════════════════
+// WHATSAPP
+// ══════════════════════════════════════════════════════
+function abrirWSP(msg) {
+  window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
+}
+function wspGeneral() {
+  abrirWSP('Hola ADIKTA! 👋 Quisiera información sobre sus productos.');
+}
+function wspProducto(id) {
+  const p = productos.find(x => x.id === id);
+  abrirWSP('Hola ADIKTA! 👋 Me interesa este producto:\n\n*' + p.nombre + '*\nPrecio: $' + p.precio + ' USD\n\n¿Está disponible? ¿Cuáles son los métodos de pago?');
+}
+function wspCarrito() {
+  let msg = 'Hola ADIKTA! 👋 Quiero hacer el siguiente pedido:\n\n';
+  carrito.forEach(i => { msg += '• ' + i.nombre + ' — $' + i.precio + ' USD\n'; });
+  msg += '\n💰 *Total: $' + total() + ' USD*\n\n¿Cómo puedo coordinar el pago?';
+  abrirWSP(msg);
+}
+
+// ══════════════════════════════════════════════════════
+// DETAIL MODAL
+// ══════════════════════════════════════════════════════
+function openDetail(id) {
+  const p = productos.find(x => x.id === id);
+  document.getElementById('d-img').textContent   = p.icon;
+  document.getElementById('d-cat').textContent   = p.cat.toUpperCase();
+  document.getElementById('d-name').textContent  = p.nombre;
+  document.getElementById('d-price').textContent = '$' + p.precio + ' USD';
+  document.getElementById('d-desc').textContent  = p.desc;
+  document.getElementById('d-specs').innerHTML   = p.specs.map(s => '<span class="spec">' + s + '</span>').join('');
+  document.getElementById('d-add').onclick = function() { addCart(p.id); closeDetail(); };
+  document.getElementById('d-wsp').onclick = function() { wspProducto(p.id); };
+  document.getElementById('detail-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDetail() {
+  document.getElementById('detail-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeDetailBg(e) {
+  if (e.target === document.getElementById('detail-overlay')) closeDetail();
+}
+
+// ══════════════════════════════════════════════════════
+// CART MODAL
+// ══════════════════════════════════════════════════════
+function openCart() {
+  renderCart();
+  document.getElementById('cart-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCart() {
+  document.getElementById('cart-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeCartBg(e) {
+  if (e.target === document.getElementById('cart-overlay')) closeCart();
+}
+
+// ══════════════════════════════════════════════════════
+// TOAST
+// ══════════════════════════════════════════════════════
+let toastT;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastT);
+  toastT = setTimeout(function() { el.classList.remove('show'); }, 2600);
+}
+
+// ══════════════════════════════════════════════════════
+// FILTERS + SEARCH
+// ══════════════════════════════════════════════════════
+document.querySelectorAll('[data-cat]').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    filtro = btn.dataset.cat;
+    document.querySelectorAll('[data-cat]').forEach(function(b) { b.classList.remove('active'); });
+    document.querySelectorAll('[data-cat="' + filtro + '"]').forEach(function(b) { b.classList.add('active'); });
+    renderGrid();
+  });
+});
+document.getElementById('search').addEventListener('input', function(e) {
+  busq = e.target.value;
+  renderGrid();
+});
+
+// INIT
+renderGrid();
+</script>
+</body>
+</html>

@@ -21,3 +21,5 @@ ON public.formularios_contacto
 FOR SELECT 
 TO authenticated 
 USING (true);
+
+
