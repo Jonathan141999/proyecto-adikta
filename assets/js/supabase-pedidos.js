@@ -16,7 +16,7 @@ const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 // 💾 GUARDAR PEDIDO EN SUPABASE
 // ─────────────────────────────────────────────────────
 
-async function guardarPedidoEnSupabase(datosCliente, itemsCarrito) {
+async function guardarPedidoEnSupabase(datosCliente, itemsCarrito, metodoPago = "whatsapp") {
   try {
     console.log("📤 Enviando pedido a Supabase...");
 
@@ -57,7 +57,7 @@ async function guardarPedidoEnSupabase(datosCliente, itemsCarrito) {
       .insert([{
         cliente_id: clienteId,
         total: total,
-        metodo_pago: "whatsapp",
+        metodo_pago: metodoPago,
         estado: "pendiente",
         notas: `Pedido de ${datosCliente.nombre}`
       }])
@@ -67,20 +67,35 @@ async function guardarPedidoEnSupabase(datosCliente, itemsCarrito) {
     const pedidoId = pedido[0].id;
     console.log("✓ Pedido creado:", pedidoId);
 
-    // 3️⃣ Crear detalles del pedido
-    const detalles = itemsCarrito.map(item => ({
-      pedido_id: pedidoId,
-      producto_id: item.id,
-      cantidad: item.cantidad,
-      precio_unitario: item.precio
-    }));
+    // 3️⃣ Crear detalles del pedido 
+    const detalles = itemsCarrito
+      .filter(item => String(item.id).includes('db-')) // Más flexible
+      .map(item => {
+        // Extraer solo los números del ID (ej: "db-7" -> 7)
+        const numericId = parseInt(String(item.id).replace(/\D/g, ''));
+        return {
+          pedido_id: pedidoId,
+          producto_id: numericId,
+          cantidad: parseInt(item.cantidad),
+          precio_unitario: parseFloat(item.precio)
+        };
+      });
 
-    const { error: errorDetalles } = await supabaseClient
-      .from("detalles_pedido")
-      .insert(detalles);
+    console.log("📦 Detalles a enviar a Supabase:", detalles);
 
-    if (errorDetalles) throw errorDetalles;
-    console.log("✓ Detalles guardados");
+    if (detalles.length > 0) {
+      const { error: errorDetalles } = await supabaseClient
+        .from("detalles_pedido")
+        .insert(detalles);
+
+      if (errorDetalles) {
+        console.error("❌ Error de Supabase al insertar detalles:", errorDetalles);
+        throw errorDetalles;
+      }
+      console.log("✓ Detalles guardados exitosamente");
+    } else {
+      console.warn("⚠️ No se encontraron productos de hardware (db-) en el carrito.");
+    }
 
     return {
       exito: true,

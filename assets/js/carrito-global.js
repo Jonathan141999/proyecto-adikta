@@ -32,6 +32,28 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
 
+    <!-- ⚠️ WHATSAPP CHOICE MODAL -->
+    <div class="overlay" id="wsp-choice-overlay">
+      <div class="cart-modal choice-modal">
+        <div class="cart-h" style="font-size: 1.5rem; justify-content: center; margin-bottom: 1rem;">
+          ${isEn ? 'How can we help you?' : '¿Cómo podemos ayudarte?'}
+        </div>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">
+          ${isEn ? 'You have items in your cart. Would you like to consult or continue with your purchase?' : 'Tienes productos en tu carrito. ¿Deseas realizar una consulta o continuar con tu compra?'}
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <button class="btn-payment whatsapp-btn" onclick="continuarWhatsAppConsulta()" style="justify-content: center;">
+            <div class="payment-icon-box whatsapp-box"><i class="fa-brands fa-whatsapp"></i></div>
+            <span>${isEn ? 'Chat with us' : 'Chatear con nosotros'}</span>
+          </button>
+          <button class="btn-wsp-pay" onclick="continuarCompraNavegacion()">
+            ${isEn ? 'Continue with Purchase 🛒' : 'Continuar con la Compra 🛒'}
+          </button>
+        </div>
+        <button class="modal-close-btn" onclick="cerrarWspChoice()">✕</button>
+      </div>
+    </div>
+
     <!-- 📋 CHECKOUT FORM MODAL -->
     <div class="overlay" id="checkout-overlay" onclick="cerrarCheckoutBg(event)">
       <div class="cart-modal" onclick="event.stopPropagation()">
@@ -118,15 +140,52 @@ document.addEventListener("DOMContentLoaded", () => {
 // Función para abrir WhatsApp
 function abrirWhatsApp() {
   const WHATSAPP_NUMERO = "593983868358";
-  // Si hay carrito con items, ir al flujo de pago
+
+  // Si estamos en la página de productos, abrimos el carrito directamente
+  const isProductPage = window.location.pathname.includes("productos.html") || window.location.pathname.includes("products.html");
+
   if (typeof carrito !== 'undefined' && carrito.items.length > 0) {
-    abrirCarrito();
+    if (isProductPage) {
+      abrirCarrito();
+    } else {
+      // Si estamos en otra página, mostramos el choice modal
+      abrirWspChoice();
+    }
   } else {
-    // Si no hay carrito o está vacío, simple consulta
-    const mensaje = "Hola, me gustaría consultar sobre tus productos. 💻";
-    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
+    // Si no hay carrito o está vacío, simple consulta o ir a catálogo
+    continuarWhatsAppConsulta();
   }
+}
+
+function abrirWspChoice() {
+  const overlay = document.getElementById("wsp-choice-overlay");
+  if (overlay) {
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function cerrarWspChoice() {
+  const overlay = document.getElementById("wsp-choice-overlay");
+  if (overlay) {
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+}
+
+function continuarWhatsAppConsulta() {
+  const WHATSAPP_NUMERO = "593983868358";
+  const mensaje = "Hola, me gustaría consultar sobre tus productos. 💻";
+  const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, "_blank");
+  cerrarWspChoice();
+}
+
+function continuarCompraNavegacion() {
+  const isEn = (window.currentLang === 'en' || document.documentElement.lang === 'en' || window.location.pathname.includes('/en/'));
+  const target = isEn ? "../en/products.html#catalog" : "../es/productos.html#catalog";
+  window.location.href = target;
+  cerrarWspChoice();
 }
 
 // Funciones adicionales de control si no están en carrito.js

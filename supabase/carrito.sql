@@ -6,21 +6,29 @@
 -- ═══════════════════════════════════════════════════════════════════════════
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 📦 TABLA: PRODUCTOS
--- ═══════════════════════════════════════════════════════════════════════════
-
 CREATE TABLE IF NOT EXISTS public.productos (
   id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   nombre VARCHAR(255) NOT NULL,
-  descripcion TEXT,
   precio DECIMAL(10,2) NOT NULL,
   categoria VARCHAR(100),
-  imagen_url VARCHAR(500),
-  stock INT DEFAULT 1,
-  icono VARCHAR(10),
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
+  icono VARCHAR(50),
+  imagen VARCHAR(255),
+  stock INT DEFAULT 0,
+  created_at TIMESTAMP DEFAULT NOW()
 );
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 📝 DATOS DE EJEMPLO: PRODUCTOS
+-- ═══════════════════════════════════════════════════════════════════════════
+
+INSERT INTO public.productos (nombre, precio, categoria, icono, imagen, stock) VALUES
+('Adikt@ Laptop Pro 15"', 980.00, 'Laptops', '💻', 'laptop.jpg', 100),
+('DDR4 16GB 3200MHz', 155.00, 'Memorias', '💾', 'memoria-ram.jpg', 100),
+('SSD NVMe 1TB', 80.00, 'Almacenamiento', '💾', 'm.2-ssd.jpg', 100),
+('HDD 2TB 7200RPM', 180.00, 'Almacenamiento', '💾', 'hhd.jpg', 100),
+('PSU 650W Gold', 150.00, 'Fuentes', '⚡', 'fuente.jpg', 100),
+('Monitor 24" Full HD', 150.00, 'Monitores', '🖥️', 'monitor.jpg', 100),
+('Teclado mecánico RGB', 50.00, 'Periféricos', '⌨️', 'teclado.jpg', 100);
 
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 👤 TABLA: CLIENTES
@@ -73,36 +81,28 @@ ALTER TABLE public.pedidos ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.detalles_pedido ENABLE ROW LEVEL SECURITY;
 
 -- ─────────────────────────────────────────────────────────────────────────
+-- Políticas para CLIENTES
+-- ─────────────────────────────────────────────────────────────────────────
+CREATE POLICY "Allow public select clientes" ON public.clientes FOR SELECT USING (true);
+CREATE POLICY "Allow public insert clientes" ON public.clientes FOR INSERT WITH CHECK (true);
+CREATE POLICY "Allow public update clientes" ON public.clientes FOR UPDATE USING (true);
+
+-- ─────────────────────────────────────────────────────────────────────────
+-- Políticas para PEDIDOS
+-- ─────────────────────────────────────────────────────────────────────────
+CREATE POLICY "Allow public select pedidos" ON public.pedidos FOR SELECT USING (true);
+CREATE POLICY "Allow public insert pedidos" ON public.pedidos FOR INSERT WITH CHECK (true);
+
+-- ─────────────────────────────────────────────────────────────────────────
+-- Políticas para DETALLES_PEDIDO
+-- ─────────────────────────────────────────────────────────────────────────
+CREATE POLICY "Allow public select detalles_pedido" ON public.detalles_pedido FOR SELECT USING (true);
+CREATE POLICY "Allow public insert detalles_pedido" ON public.detalles_pedido FOR INSERT WITH CHECK (true);
+
+-- ─────────────────────────────────────────────────────────────────────────
 -- Política: Permitir lectura pública de productos
 -- ─────────────────────────────────────────────────────────────────────────
-
-CREATE POLICY "Allow public read productos" 
-ON public.productos 
-FOR SELECT USING (true);
-
--- ─────────────────────────────────────────────────────────────────────────
--- Política: Permitir insertar clientes públicamente
--- ─────────────────────────────────────────────────────────────────────────
-
-CREATE POLICY "Allow public insert clientes" 
-ON public.clientes 
-FOR INSERT WITH CHECK (true);
-
--- ─────────────────────────────────────────────────────────────────────────
--- Política: Permitir insertar pedidos públicamente
--- ─────────────────────────────────────────────────────────────────────────
-
-CREATE POLICY "Allow public insert pedidos" 
-ON public.pedidos 
-FOR INSERT WITH CHECK (true);
-
--- ─────────────────────────────────────────────────────────────────────────
--- Política: Permitir insertar detalles de pedidos públicamente
--- ─────────────────────────────────────────────────────────────────────────
-
-CREATE POLICY "Allow public insert detalles_pedido" 
-ON public.detalles_pedido 
-FOR INSERT WITH CHECK (true);
+CREATE POLICY "Allow public read productos" ON public.productos FOR SELECT USING (true);
 
 -- ═══════════════════════════════════════════════════════════════════════════
 -- ✅ TABLAS CREADAS EXITOSAMENTE

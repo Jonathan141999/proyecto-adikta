@@ -10,7 +10,10 @@ const WHATSAPP_NUMERO = "593983868358"; // 👈 REEMPLAZA CON TU NÚMERO
 
 class Carrito {
   constructor() {
-    this.items = JSON.parse(localStorage.getItem("carrito")) || [];
+    // 💡 REQUERIMIENTO: No persistir carrito al recargar
+    localStorage.removeItem("carrito");
+    this.items = [];
+    this.metodoPagoSeleccionado = "whatsapp"; // Default
   }
 
   agregar(producto) {
@@ -156,6 +159,7 @@ class Carrito {
       this.mostrarToast("⚠️ Carrito vacío");
       return;
     }
+    this.metodoPagoSeleccionado = "whatsapp";
     cerrarCarrito();
     abrirCheckout();
   }
@@ -168,11 +172,25 @@ class Carrito {
     }
 
     // 1. Guardar en Supabase
-    const resultado = await guardarPedidoEnSupabase(datosCliente, this.items);
+    const resultado = await guardarPedidoEnSupabase(datosCliente, this.items, this.metodoPagoSeleccionado);
 
     if (resultado.exito) {
-      // 2. Preparar mensaje de WhatsApp
-      let mensaje = `🛒 *NUEVO PEDIDO ADIKTA #${resultado.pedidoId}*\n\n`;
+      // 2. Preparar mensaje de WhatsApp según método
+      let titulo = "🛒 *NUEVO PEDIDO ADIKTA*";
+      let footer = "Me gustaría coordinar el pago y la entrega. 🚀";
+
+      if (this.metodoPagoSeleccionado === "transferencia") {
+        titulo = "🛒 *NUEVO PEDIDO - TRANSFERENCIA BANCARIA*";
+        footer = "Deseo pagar por transferencia bancaria. ¿Cuáles son los datos de la cuenta? 🏦";
+      } else if (this.metodoPagoSeleccionado === "deposito") {
+        titulo = "🛒 *NUEVO PEDIDO - DEPÓSITO EN EFECTIVO*";
+        footer = "Deseo pagar por depósito en efectivo. ¿Cuáles son los datos para el depósito? 💰";
+      } else if (this.metodoPagoSeleccionado === "presencial") {
+        titulo = "🛒 *NUEVO PEDIDO - PAGO EN PERSONA*";
+        footer = "Deseo pagar en persona. ¿Cuál es el mejor lugar y horario para retirar? 📍";
+      }
+
+      let mensaje = `${titulo} #${resultado.pedidoId}\n\n`;
       mensaje += `👤 *Cliente:* ${datosCliente.nombre}\n`;
       mensaje += `📱 *WhatsApp:* ${datosCliente.whatsapp}\n\n`;
       mensaje += "📋 *Detalles del pedido:*\n";
@@ -183,7 +201,7 @@ class Carrito {
 
       const total = this.obtenerTotal();
       mensaje += `\n💰 *Total: $${total.toFixed(2)} USD*\n\n`;
-      mensaje += "Me gustaría coordinar el pago y la entrega. 🚀";
+      mensaje += footer;
 
       const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
       window.open(url, "_blank");
@@ -206,25 +224,9 @@ class Carrito {
       this.mostrarToast("⚠️ Carrito vacío");
       return;
     }
-
-    let mensaje = "🛒 *NUEVO PEDIDO ADIKTA - TRANSFERENCIA BANCARIA*\n\n";
-    let detalles = "📋 *Detalles del pedido:*\n\n";
-
-    this.items.forEach(item => {
-      detalles += `• ${item.nombre} × ${item.cantidad} = $${(item.precio * item.cantidad).toFixed(2)}\n`;
-    });
-
-    const total = this.obtenerTotal();
-    mensaje += detalles;
-    mensaje += `\n💰 *Total: $${total.toFixed(2)} USD*\n\n`;
-    mensaje += "Deseo pagar por transferencia bancaria. ¿Cuáles son los datos de la cuenta? 🏦";
-
-    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
-
-    this.limpiar();
-    this.mostrarToast("✓ Pedido enviado. Carrito vaciado.");
+    this.metodoPagoSeleccionado = "transferencia";
     cerrarCarrito();
+    abrirCheckout();
   }
 
   pagarPorDeposito() {
@@ -232,25 +234,9 @@ class Carrito {
       this.mostrarToast("⚠️ Carrito vacío");
       return;
     }
-
-    let mensaje = "🛒 *NUEVO PEDIDO ADIKTA - DEPÓSITO EN EFECTIVO*\n\n";
-    let detalles = "📋 *Detalles del pedido:*\n\n";
-
-    this.items.forEach(item => {
-      detalles += `• ${item.nombre} × ${item.cantidad} = $${(item.precio * item.cantidad).toFixed(2)}\n`;
-    });
-
-    const total = this.obtenerTotal();
-    mensaje += detalles;
-    mensaje += `\n💰 *Total: $${total.toFixed(2)} USD*\n\n`;
-    mensaje += "Deseo pagar por depósito en efectivo. ¿Cuáles son los datos para el depósito? 💰";
-
-    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
-
-    this.limpiar();
-    this.mostrarToast("✓ Pedido enviado. Carrito vaciado.");
+    this.metodoPagoSeleccionado = "deposito";
     cerrarCarrito();
+    abrirCheckout();
   }
 
   pagarEnPersona() {
@@ -258,25 +244,9 @@ class Carrito {
       this.mostrarToast("⚠️ Carrito vacío");
       return;
     }
-
-    let mensaje = "🛒 *NUEVO PEDIDO ADIKTA - PAGO EN PERSONA*\n\n";
-    let detalles = "📋 *Detalles del pedido:*\n\n";
-
-    this.items.forEach(item => {
-      detalles += `• ${item.nombre} × ${item.cantidad} = $${(item.precio * item.cantidad).toFixed(2)}\n`;
-    });
-
-    const total = this.obtenerTotal();
-    mensaje += detalles;
-    mensaje += `\n💰 *Total: $${total.toFixed(2)} USD*\n\n`;
-    mensaje += "Deseo pagar en persona. ¿Cuál es el mejor lugar y horario para retirar? 📍";
-
-    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
-
-    this.limpiar();
-    this.mostrarToast("✓ Pedido enviado. Carrito vaciado.");
+    this.metodoPagoSeleccionado = "presencial";
     cerrarCarrito();
+    abrirCheckout();
   }
 }
 

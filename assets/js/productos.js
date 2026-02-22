@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge_performance_value: 'Alto Nivel',
       badge_warranty: 'Garantía',
       badge_warranty_value: '3 Años',
+      add_to_cart: 'Añadir al Carrito',
       section_processor: 'Rendimiento y Procesador',
       section_connectivity: 'Conectividad y Expansión',
       section_storage: 'Almacenamiento y Memoria',
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge_performance_value: 'High Level',
       badge_warranty: 'Warranty',
       badge_warranty_value: '3 Years',
+      add_to_cart: 'Add to Cart',
       section_processor: 'Performance & Processor',
       section_connectivity: 'Connectivity & Expansion',
       section_storage: 'Storage & Memory',
@@ -194,8 +196,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       allProducts = data;
+      // Cargamos únicamente los productos de software del JSON
       flatProductsList = flattenProducts(data);
-      console.log('Productos cargados:', flatProductsList.length);
+
+      console.log('Productos cargados (JSON):', flatProductsList.length);
+
+      // 🔄 Intentar cargar productos extra de Supabase
+      intentarCargarDesdeSupabase();
 
       if (flatProductsList.length === 0) {
         productsGrid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">${t('no_products')}</p>`;
@@ -272,19 +279,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getProductImage(product) {
-    if (product.id && product.id.includes('lap')) return '../assets/img/laptop.jpg';
-    if (product.id && product.id.includes('aio')) return '../assets/img/monitor.jpg';
-    if (product.id && product.id.includes('est')) return '../assets/img/hdd.jpg';
+    if (product.imagen) {
+      // Si es de base de datos, usamos la carpeta catalogo
+      return `../assets/catalogo/${product.imagen}`;
+    }
+
+    // Fallback para software u otros
+    const sub = String(product._subcategory || '').toLowerCase();
+    if (sub.includes('lap')) return '../assets/img/laptop.jpg';
+    if (sub.includes('ram')) return '../assets/img/ram.jpg';
+    if (sub.includes('ssd')) return '../assets/img/ssd.jpg';
+    if (sub.includes('hdd')) return '../assets/img/hdd.jpg';
+    if (sub.includes('psu')) return '../assets/img/psu.jpg';
+    if (sub.includes('mon')) return '../assets/img/monitor.jpg';
+    if (sub.includes('kb') || sub.includes('teclado')) return '../assets/img/keyboard.jpg';
+    if (sub.includes('aio') || sub.includes('todo')) return '../assets/img/monitor.jpg';
+    if (sub.includes('esc') || sub.includes('deskt')) return '../assets/img/hdd.jpg';
     return '../assets/img/hdd.jpg';
   }
 
   function getCategoryLabel(subcategory) {
+    const sub = String(subcategory || '').toLowerCase();
     const map = {
       'todo_en_uno': 'category_aio',
       'escritorio': 'category_desktop',
-      'portatiles': 'category_laptop'
+      'portatiles': 'category_laptop',
+      'lap': 'category_laptop',
+      'ram': 'product_category_ram',
+      'ssd': 'product_category_storage',
+      'hdd': 'product_category_storage',
+      'psu': 'product_category_psu',
+      'mon': 'product_category_monitors',
+      'kb': 'product_category_peripherals'
     };
-    return t(map[subcategory] || 'product_default');
+    return t(map[sub] || 'product_default');
   }
 
   function renderProducts(products) {
@@ -307,12 +335,32 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="card-body">
           <p class="product-category">${categoryLabel}</p>
           <h3 class="product-title">${tSpecs(product.nombre)}</h3>
-          <ul class="product-features">
-             <li>${tSpecs(formatSpecValue(product.procesador, 'marca'))} ${tSpecs(formatSpecValue(product.procesador, 'modelo'))}</li>
-             <li>${tSpecs(formatSpecValue(product.memoria_ram, 'capacidad'))}</li>
-             <li>${tSpecs(formatSpecValue(product.almacenamiento, 'capacidad'))}</li>
-          </ul>
-          <button class="product-cta w-full" data-id="${product.id}" onclick="openModal('${product.id}')">${t('modal_view_details')}</button>
+          
+          ${product._category === 'original' ? `
+            <p class="product-price" style="margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700; color: #111827;">
+              $${parseFloat(product.precio || 0).toFixed(2)}
+            </p>
+            <ul class="product-features">
+               ${product.procesador?.marca ? `<li>${tSpecs(formatSpecValue(product.procesador, 'marca'))} ${tSpecs(formatSpecValue(product.procesador, 'modelo'))}</li>` : ''}
+               ${product.memoria_ram?.capacidad ? `<li>${tSpecs(formatSpecValue(product.memoria_ram, 'capacidad'))}</li>` : ''}
+               ${product.almacenamiento?.capacidad ? `<li>${tSpecs(formatSpecValue(product.almacenamiento, 'capacidad'))}</li>` : ''}
+            </ul>
+            <div class="card-actions" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+              <button class="btn-add-cart" style="flex: 1;" onclick='agregarAlCarritoDirecto("${product.id}")'>
+                🛒 ${getLang() === 'es' ? 'Agregar' : 'Add'}
+              </button>
+              <button class="product-cta-outline" style="flex: 1; font-size: 0.8rem; padding: 0.5rem;" onclick="openModal('${product.id}')">
+                ${t('modal_view_details')}
+              </button>
+            </div>
+          ` : `
+            <ul class="product-features">
+               <li>${tSpecs(formatSpecValue(product.procesador, 'marca'))} ${tSpecs(formatSpecValue(product.procesador, 'modelo'))}</li>
+               <li>${tSpecs(formatSpecValue(product.memoria_ram, 'capacidad'))}</li>
+               <li>${tSpecs(formatSpecValue(product.almacenamiento, 'capacidad'))}</li>
+            </ul>
+            <button class="product-cta w-full" onclick="openModal('${product.id}')">${t('modal_view_details')}</button>
+          `}
         </div>
       `;
       productsGrid.appendChild(card);
@@ -411,6 +459,15 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="material-symbols-outlined">download</span>
               ${t('modal_download_btn')}
             </button>
+            ${product._category === 'original' ? `
+            <div class="modal-buy-container" style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1.5rem;">
+              <span class="modal-price" style="font-size: 2rem; font-weight: 800; color: var(--accent);">$${parseFloat(product.precio || 0).toFixed(2)}</span>
+              <button class="product-cta" style="flex: 1;" onclick='agregarDesdeModal("${product.id}")'>
+                <span class="material-symbols-outlined">shopping_cart</span>
+                ${t('add_to_cart')}
+              </button>
+            </div>
+            ` : ''}
           </div>
           <div class="modal-info-badges">
             <div class="modal-info-badge">
@@ -447,6 +504,33 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeModal() {
     modalOverlay.classList.remove('active');
   }
+
+  // Helper para agregar al carrito desde el modal
+  window.agregarDesdeModal = function (productId) {
+    const product = flatProductsList.find(p => p.id === productId);
+    if (product && typeof carrito !== 'undefined') {
+      carrito.agregar({
+        id: product.id,
+        nombre: product.nombre,
+        precio: parseFloat(product.precio || 0),
+        imagen: getProductImage(product)
+      });
+      closeModal();
+    }
+  };
+
+  // Helper para agregar al carrito directo desde la card
+  window.agregarAlCarritoDirecto = function (productId) {
+    const product = flatProductsList.find(p => p.id === productId);
+    if (product && typeof carrito !== 'undefined') {
+      carrito.agregar({
+        id: product.id,
+        nombre: product.nombre,
+        precio: parseFloat(product.precio || 0),
+        imagen: getProductImage(product)
+      });
+    }
+  };
 
   modalCloseBtn.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', (e) => {
@@ -625,5 +709,47 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     `;
+  }
+
+  // 🚀 CARGAR DESDE SUPABASE
+  async function intentarCargarDesdeSupabase() {
+    if (typeof obtenerProductosDeSupabase !== 'function') return;
+
+    const dbProducts = await obtenerProductosDeSupabase();
+    if (dbProducts && dbProducts.length > 0) {
+      console.log(`✨ Cargados ${dbProducts.length} productos desde Supabase`);
+
+      // Mapear al formato esperado por el grid actual
+      const mapped = dbProducts.map(p => ({
+        id: "db-" + String(p.id),
+        nombre: p.nombre,
+        precio: p.precio,
+        icon: p.icono,
+        imagen: p.imagen,
+        _category: 'original',
+        _subcategory: p.categoria?.toLowerCase() || 'escritorio',
+        procesador: { marca: p.categoria || 'Hardware', modelo: '' },
+        memoria_ram: { capacidad: '' },
+        almacenamiento: { capacidad: '' },
+        accesorios: []
+      }));
+
+      // 🛒 AGREGAR A LA LISTA GLOBAL
+      mapped.forEach(p => {
+        if (!flatProductsList.find(fp => fp.id === p.id)) {
+          flatProductsList.push(p);
+        }
+      });
+
+      // Forzar render si estamos en la pestaña correcta
+      if (currentMainFilter === 'original') {
+        filterAndRender();
+      }
+    }
+  }
+
+  // Ejecutar carga inicial de Supabase si aplica
+  if (currentMainFilter === 'original') {
+    intentarCargarDesdeSupabase();
   }
 });
